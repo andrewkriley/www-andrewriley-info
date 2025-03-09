@@ -11,6 +11,7 @@ tags:
     - git
 categories:
     - technology
+    - hugo
 ---
 
 ## TLDR;
