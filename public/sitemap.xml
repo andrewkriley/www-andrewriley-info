@@ -2,10 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:55765/categories/</loc>
+    <loc>http://localhost:1314/p/test/</loc>
+    <lastmod>2025-03-09T14:35:50+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:55765/</loc>
+    <loc>http://localhost:1314/p/hello-world/</loc>
+    <lastmod>2025-03-09T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:55765/tags/</loc>
+    <loc>http://localhost:1314/</loc>
+    <lastmod>2025-03-09T14:35:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/categories/</loc>
+    <lastmod>2025-03-09T14:35:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/categories/home/</loc>
+    <lastmod>2025-03-09T14:35:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/post/</loc>
+    <lastmod>2025-03-09T14:35:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/tags/</loc>
+    <lastmod>2025-03-09T14:35:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/tags/test/</loc>
+    <lastmod>2025-03-09T14:35:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/categories/music/</loc>
+    <lastmod>2025-03-09T13:18:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/categories/technology/</loc>
+    <lastmod>2025-03-09T13:18:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/tags/welcome/</loc>
+    <lastmod>2025-03-09T13:18:50+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/archives/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/page/</loc>
+    <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1314/search/</loc>
   </url>
 </urlset>

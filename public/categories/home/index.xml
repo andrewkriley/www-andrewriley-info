@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>home on Andrew Riley -  you can call me &#39;Riles&#39; </title>
+        <link>http://localhost:1314/categories/home/</link>
+        <description>Recent content in home on Andrew Riley -  you can call me &#39;Riles&#39; </description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 09 Mar 2025 14:35:50 +1100</lastBuildDate><atom:link href="http://localhost:1314/categories/home/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Test</title>
+        <link>http://localhost:1314/p/test/</link>
+        <pubDate>Sun, 09 Mar 2025 14:35:50 +1100</pubDate>
+        
+        <guid>http://localhost:1314/p/test/</guid>
+        <description>&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;Test&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Hello World</title>
+        <link>http://localhost:1314/p/hello-world/</link>
+        <pubDate>Thu, 09 Mar 2023 13:18:50 +1100</pubDate>
+        
+        <guid>http://localhost:1314/p/hello-world/</guid>
+        <description>&lt;img src="http://localhost:1314/p/hello-world/RilesBlackLarge.png" alt="Featured image of post Hello World" /&gt;&lt;p&gt;Welcome to andrewriley.info&lt;/p&gt;
+&lt;p&gt;A selection of technology, home and music ideas, projects and things I build, make or create.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

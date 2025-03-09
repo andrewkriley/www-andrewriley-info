@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on My New Hugo Site</title>
-        <link>http://localhost:55765/categories/</link>
-        <description>Recent content in Categories on My New Hugo Site</description>
+        <title>Categories on Andrew Riley -  you can call me &#39;Riles&#39; </title>
+        <link>http://localhost:1314/categories/</link>
+        <description>Recent content in Categories on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="http://localhost:55765/categories/index.xml" rel="self" type="application/rss+xml" />
+        <language>en-us</language>
+        <lastBuildDate>Sun, 09 Mar 2025 14:35:50 +1100</lastBuildDate><atom:link href="http://localhost:1314/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>home</title>
+        <link>http://localhost:1314/categories/home/</link>
+        <pubDate>Sun, 09 Mar 2025 14:35:50 +1100</pubDate>
+        
+        <guid>http://localhost:1314/categories/home/</guid>
+        <description>&lt;img src="http://localhost:1314/categories/home/build.png" alt="Featured image of post home" /&gt;</description>
+        </item>
+        <item>
+        <title>music</title>
+        <link>http://localhost:1314/categories/music/</link>
+        <pubDate>Sun, 09 Mar 2025 13:18:50 +1100</pubDate>
+        
+        <guid>http://localhost:1314/categories/music/</guid>
+        <description>&lt;img src="http://localhost:1314/categories/music/music.png" alt="Featured image of post music" /&gt;</description>
+        </item>
+        <item>
+        <title>technology</title>
+        <link>http://localhost:1314/categories/technology/</link>
+        <pubDate>Sun, 09 Mar 2025 13:18:50 +1100</pubDate>
+        
+        <guid>http://localhost:1314/categories/technology/</guid>
+        <description>&lt;img src="http://localhost:1314/categories/technology/technology.png" alt="Featured image of post technology" /&gt;</description>
+        </item>
+        
     </channel>
 </rss>
