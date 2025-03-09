@@ -1,0 +1,56 @@
+# Configure main menu and social menu
+#[[main]]
+#identifier = "home"
+#name = "Home"
+#url = "/"
+#[main.params]
+#icon = "home"
+#newtab = true
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/andrewkriley"
+
+[social.params]
+icon = "brand-github"
+
+#[[social]]
+#identifier = "twitter"
+#name = "Twitter"
+#url = "https://twitter.com"
+
+#[social.params]
+#icon = "brand-twitter"
+
+#[[social]]
+#identifier = "youtube"
+#name ="YouTube"
+#url = "https://youtube.com"
+
+#[social.params]
+#icon = "brand-youtube"
+
+[[social]]
+identifier = "youtube" # Or any custom identifier you prefer
+name = "YouTube"
+url = "https://www.youtube.com/@rilesdj"
+
+[social.params]
+icon = "brand-youtube1" # Using the correct icon name
+
+[[social]]
+identifier = "mixcloud" # Or any custom identifier you prefer
+name = "MixCloud"
+url = "https://www.mixcloud.com/rilesdj/"
+
+[social.params]
+icon = "brand-mixcloud" # Using the correct icon name
+
+[[social]]
+identifier = "linkedin" # Or any custom identifier you prefer
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/andrewriley"
+
+[social.params]
+icon = "brand-linkedin" # Using the correct icon name
