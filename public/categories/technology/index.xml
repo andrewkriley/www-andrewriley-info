@@ -109,6 +109,14 @@ Yes, Docker is the default answer to everything right? I discovered permission i
 </description>
         </item>
         <item>
+        <title>A Journey with Lewis</title>
+        <link>http://0.0.0.0:1313/p/a-journey-with-lewis/</link>
+        <pubDate>Sun, 09 Mar 2025 20:58:50 +1100</pubDate>
+        
+        <guid>http://0.0.0.0:1313/p/a-journey-with-lewis/</guid>
+        <description>&lt;img src="http://0.0.0.0:1313/hugo.png" alt="Featured image of post A Journey with Lewis" /&gt;</description>
+        </item>
+        <item>
         <title>Hello World</title>
         <link>http://0.0.0.0:1313/p/hello-world/</link>
         <pubDate>Thu, 09 Mar 2023 13:18:50 +1100</pubDate>
