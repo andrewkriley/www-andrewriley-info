@@ -37,7 +37,7 @@ name = "YouTube"
 url = "https://www.youtube.com/@rilesdj"
 
 [social.params]
-icon = "brand-youtube1" # Using the correct icon name
+icon = "brand-youtube" # Using the correct icon name
 
 [[social]]
 identifier = "mixcloud" # Or any custom identifier you prefer
