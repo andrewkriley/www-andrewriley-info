@@ -1,7 +1,7 @@
 ---
 title: A Journey with Hugo
-description: Taking the first steps towards a Hugo  
-date: 2023-03-09T20:58:50+11:00
+description: The first steps to crafting a new static website using the Hugo Framework.
+date: 2025-03-09T20:58:50+11:00
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 image: hugo.png
 tags: 
@@ -13,9 +13,11 @@ categories:
     - technology
 ---
 
-# TLDR;
+## TLDR;
 
-Here's the
+What is Hugo https://gohugo.io/ - "The world’s fastest framework for building websites"
+
+Here's the high level steps
 1) Download Hugo binary for your OS
 2) Confirm you can run the hugo binary 
 3) Create a new site using hugo
@@ -24,10 +26,10 @@ Here's the
 6) Connect your Github to CloudFlare Pages
 7) Deploy your hugo site to CloudFlare Pages
 
-Some questions you might have:
-- Did I try using Docker? Yes
+> ***Did I try using Docker?***<br>
+Yes, Docker is the default answer to everything right? I discovered permission issues with the base setup when running `hugo new site <newsite>`, mounting the path as a volume and then trying to edit it in Visual Studio Code. Am sure there's a way around this but for these first steps I just wanted a result. Hence the above approach using the locally run Hugo binary on my dev workstation meant permissions where simple and I could get underway quickly.
 
-Here's the detail
+## Here's the detail
 
 ```bash
 andreril ~/Downloads/hugo_extended_0.145.0_darwin-universal  $ ./hugo version
@@ -68,6 +70,9 @@ https://gohugo.io/installation
 https://gohugo.io/installation/macos/
 
 
-
+## Future projects
+- Publish the docker image for Hugo I created
+- Publish a how-to using the above and a local docker compose example
 
 ---
+
