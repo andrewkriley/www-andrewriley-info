@@ -7,6 +7,14 @@
 #icon = "home"
 #newtab = true
 
+[[main]]
+identifier = "djriles"
+name = "DJ Riles"
+url = "/djriles"
+[main.params]
+icon = "infinity"
+#newtab = true
+
 [[social]]
 identifier = "github"
 name = "GitHub"
