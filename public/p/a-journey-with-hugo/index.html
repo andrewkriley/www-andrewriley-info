@@ -360,6 +360,7 @@
 <li>Push your new site to github.com</li>
 <li>Connect your Github to CloudFlare Pages</li>
 <li>Deploy your hugo site to CloudFlare Pages</li>
+<li>Test it&rsquo;s available</li>
 </ol>
 <blockquote>
 <p><em><strong>Did I try using Docker?</strong></em><br>
@@ -485,82 +486,22 @@ Precompiled Binaries here <br>
 <ol start="6">
 <li>Connect your Github to CloudFlare Pages</li>
 <li>Deploy your hugo site to CloudFlare Pages</li>
+<li>Test its available</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">andreril ~/Downloads/hugo_extended_0.145.0_darwin-universal  $ ./hugo version
-</span></span><span class="line"><span class="cl">hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended darwin/arm64 <span class="nv">BuildDate</span><span class="o">=</span>2025-02-26T15:41:25Z <span class="nv">VendorInfo</span><span class="o">=</span>gohugoio
-</span></span><span class="line"><span class="cl">andreril ~/Downloads/hugo_extended_0.145.0_darwin-universal  $ 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ol start="3">
-<li>run the binary to create a new site</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site my-first-site
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ol start="4">
-<li>You should see the following output</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Congratulations! Your new Hugo site was created in /Users/andreril/Desktop/dev/my-first-site.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Just a few more steps...
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">1. Change the current directory to /Users/andreril/Desktop/dev/my-first-site.
-</span></span><span class="line"><span class="cl">2. Create or install a theme:
-</span></span><span class="line"><span class="cl">   - Create a new theme with the <span class="nb">command</span> <span class="s2">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span>
-</span></span><span class="line"><span class="cl">   - Or, install a theme from https://themes.gohugo.io/
-</span></span><span class="line"><span class="cl">3. Edit hugo.toml, setting the <span class="s2">&#34;theme&#34;</span> property to the theme name.
-</span></span><span class="line"><span class="cl">4. Create new content with the <span class="nb">command</span> <span class="s2">&#34;hugo new content &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
-</span></span><span class="line"><span class="cl">5. Start the embedded web server with the <span class="nb">command</span> <span class="s2">&#34;hugo server --buildDrafts&#34;</span>.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">See documentation at https://gohugo.io/.
-</span></span><span class="line"><span class="cl">andreril ~/Desktop/dev  $ 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Resources used</p>
+<p>Resources used</p>
 <p><a class="link" href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/"  target="_blank" rel="noopener"
-    >https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/</a>
+    >https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/</a><br>
 <a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
-    >https://github.com/CaiJimmy/hugo-theme-stack</a>
+    >https://github.com/CaiJimmy/hugo-theme-stack</a><br>
 <a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack-starter"  target="_blank" rel="noopener"
-    >https://github.com/CaiJimmy/hugo-theme-stack-starter</a>
+    >https://github.com/CaiJimmy/hugo-theme-stack-starter</a><br>
 <a class="link" href="https://gohugo.io/installation"  target="_blank" rel="noopener"
-    >https://gohugo.io/installation</a></p>
-<p><a class="link" href="https://gohugo.io/installation/macos/"  target="_blank" rel="noopener"
-    >https://gohugo.io/installation/macos/</a></p>
+    >https://gohugo.io/installation</a><br></p>
 <h2 id="future-projects">Future projects
 </h2><ul>
 <li>Publish the docker image for Hugo I created</li>
 <li>Publish a how-to using the above and a local docker compose example</li>
+<li>CF page with a custom domain</li>
 </ul>
 <hr>
 

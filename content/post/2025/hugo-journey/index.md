@@ -25,6 +25,7 @@ Here's the high level steps
 5) Push your new site to github.com
 6) Connect your Github to CloudFlare Pages
 7) Deploy your hugo site to CloudFlare Pages
+8) Test it's available
 
 > ***Did I try using Docker?***<br>
 Yes, Docker is the default answer to everything right? I discovered permission issues with the base setup when running `hugo new site <newsite>`, mounting the path as a volume and then trying to edit it in Visual Studio Code. Am sure there's a way around this but for these first steps I just wanted a result. Hence the above approach using the locally run Hugo binary on my dev workstation meant permissions where simple and I could get underway quickly.
@@ -110,49 +111,22 @@ git push -u origin main
 
 6) Connect your Github to CloudFlare Pages
 7) Deploy your hugo site to CloudFlare Pages
+8) Test its available
 
-```bash
-andreril ~/Downloads/hugo_extended_0.145.0_darwin-universal  $ ./hugo version
-hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended darwin/arm64 BuildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
-andreril ~/Downloads/hugo_extended_0.145.0_darwin-universal  $ 
-```
-3) run the binary to create a new site
-```bash
-hugo new site my-first-site
-```
-4) You should see the following output
-
-```bash
-Congratulations! Your new Hugo site was created in /Users/andreril/Desktop/dev/my-first-site.
-
-Just a few more steps...
-
-1. Change the current directory to /Users/andreril/Desktop/dev/my-first-site.
-2. Create or install a theme:
-   - Create a new theme with the command "hugo new theme <THEMENAME>"
-   - Or, install a theme from https://themes.gohugo.io/
-3. Edit hugo.toml, setting the "theme" property to the theme name.
-4. Create new content with the command "hugo new content <SECTIONNAME>/<FILENAME>.<FORMAT>".
-5. Start the embedded web server with the command "hugo server --buildDrafts".
-
-See documentation at https://gohugo.io/.
-andreril ~/Desktop/dev  $ 
-```
 
 
 Resources used
 
-https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/
-https://github.com/CaiJimmy/hugo-theme-stack
-https://github.com/CaiJimmy/hugo-theme-stack-starter
-https://gohugo.io/installation
-
-https://gohugo.io/installation/macos/
+https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/<br>
+https://github.com/CaiJimmy/hugo-theme-stack<br>
+https://github.com/CaiJimmy/hugo-theme-stack-starter<br>
+https://gohugo.io/installation<br>
 
 
 ## Future projects
 - Publish the docker image for Hugo I created
 - Publish a how-to using the above and a local docker compose example
+- CF page with a custom domain
 
 ---
 
