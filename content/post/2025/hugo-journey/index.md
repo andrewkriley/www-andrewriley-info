@@ -31,6 +31,84 @@ Yes, Docker is the default answer to everything right? I discovered permission i
 
 ## Here's the detail
 
+1) Download Hugo binary for your OS.
+
+https://gohugo.io/installation<br>
+https://gohugo.io/installation/macos/<br>
+https://github.com/gohugoio/hugo/releases/tag/v0.145.0
+
+In my case I used the ```hugo_extended_0.145.0_darwin-universal.tar.gz``` binary, but do what fits your dev environment.
+
+Extract the binary to a folder
+
+```bash
+mkdir hugo_extended
+tar -xzvf hugo_extended_0.145.0_darwin-universal.tar.gz -C ./hugo_extended
+```
+2) Confirm you can run the hugo binary 
+
+```
+cd hugo_extended
+hugo version
+```
+Which should give you this output<br>
+
+```
+hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended darwin/arm64 BuildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
+```
+
+3) Create a new site using hugo
+
+Run the following ```hugo``` command to set up the directory structure and files in the ```my-new-site``` folder.
+
+```bash
+hugo new site my-new-site
+```
+
+This will then give the following output if successful
+
+```
+Congratulations! Your new Hugo site was created in /Users/<yourusername>/Desktop/dev/my-new-site.
+
+Just a few more steps...
+
+1. Change the current directory to /Users/<yourusername>>/Desktop/dev/my-new-site.
+2. Create or install a theme:
+   - Create a new theme with the command "hugo new theme <THEMENAME>"
+   - Or, install a theme from https://themes.gohugo.io/
+3. Edit hugo.toml, setting the "theme" property to the theme name.
+4. Create new content with the command "hugo new content <SECTIONNAME>/<FILENAME>.<FORMAT>".
+5. Start the embedded web server with the command "hugo server --buildDrafts".
+
+
+```
+4) Initiate a new git repository inside your newly provisioned hugo site
+
+Change directory to the ```my-new-site``` folder
+
+```bash
+cd my-new-folder
+```
+Then create a new repository and push it to the main branch
+
+```bash
+echo "# my-new-site" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+```
+
+5) Push your new site to github.com
+
+```bash
+git remote add origin git@github.com:<andrewkriley>/my-new-site.git
+git push -u origin main
+```
+
+6) Connect your Github to CloudFlare Pages
+7) Deploy your hugo site to CloudFlare Pages
+
 ```bash
 andreril ~/Downloads/hugo_extended_0.145.0_darwin-universal  $ ./hugo version
 hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended darwin/arm64 BuildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
