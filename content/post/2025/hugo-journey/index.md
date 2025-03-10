@@ -106,6 +106,8 @@ git remote add origin git@github.com:<andrewkriley>/my-new-site.git
 git push -u origin main
 ```
 
+> ***UNFINISHED BELOW***<br>
+
 6) Connect your Github to CloudFlare Pages
 7) Deploy your hugo site to CloudFlare Pages
 
