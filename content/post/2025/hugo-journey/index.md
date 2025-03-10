@@ -31,10 +31,10 @@ Yes, Docker is the default answer to everything right? I discovered permission i
 
 ## Here's the detail
 
-1) Download Hugo binary for your OS.
+Download Hugo binary for your OS.
 
 https://gohugo.io/installation<br>
-https://gohugo.io/installation/macos/<br>
+Precompiled Binaries here <br>
 https://github.com/gohugoio/hugo/releases/tag/v0.145.0
 
 In my case I used the ```hugo_extended_0.145.0_darwin-universal.tar.gz``` binary, but do what fits your dev environment.
@@ -45,7 +45,7 @@ Extract the binary to a folder
 mkdir hugo_extended
 tar -xzvf hugo_extended_0.145.0_darwin-universal.tar.gz -C ./hugo_extended
 ```
-2) Confirm you can run the hugo binary 
+Confirm you can run the hugo binary 
 
 ```
 cd hugo_extended
@@ -57,7 +57,7 @@ Which should give you this output<br>
 hugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended darwin/arm64 BuildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio
 ```
 
-3) Create a new site using hugo
+Create a new site using hugo
 
 Run the following ```hugo``` command to set up the directory structure and files in the ```my-new-site``` folder.
 
@@ -82,12 +82,12 @@ Just a few more steps...
 
 
 ```
-4) Initiate a new git repository inside your newly provisioned hugo site
+Initiate a new git repository inside your newly provisioned hugo site
 
 Change directory to the ```my-new-site``` folder
 
 ```bash
-cd my-new-folder
+cd my-new-site
 ```
 Then create a new repository and push it to the main branch
 
@@ -99,7 +99,7 @@ git commit -m "first commit"
 git branch -M main
 ```
 
-5) Push your new site to github.com
+Push your new site to github.com
 
 ```bash
 git remote add origin git@github.com:<andrewkriley>/my-new-site.git
