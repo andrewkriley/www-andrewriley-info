@@ -333,7 +333,7 @@
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -454,6 +454,32 @@ Precompiled Binaries here <br>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Then create a new repository and push it to the main branch</p>
+<p>Go to <a class="link" href="https://github.com"  target="_blank" rel="noopener"
+    >https://github.com</a> and create a new repository <code>my-new-site</code> if you are following along with this guide. Otherwise substitute for your own repository name.</p>
+<p><img src="/p/a-journey-with-hugo/create-repo.png"
+	width="902"
+	height="1034"
+	srcset="/p/a-journey-with-hugo/create-repo_hu_be1a5ded6ab898f7.png 480w, /p/a-journey-with-hugo/create-repo_hu_d35bc12153034156.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="87"
+		data-flex-basis="209px"
+	
+></p>
+<p><img src="/p/a-journey-with-hugo/prep-repo.png"
+	width="1274"
+	height="862"
+	srcset="/p/a-journey-with-hugo/prep-repo_hu_4edc08fc3ed33e72.png 480w, /p/a-journey-with-hugo/prep-repo_hu_375eae983d78bad0.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="354px"
+	
+></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -470,6 +496,21 @@ Precompiled Binaries here <br>
 </span></span><span class="line"><span class="cl">git branch -M main
 </span></span></code></pre></td></tr></table>
 </div>
+</div><p>This will initalise the repository, add a README.md file and commit the changes to the respositories <code>main</code> branch.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Initialized empty Git repository in /Users/andreril/Desktop/dev/my-new-site/.git/
+</span></span><span class="line"><span class="cl">[main (root-commit) 33c6e22] first commit
+</span></span><span class="line"><span class="cl"> 1 file changed, 1 insertion(+)
+</span></span><span class="line"><span class="cl"> create mode 100644 README.md
+</span></span></code></pre></td></tr></table>
+</div>
 </div><p>Push your new site to github.com</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -477,8 +518,87 @@ Precompiled Binaries here <br>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote add origin git@github.com:&lt;andrewkriley&gt;/my-new-site.git
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote add origin git@github.com:&lt;YOURGITUSERHERE&gt;/my-new-site.git
 </span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Will give you a result like this</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Enumerating objects: 3, done.
+</span></span><span class="line"><span class="cl">Counting objects: 100% (3/3), done.
+</span></span><span class="line"><span class="cl">Writing objects: 100% (3/3), 225 bytes | 225.00 KiB/s, done.
+</span></span><span class="line"><span class="cl">Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+</span></span><span class="line"><span class="cl">To github.com:andrewkriley/my-new-site.git
+</span></span><span class="line"><span class="cl"> * [new branch]      main -&gt; main
+</span></span><span class="line"><span class="cl">branch &#39;main&#39; set up to track &#39;origin/main&#39;.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You can then add the rest of the Hugo created files</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;hugo commit&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Resulting in</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[main a5a500f] hugo commit
+</span></span><span class="line"><span class="cl"> 2 files changed, 8 insertions(+)
+</span></span><span class="line"><span class="cl"> create mode 100644 archetypes/default.md
+</span></span><span class="line"><span class="cl"> create mode 100644 hugo.toml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>then</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Results</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Enumerating objects: 6, done.
+</span></span><span class="line"><span class="cl">Counting objects: 100% (6/6), done.
+</span></span><span class="line"><span class="cl">Delta compression using up to 8 threads
+</span></span><span class="line"><span class="cl">Compressing objects: 100% (4/4), done.
+</span></span><span class="line"><span class="cl">Writing objects: 100% (5/5), 534 bytes | 534.00 KiB/s, done.
+</span></span><span class="line"><span class="cl">Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+</span></span><span class="line"><span class="cl">To github.com:andrewkriley/my-new-site.git
+</span></span><span class="line"><span class="cl">   33c6e22..a5a500f  main -&gt; main
 </span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -556,7 +676,7 @@ Precompiled Binaries here <br>
         
         
             <div class="article-image">
-                <img src="/p/hello-world/belongil.6a3ed32a3f574f8df8518c8d7e4294cf.6a3ed32a3f574f8df8518c8d7e4294cf_hu_3e54595109626610.png" 
+                <img src="/p/hello-world/belongil.6a3ed32a3f574f8df8518c8d7e4294cf_hu_3e54595109626610.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"

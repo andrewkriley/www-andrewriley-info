@@ -92,6 +92,12 @@ cd my-new-site
 ```
 Then create a new repository and push it to the main branch
 
+Go to https://github.com and create a new repository ```my-new-site``` if you are following along with this guide. Otherwise substitute for your own repository name.
+
+![](create-repo.png)
+
+![](prep-repo.png)
+
 ```bash
 echo "# my-new-site" >> README.md
 git init
@@ -100,11 +106,61 @@ git commit -m "first commit"
 git branch -M main
 ```
 
+This will initalise the repository, add a README.md file and commit the changes to the respositories ```main``` branch.
+
+```
+Initialized empty Git repository in /Users/andreril/Desktop/dev/my-new-site/.git/
+[main (root-commit) 33c6e22] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+ ```
+
 Push your new site to github.com
 
 ```bash
-git remote add origin git@github.com:<andrewkriley>/my-new-site.git
+git remote add origin git@github.com:<YOURGITUSERHERE>/my-new-site.git
 git push -u origin main
+```
+
+Will give you a result like this
+
+```
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 225 bytes | 225.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:andrewkriley/my-new-site.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
+
+You can then add the rest of the Hugo created files 
+
+```bash
+git add .
+git commit -m "hugo commit"
+```
+Resulting in 
+```
+[main a5a500f] hugo commit
+ 2 files changed, 8 insertions(+)
+ create mode 100644 archetypes/default.md
+ create mode 100644 hugo.toml
+```
+then
+```bash
+git push origin main
+```
+Results 
+```
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 534 bytes | 534.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:andrewkriley/my-new-site.git
+   33c6e22..a5a500f  main -> main
 ```
 
 > ***UNFINISHED BELOW***<br>
