@@ -1,7 +1,7 @@
 ---
 title: leadership
 description: A selection of leadership topics
-#image: music.png
+image: leadership.jpeg
 
 # Badge style
 #style:
