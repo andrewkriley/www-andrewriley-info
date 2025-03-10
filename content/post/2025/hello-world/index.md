@@ -16,4 +16,8 @@ Welcome to andrewriley.info
 
 A selection of technology, home and music ideas, projects and things I build, make or create.
 
+This photo taken just after sunrise at Belongil Beach in northern NSW Australia<br>
+https://maps.app.goo.gl/4WbupUyviXSAqHM79
+
+
 ---
