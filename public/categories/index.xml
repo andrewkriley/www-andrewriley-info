@@ -6,10 +6,10 @@
         <description>Recent content in Categories on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 10 Mar 2025 01:33:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Mar 2025 13:18:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>technology</title>
         <link>http://0.0.0.0:1313/categories/technology/</link>
-        <pubDate>Mon, 10 Mar 2025 01:33:50 +1100</pubDate>
+        <pubDate>Mon, 10 Mar 2025 13:18:50 +1100</pubDate>
         
         <guid>http://0.0.0.0:1313/categories/technology/</guid>
         <description>&lt;img src="http://0.0.0.0:1313/categories/technology/technology.png" alt="Featured image of post technology" /&gt;</description>
@@ -36,7 +36,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>http://0.0.0.0:1313/categories/leadership/</guid>
-        <description>&lt;img src="http://0.0.0.0:1313/leadership.png" alt="Featured image of post leadership" /&gt;</description>
+        <description>&lt;img src="http://0.0.0.0:1313/categories/leadership/leadership.jpeg" alt="Featured image of post leadership" /&gt;</description>
         </item>
         
     </channel>
