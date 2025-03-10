@@ -6,7 +6,52 @@
         <description>Recent content on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 09 Mar 2025 20:58:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Mar 2025 01:33:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Nested Environment Variables with Docker Compose Files</title>
+        <link>http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/</link>
+        <pubDate>Mon, 10 Mar 2025 01:33:50 +1100</pubDate>
+        
+        <guid>http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/</guid>
+        <description>&lt;img src="http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/nested.png" alt="Featured image of post Nested Environment Variables with Docker Compose Files" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/andrewkriley/nested-var-compose&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/andrewkriley/nested-var-compose&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The intent of this project is demonstrate how nested variables can be used and inspire you to use something similar in your own projects.&lt;/p&gt;
+&lt;p&gt;This project has the following structure&lt;/p&gt;
+&lt;p&gt;.env # a global environment variables file that sets environment variables that will be available to all containers and docker-compose files.&lt;br&gt;
+docker-compose.yaml # a main docker compose file that uses the include: function to lauch 2 other containers.&lt;br&gt;
+container_1 # a directory hosting files for a container that pulls the global and local variables.&lt;br&gt;
+container_2 # a second directory hosting files for a container that pulls the global and local variables.&lt;br&gt;
+container_3 # a third directory hosting files for a container that pulls the global and local variables.&lt;br&gt;
+container_4 # a fourth directory hosting files for a container that pulls the global and local variables.&lt;/p&gt;
+&lt;p&gt;Each &amp;lsquo;container_N&amp;rsquo; directory has the following structure&lt;/p&gt;
+&lt;p&gt;.env # a local (to the container) environment variables file that sets environment variables that will be available to all containers and docker-compose files.&lt;br&gt;
+docker-compose.yaml # a docker-compose.yaml file used to launch the image.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/1and2.png&#34;
+	width=&#34;2308&#34;
+	height=&#34;710&#34;
+	srcset=&#34;http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/1and2_hu_b0729ea0c7fb55e6.png 480w, http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/1and2_hu_5ab509031537e18c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;325&#34;
+		data-flex-basis=&#34;780px&#34;
+	
+&gt;
+&lt;img src=&#34;http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/3and4.png&#34;
+	width=&#34;2280&#34;
+	height=&#34;664&#34;
+	srcset=&#34;http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/3and4_hu_2514ddc51d750a30.png 480w, http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/3and4_hu_4c52172dc264135e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;343&#34;
+		data-flex-basis=&#34;824px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>A Journey with Hugo</title>
         <link>http://0.0.0.0:1313/p/a-journey-with-hugo/</link>
         <pubDate>Sun, 09 Mar 2025 20:58:50 +1100</pubDate>
@@ -293,7 +338,7 @@ Precompiled Binaries here &lt;br&gt;
         <item>
         <title>Hello World</title>
         <link>http://0.0.0.0:1313/p/hello-world/</link>
-        <pubDate>Thu, 09 Mar 2023 13:18:50 +1100</pubDate>
+        <pubDate>Sat, 08 Mar 2025 13:18:50 +1100</pubDate>
         
         <guid>http://0.0.0.0:1313/p/hello-world/</guid>
         <description>&lt;img src="http://0.0.0.0:1313/p/hello-world/belongil.png" alt="Featured image of post Hello World" /&gt;&lt;p&gt;Welcome to andrewriley.info&lt;/p&gt;

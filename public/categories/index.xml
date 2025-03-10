@@ -6,18 +6,10 @@
         <description>Recent content in Categories on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 09 Mar 2025 20:58:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Hugo</title>
-        <link>http://0.0.0.0:1313/categories/hugo/</link>
-        <pubDate>Sun, 09 Mar 2025 20:58:50 +1100</pubDate>
-        
-        <guid>http://0.0.0.0:1313/categories/hugo/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Mon, 10 Mar 2025 01:33:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>technology</title>
         <link>http://0.0.0.0:1313/categories/technology/</link>
-        <pubDate>Sun, 09 Mar 2025 20:58:50 +1100</pubDate>
+        <pubDate>Mon, 10 Mar 2025 01:33:50 +1100</pubDate>
         
         <guid>http://0.0.0.0:1313/categories/technology/</guid>
         <description>&lt;img src="http://0.0.0.0:1313/categories/technology/technology.png" alt="Featured image of post technology" /&gt;</description>
@@ -25,7 +17,7 @@
         <item>
         <title>home</title>
         <link>http://0.0.0.0:1313/categories/home/</link>
-        <pubDate>Thu, 09 Mar 2023 13:18:50 +1100</pubDate>
+        <pubDate>Sat, 08 Mar 2025 13:18:50 +1100</pubDate>
         
         <guid>http://0.0.0.0:1313/categories/home/</guid>
         <description>&lt;img src="http://0.0.0.0:1313/categories/home/build.png" alt="Featured image of post home" /&gt;</description>
@@ -33,10 +25,18 @@
         <item>
         <title>music</title>
         <link>http://0.0.0.0:1313/categories/music/</link>
-        <pubDate>Thu, 09 Mar 2023 13:18:50 +1100</pubDate>
+        <pubDate>Sat, 08 Mar 2025 13:18:50 +1100</pubDate>
         
         <guid>http://0.0.0.0:1313/categories/music/</guid>
         <description>&lt;img src="http://0.0.0.0:1313/categories/music/music.png" alt="Featured image of post music" /&gt;</description>
+        </item>
+        <item>
+        <title>leadership</title>
+        <link>http://0.0.0.0:1313/categories/leadership/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://0.0.0.0:1313/categories/leadership/</guid>
+        <description></description>
         </item>
         
     </channel>
