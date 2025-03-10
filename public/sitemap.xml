@@ -5,9 +5,6 @@
     <loc>http://0.0.0.0:1313/p/a-journey-with-hugo/</loc>
     <lastmod>2025-03-09T20:58:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/p/a-journey-with-lewis/</loc>
-    <lastmod>2025-03-09T20:58:50+11:00</lastmod>
-  </url><url>
     <loc>http://0.0.0.0:1313/p/hello-world/</loc>
     <lastmod>2023-03-09T13:18:50+11:00</lastmod>
   </url><url>
@@ -52,6 +49,8 @@
   </url><url>
     <loc>http://0.0.0.0:1313/page/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/p/</loc>
   </url><url>
     <loc>http://0.0.0.0:1313/search/</loc>
   </url>
