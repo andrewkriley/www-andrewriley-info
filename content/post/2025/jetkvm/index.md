@@ -12,6 +12,15 @@ categories:
 
 Checkout https://jetkvm.com/
 
+TLDR;
+
+- Powered by USB-C
+- Ethernet conenctivity 
+- Can connect via Serial or ATX power controls
+- USB-C provides keyboard, video, mouse and can mount a virtual disk e.g. an ISO file
+
+![](jetkvm14.png)
+![](jetkvm13.png)
 ![](jetkvm1.png)
 ![](jetkvm2.png)
 ![](jetkvm3.png)
