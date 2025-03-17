@@ -19,7 +19,7 @@ homepage  | [2025-03-17T19:48:52.418Z] error: Host validation failed for: X.X.X.
 
 Per the documentation at https://gethomepage.dev/installation/#homepage_allowed_hosts a change was introduced in v1.0 that now requires this environment variable to be set.
 
-HOMEPAGE_ALLOWED_HOSTS
+# HOMEPAGE_ALLOWED_HOSTS
 As of v1.0 there is one required environment variable to access homepage via a URL other than localhost, HOMEPAGE_ALLOWED_HOSTS. The setting helps prevent certain kinds of attacks when retrieving data from the homepage API proxy.
 
 The value is a comma-separated (no spaces) list of allowed hosts (sometimes with the port) that can host your homepage install. See the docker, kubernetes and source installation pages for more information about where / how to set the variable.
@@ -29,7 +29,13 @@ localhost:3000 and 127.0.0.1:3000 are always included, but you can add a domain 
 If you are seeing errors about host validation, check the homepage logs and ensure that the host exactly as output in the logs is in the HOMEPAGE_ALLOWED_HOSTS list.
 
 This can be disabled by setting HOMEPAGE_ALLOWED_HOSTS to * but this is not recommended.
+<br>
 
+How to fix 
+```docker
+      environment:
+        - HOMEPAGE_ALLOWED_HOSTS=*
+```
 
 
 
