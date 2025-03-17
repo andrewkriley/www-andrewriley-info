@@ -7,16 +7,27 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Thu, 13 Mar 2025 13:18:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Good practice for Cisco devices</title>
-        <link>http://0.0.0.0:1313/p/good-practice-for-cisco-devices/</link>
+        <title>A quick guide on copying IOS to a Cisco device</title>
+        <link>http://0.0.0.0:1313/p/a-quick-guide-on-copying-ios-to-a-cisco-device/</link>
         <pubDate>Thu, 13 Mar 2025 13:18:50 +1100</pubDate>
         
-        <guid>http://0.0.0.0:1313/p/good-practice-for-cisco-devices/</guid>
-        <description>&lt;img src="http://0.0.0.0:1313/belongil.png" alt="Featured image of post Good practice for Cisco devices" /&gt;&lt;p&gt;Here are some handy resources&lt;/p&gt;
+        <guid>http://0.0.0.0:1313/p/a-quick-guide-on-copying-ios-to-a-cisco-device/</guid>
+        <description>&lt;p&gt;Here are some handy resources&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/215450-copy-cisco-ios-images-from-pc-to-router.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/215450-copy-cisco-ios-images-from-pc-to-router.html&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Good password practice for Cisco devices</title>
+        <link>http://0.0.0.0:1313/p/good-password-practice-for-cisco-devices/</link>
+        <pubDate>Thu, 13 Mar 2025 13:18:50 +1100</pubDate>
+        
+        <guid>http://0.0.0.0:1313/p/good-password-practice-for-cisco-devices/</guid>
+        <description>&lt;p&gt;Here are some handy resources&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://community.cisco.com/t5/networking-knowledge-base/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://community.cisco.com/t5/networking-knowledge-base/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238&lt;/a&gt;&lt;/p&gt;
+    &gt;https://community.cisco.com/t5/networking-knowledge-base/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238&lt;/a&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://community.cisco.com/t5/networking-knowledge-base/configuring-type-6-passwords-in-ios-xe/ta-p/4438495&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;a class=&#34;link&#34; href=&#34;https://community.cisco.com/t5/networking-knowledge-base/configuring-type-6-passwords-in-ios-xe/ta-p/4438495&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://community.cisco.com/t5/networking-knowledge-base/configuring-type-6-passwords-in-ios-xe/ta-p/4438495&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
