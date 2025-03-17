@@ -1,15 +1,14 @@
 ---
 title: HOMEPAGE_ALLOWED_HOSTS env parameter
 description: What to do if you get a "denied access" to your homepage.dev 
-date: 2025-03-18T13:18:50+11:00
-image: homepage-denied
+date: 2025-03-18T00:00:01+11:00
+image: homepage-denied.png
 #weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 tags: 
-    - welcome
+    - homepage
+    - docker
 categories:
-    - music
     - technology
-    - home
 ---
 
 So you've landed here because your getting an error like this in your ```homepage.dev``` logs.

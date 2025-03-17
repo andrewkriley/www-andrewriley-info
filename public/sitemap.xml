@@ -3,15 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://0.0.0.0:1313/</loc>
-    <lastmod>2025-03-18T13:18:50+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/post/</loc>
-    <lastmod>2025-03-18T13:18:50+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/p/a-quick-guide-on-copying-ios-to-a-cisco-device/</loc>
-    <lastmod>2025-03-13T13:18:50+11:00</lastmod>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
   </url><url>
     <loc>http://0.0.0.0:1313/categories/</loc>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/tags/docker/</loc>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/tags/homepage/</loc>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/p/homepage_allowed_hosts-env-parameter/</loc>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/post/</loc>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/tags/</loc>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/categories/technology/</loc>
+    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
+  </url><url>
+    <loc>http://0.0.0.0:1313/p/a-quick-guide-on-copying-ios-to-a-cisco-device/</loc>
     <lastmod>2025-03-13T13:18:50+11:00</lastmod>
   </url><url>
     <loc>http://0.0.0.0:1313/tags/cisco/</loc>
@@ -23,20 +38,11 @@
     <loc>http://0.0.0.0:1313/tags/security/</loc>
     <lastmod>2025-03-13T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/</loc>
-    <lastmod>2025-03-13T13:18:50+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/categories/technology/</loc>
-    <lastmod>2025-03-13T13:18:50+11:00</lastmod>
-  </url><url>
     <loc>http://0.0.0.0:1313/tags/jetkvm/</loc>
     <lastmod>2025-03-11T00:18:50+11:00</lastmod>
   </url><url>
     <loc>http://0.0.0.0:1313/p/jetkvm-is-the-smallest-screen-youll-ever-use./</loc>
     <lastmod>2025-03-11T00:18:50+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/tags/docker/</loc>
-    <lastmod>2025-03-10T13:18:50+11:00</lastmod>
   </url><url>
     <loc>http://0.0.0.0:1313/tags/hugo/</loc>
     <lastmod>2025-03-10T13:18:50+11:00</lastmod>
