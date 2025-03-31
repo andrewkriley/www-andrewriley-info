@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Proxmox on Andrew Riley -  you can call me &#39;Riles&#39; </title>
-        <link>https://www.andrewriley.info/tags/proxmox/</link>
+        <link>http://localhost:1313/tags/proxmox/</link>
         <description>Recent content in Proxmox on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 25 Mar 2025 00:18:50 +1100</lastBuildDate><atom:link href="https://www.andrewriley.info/tags/proxmox/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Mar 2025 00:18:50 +1100</lastBuildDate><atom:link href="http://localhost:1313/tags/proxmox/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>NVIDIA GPU access inside a Proxmox LXC</title>
-        <link>https://www.andrewriley.info/p/nvidia-gpu-access-inside-a-proxmox-lxc/</link>
+        <link>http://localhost:1313/p/nvidia-gpu-access-inside-a-proxmox-lxc/</link>
         <pubDate>Tue, 25 Mar 2025 00:18:50 +1100</pubDate>
         
-        <guid>https://www.andrewriley.info/p/nvidia-gpu-access-inside-a-proxmox-lxc/</guid>
+        <guid>http://localhost:1313/p/nvidia-gpu-access-inside-a-proxmox-lxc/</guid>
         <description>&lt;h2 id=&#34;tldr&#34;&gt;TLDR;
 &lt;/h2&gt;&lt;p&gt;So you want to get your NVIDIA GPU working inside a LXC container on your proxmox host. I followed this guide from Digital Space port &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=lNGNRIJ708k&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.youtube.com/watch?v=lNGNRIJ708k&lt;/a&gt; ; &lt;a class=&#34;link&#34; href=&#34;https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
