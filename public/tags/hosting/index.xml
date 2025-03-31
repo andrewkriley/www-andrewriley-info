@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Hosting on Andrew Riley -  you can call me &#39;Riles&#39; </title>
-        <link>http://0.0.0.0:1313/tags/hosting/</link>
+        <link>https://www.andrewriley.info/tags/hosting/</link>
         <description>Recent content in Hosting on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 09 Mar 2025 20:58:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/tags/hosting/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Mar 2025 20:58:50 +1100</lastBuildDate><atom:link href="https://www.andrewriley.info/tags/hosting/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>A Journey with Hugo</title>
-        <link>http://0.0.0.0:1313/p/a-journey-with-hugo/</link>
+        <link>https://www.andrewriley.info/p/a-journey-with-hugo/</link>
         <pubDate>Sun, 09 Mar 2025 20:58:50 +1100</pubDate>
         
-        <guid>http://0.0.0.0:1313/p/a-journey-with-hugo/</guid>
-        <description>&lt;img src="http://0.0.0.0:1313/p/a-journey-with-hugo/hugo.png" alt="Featured image of post A Journey with Hugo" /&gt;&lt;h2 id=&#34;tldr&#34;&gt;TLDR;
+        <guid>https://www.andrewriley.info/p/a-journey-with-hugo/</guid>
+        <description>&lt;img src="https://www.andrewriley.info/p/a-journey-with-hugo/hugo.png" alt="Featured image of post A Journey with Hugo" /&gt;&lt;h2 id=&#34;tldr&#34;&gt;TLDR;
 &lt;/h2&gt;&lt;p&gt;What is Hugo &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://gohugo.io/&lt;/a&gt; - &amp;ldquo;The world’s fastest framework for building websites&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s the high level steps&lt;/p&gt;
@@ -120,10 +120,10 @@ Precompiled Binaries here &lt;br&gt;
 &lt;/div&gt;&lt;p&gt;Then create a new repository and push it to the main branch&lt;/p&gt;
 &lt;p&gt;Go to &lt;a class=&#34;link&#34; href=&#34;https://github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com&lt;/a&gt; and create a new repository &lt;code&gt;my-new-site&lt;/code&gt; if you are following along with this guide. Otherwise substitute for your own repository name.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://0.0.0.0:1313/p/a-journey-with-hugo/create-repo.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://www.andrewriley.info/p/a-journey-with-hugo/create-repo.png&#34;
 	width=&#34;902&#34;
 	height=&#34;1034&#34;
-	srcset=&#34;http://0.0.0.0:1313/p/a-journey-with-hugo/create-repo_hu_be1a5ded6ab898f7.png 480w, http://0.0.0.0:1313/p/a-journey-with-hugo/create-repo_hu_d35bc12153034156.png 1024w&#34;
+	srcset=&#34;https://www.andrewriley.info/p/a-journey-with-hugo/create-repo_hu_be1a5ded6ab898f7.png 480w, https://www.andrewriley.info/p/a-journey-with-hugo/create-repo_hu_d35bc12153034156.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -132,10 +132,10 @@ Precompiled Binaries here &lt;br&gt;
 		data-flex-basis=&#34;209px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://0.0.0.0:1313/p/a-journey-with-hugo/prep-repo.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://www.andrewriley.info/p/a-journey-with-hugo/prep-repo.png&#34;
 	width=&#34;1274&#34;
 	height=&#34;862&#34;
-	srcset=&#34;http://0.0.0.0:1313/p/a-journey-with-hugo/prep-repo_hu_4edc08fc3ed33e72.png 480w, http://0.0.0.0:1313/p/a-journey-with-hugo/prep-repo_hu_375eae983d78bad0.png 1024w&#34;
+	srcset=&#34;https://www.andrewriley.info/p/a-journey-with-hugo/prep-repo_hu_4edc08fc3ed33e72.png 480w, https://www.andrewriley.info/p/a-journey-with-hugo/prep-repo_hu_375eae983d78bad0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

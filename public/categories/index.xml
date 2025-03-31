@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Andrew Riley -  you can call me &#39;Riles&#39; </title>
-        <link>http://0.0.0.0:1313/categories/</link>
+        <link>https://www.andrewriley.info/categories/</link>
         <description>Recent content in Categories on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 18 Mar 2025 00:00:01 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Mar 2025 00:18:50 +1100</lastBuildDate><atom:link href="https://www.andrewriley.info/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>technology</title>
-        <link>http://0.0.0.0:1313/categories/technology/</link>
-        <pubDate>Tue, 18 Mar 2025 00:00:01 +1100</pubDate>
+        <link>https://www.andrewriley.info/categories/technology/</link>
+        <pubDate>Tue, 25 Mar 2025 00:18:50 +1100</pubDate>
         
-        <guid>http://0.0.0.0:1313/categories/technology/</guid>
-        <description>&lt;img src="http://0.0.0.0:1313/categories/technology/technology.png" alt="Featured image of post technology" /&gt;</description>
+        <guid>https://www.andrewriley.info/categories/technology/</guid>
+        <description>&lt;img src="https://www.andrewriley.info/categories/technology/technology.png" alt="Featured image of post technology" /&gt;</description>
         </item>
         <item>
         <title>home</title>
-        <link>http://0.0.0.0:1313/categories/home/</link>
+        <link>https://www.andrewriley.info/categories/home/</link>
         <pubDate>Sat, 08 Mar 2025 13:18:50 +1100</pubDate>
         
-        <guid>http://0.0.0.0:1313/categories/home/</guid>
-        <description>&lt;img src="http://0.0.0.0:1313/categories/home/build.png" alt="Featured image of post home" /&gt;</description>
+        <guid>https://www.andrewriley.info/categories/home/</guid>
+        <description>&lt;img src="https://www.andrewriley.info/categories/home/build.png" alt="Featured image of post home" /&gt;</description>
         </item>
         <item>
         <title>music</title>
-        <link>http://0.0.0.0:1313/categories/music/</link>
+        <link>https://www.andrewriley.info/categories/music/</link>
         <pubDate>Sat, 08 Mar 2025 13:18:50 +1100</pubDate>
         
-        <guid>http://0.0.0.0:1313/categories/music/</guid>
-        <description>&lt;img src="http://0.0.0.0:1313/categories/music/music.png" alt="Featured image of post music" /&gt;</description>
+        <guid>https://www.andrewriley.info/categories/music/</guid>
+        <description>&lt;img src="https://www.andrewriley.info/categories/music/music.png" alt="Featured image of post music" /&gt;</description>
         </item>
         <item>
         <title>leadership</title>
-        <link>http://0.0.0.0:1313/categories/leadership/</link>
+        <link>https://www.andrewriley.info/categories/leadership/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://0.0.0.0:1313/categories/leadership/</guid>
-        <description>&lt;img src="http://0.0.0.0:1313/categories/leadership/leadership.jpeg" alt="Featured image of post leadership" /&gt;</description>
+        <guid>https://www.andrewriley.info/categories/leadership/</guid>
+        <description>&lt;img src="https://www.andrewriley.info/categories/leadership/leadership.jpeg" alt="Featured image of post leadership" /&gt;</description>
         </item>
         
     </channel>

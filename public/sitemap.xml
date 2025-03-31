@@ -2,92 +2,104 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://0.0.0.0:1313/</loc>
+    <loc>https://www.andrewriley.info/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/categories/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/tags/gpu/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/tags/nvidia/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/p/nvidia-gpu-access-inside-a-proxmox-lxc/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/post/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/tags/proxmox/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/tags/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/categories/technology/</loc>
+    <lastmod>2025-03-25T00:18:50+11:00</lastmod>
+  </url><url>
+    <loc>https://www.andrewriley.info/tags/docker/</loc>
     <lastmod>2025-03-18T00:00:01+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/categories/</loc>
+    <loc>https://www.andrewriley.info/tags/homepage/</loc>
     <lastmod>2025-03-18T00:00:01+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/docker/</loc>
+    <loc>https://www.andrewriley.info/p/homepage_allowed_hosts-env-parameter/</loc>
     <lastmod>2025-03-18T00:00:01+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/homepage/</loc>
-    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/p/homepage_allowed_hosts-env-parameter/</loc>
-    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/post/</loc>
-    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/tags/</loc>
-    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/categories/technology/</loc>
-    <lastmod>2025-03-18T00:00:01+11:00</lastmod>
-  </url><url>
-    <loc>http://0.0.0.0:1313/p/a-quick-guide-on-copying-ios-to-a-cisco-device/</loc>
+    <loc>https://www.andrewriley.info/p/a-quick-guide-on-copying-ios-to-a-cisco-device/</loc>
     <lastmod>2025-03-13T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/cisco/</loc>
+    <loc>https://www.andrewriley.info/tags/cisco/</loc>
     <lastmod>2025-03-13T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/p/good-password-practice-for-cisco-devices/</loc>
+    <loc>https://www.andrewriley.info/p/good-password-practice-for-cisco-devices/</loc>
     <lastmod>2025-03-13T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/security/</loc>
+    <loc>https://www.andrewriley.info/tags/security/</loc>
     <lastmod>2025-03-13T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/jetkvm/</loc>
+    <loc>https://www.andrewriley.info/tags/jetkvm/</loc>
     <lastmod>2025-03-11T00:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/p/jetkvm-is-the-smallest-screen-youll-ever-use./</loc>
+    <loc>https://www.andrewriley.info/p/jetkvm-is-the-smallest-screen-youll-ever-use./</loc>
     <lastmod>2025-03-11T00:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/hugo/</loc>
+    <loc>https://www.andrewriley.info/tags/hugo/</loc>
     <lastmod>2025-03-10T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/p/hugo-dockerfile/</loc>
+    <loc>https://www.andrewriley.info/p/hugo-dockerfile/</loc>
     <lastmod>2025-03-10T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/djriles/</loc>
+    <loc>https://www.andrewriley.info/djriles/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/page/</loc>
+    <loc>https://www.andrewriley.info/page/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/p/nested-environment-variables-with-docker-compose-files/</loc>
+    <loc>https://www.andrewriley.info/p/nested-environment-variables-with-docker-compose-files/</loc>
     <lastmod>2025-03-10T01:33:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/p/a-journey-with-hugo/</loc>
+    <loc>https://www.andrewriley.info/p/a-journey-with-hugo/</loc>
     <lastmod>2025-03-09T20:58:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/cloudflare/</loc>
+    <loc>https://www.andrewriley.info/tags/cloudflare/</loc>
     <lastmod>2025-03-09T20:58:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/git/</loc>
+    <loc>https://www.andrewriley.info/tags/git/</loc>
     <lastmod>2025-03-09T20:58:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/hosting/</loc>
+    <loc>https://www.andrewriley.info/tags/hosting/</loc>
     <lastmod>2025-03-09T20:58:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/p/hello-world/</loc>
+    <loc>https://www.andrewriley.info/p/hello-world/</loc>
     <lastmod>2025-03-08T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/categories/home/</loc>
+    <loc>https://www.andrewriley.info/categories/home/</loc>
     <lastmod>2025-03-08T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/categories/music/</loc>
+    <loc>https://www.andrewriley.info/categories/music/</loc>
     <lastmod>2025-03-08T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/tags/welcome/</loc>
+    <loc>https://www.andrewriley.info/tags/welcome/</loc>
     <lastmod>2025-03-08T13:18:50+11:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/archives/</loc>
+    <loc>https://www.andrewriley.info/archives/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://0.0.0.0:1313/categories/leadership/</loc>
+    <loc>https://www.andrewriley.info/categories/leadership/</loc>
   </url><url>
-    <loc>http://0.0.0.0:1313/search/</loc>
+    <loc>https://www.andrewriley.info/search/</loc>
   </url>
 </urlset>

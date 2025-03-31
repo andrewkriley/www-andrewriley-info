@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Security on Andrew Riley -  you can call me &#39;Riles&#39; </title>
-        <link>http://0.0.0.0:1313/tags/security/</link>
+        <link>https://www.andrewriley.info/tags/security/</link>
         <description>Recent content in Security on Andrew Riley -  you can call me &#39;Riles&#39; </description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 13 Mar 2025 13:18:50 +1100</lastBuildDate><atom:link href="http://0.0.0.0:1313/tags/security/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 13:18:50 +1100</lastBuildDate><atom:link href="https://www.andrewriley.info/tags/security/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Good password practice for Cisco devices</title>
-        <link>http://0.0.0.0:1313/p/good-password-practice-for-cisco-devices/</link>
+        <link>https://www.andrewriley.info/p/good-password-practice-for-cisco-devices/</link>
         <pubDate>Thu, 13 Mar 2025 13:18:50 +1100</pubDate>
         
-        <guid>http://0.0.0.0:1313/p/good-password-practice-for-cisco-devices/</guid>
-        <description>&lt;p&gt;Here are some handy resources&lt;/p&gt;
+        <guid>https://www.andrewriley.info/p/good-password-practice-for-cisco-devices/</guid>
+        <description>&lt;p&gt;When you need a brush up on password types&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://community.cisco.com/t5/networking-knowledge-base/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://community.cisco.com/t5/networking-knowledge-base/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238&lt;/a&gt;
 &lt;br&gt;
