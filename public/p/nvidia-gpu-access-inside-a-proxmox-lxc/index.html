@@ -350,7 +350,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -389,7 +389,116 @@ I followed these guides from Digital Space port;<br>
 </ul>
 <p>Here&rsquo;s my steps from the above TLDR</p>
 <h2 id="base-proxmox-build-prep">Base Proxmox build prep
-</h2>
+</h2><ol>
+<li>
+<p>Follow guide here <a class="link" href="https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/"  target="_blank" rel="noopener"
+    >https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/</a></p>
+</li>
+<li>
+<p>Get NVIDIA drivers <a class="link" href="https://www.nvidia.com/en-us/drivers"  target="_blank" rel="noopener"
+    >https://www.nvidia.com/en-us/drivers</a></p>
+</li>
+<li>
+<p>Install driver</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://us.download.nvidia.com/XFree86/Linux-x86_64/570.133.07/NVIDIA-Linux-x86_
+</span></span><span class="line"><span class="cl">64-570.133.07.run
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Check</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -al /dev/nvidia*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@pve01:~# ls -al /dev/nvidia*
+</span></span><span class="line"><span class="cl">crw-rw-rw- <span class="m">1</span> root root 195,   <span class="m">0</span> Mar <span class="m">24</span> 05:38 /dev/nvidia0
+</span></span><span class="line"><span class="cl">crw-rw-rw- <span class="m">1</span> root root 195, <span class="m">255</span> Mar <span class="m">24</span> 05:38 /dev/nvidiactl
+</span></span><span class="line"><span class="cl">crw-rw-rw- <span class="m">1</span> root root 508,   <span class="m">0</span> Mar <span class="m">24</span> 05:38 /dev/nvidia-uvm
+</span></span><span class="line"><span class="cl">crw-rw-rw- <span class="m">1</span> root root 508,   <span class="m">1</span> Mar <span class="m">24</span> 05:38 /dev/nvidia-uvm-tools
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/dev/nvidia-caps:
+</span></span><span class="line"><span class="cl">total <span class="m">0</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">2</span> root root     <span class="m">80</span> Mar <span class="m">24</span> 05:38 .
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">21</span> root root   <span class="m">4700</span> Mar <span class="m">24</span> 05:38 ..
+</span></span><span class="line"><span class="cl">cr--------  <span class="m">1</span> root root 511, <span class="m">1</span> Mar <span class="m">24</span> 05:38 nvidia-cap1
+</span></span><span class="line"><span class="cl">cr--r--r--  <span class="m">1</span> root root 511, <span class="m">2</span> Mar <span class="m">24</span> 05:38 nvidia-cap2
+</span></span><span class="line"><span class="cl">root@pve01:~# 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><em><strong>UNFINISHED BELOW</strong></em><br></p></blockquote>
+<ol start="4">
+<li>Configure a container</li>
+</ol>
+<p>Start a container</p>
+<p>Terraform</p>
+<p>Append to LXC.conf file
+lxc.cgroup2.devices.allow: c 195:* rwm
+lxc.cgroup2.devices.allow: c 234:* rwm
+lxc.cgroup2.devices.allow: c 509:* rwm
+lxc.mount.entry: /dev/nvidia0 dev/nvidia0 none bind,optional,create=file
+lxc.mount.entry: /dev/nvidiactl dev/nvidiactl none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-modeset dev/nvidia-modeset none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-uvm dev/nvidia-uvm none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-caps/nvidia-cap1 dev/nvidia-caps/nvidia-cap1 none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-caps/nvidia-cap2 dev/nvidia-caps/nvidia-cap2 none bind,optional,create=file</p>
+<p>pct push 105 NVIDIA-Linux-x86_64-550.107.02.run /root/NVIDIA-Linux-x86_64-550.107.02.run</p>
+<p>Within container</p>
+<p>./NVIDIA-Linux-x86_64-550.107.02.run &ndash;no-kernel-modules</p>
+<p>apt install gpg curl
+curl -fsSL <a class="link" href="https://nvidia.github.io/libnvidia-container/gpgkey"  target="_blank" rel="noopener"
+    >https://nvidia.github.io/libnvidia-container/gpgkey</a> | gpg &ndash;dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg &amp;&amp; curl -s -L <a class="link" href="https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list"  target="_blank" rel="noopener"
+    >https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list</a> | sed &rsquo;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&rsquo; | tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+apt update
+apt install nvidia-container-toolkit</p>
+<p>nano /etc/nvidia-container-runtime/config.toml
+#no-cgroups = false
+to
+no-cgroups = true</p>
+<p>apt install ca-certificates
+apt update
+apt install ca-certificates
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL <a class="link" href="https://download.docker.com/linux/debian/gpg"  target="_blank" rel="noopener"
+    >https://download.docker.com/linux/debian/gpg</a> | gpg &ndash;dearmor -o /etc/apt/trusted.gpg.d/docker.gpg
+chmod a+r /etc/apt/trusted.gpg.d/docker.gpg
+echo &ldquo;deb [arch=$(dpkg &ndash;print-architecture) signed-by=/etc/apt/trusted.gpg.d/docker.gpg] <a class="link" href="https://download.docker.com/linux/debian"  target="_blank" rel="noopener"
+    >https://download.docker.com/linux/debian</a> bookworm stable&rdquo; | tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+apt update
+apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</p>
+<p>nvidia-ctk runtime configure &ndash;runtime=docker</p>
+
 </section>
 
 

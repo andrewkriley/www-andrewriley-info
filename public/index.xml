@@ -172,7 +172,116 @@ I followed these guides from Digital Space port;&lt;br&gt;
 &lt;/ul&gt;
 &lt;p&gt;Here&amp;rsquo;s my steps from the above TLDR&lt;/p&gt;
 &lt;h2 id=&#34;base-proxmox-build-prep&#34;&gt;Base Proxmox build prep
-&lt;/h2&gt;</description>
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Follow guide here &lt;a class=&#34;link&#34; href=&#34;https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Get NVIDIA drivers &lt;a class=&#34;link&#34; href=&#34;https://www.nvidia.com/en-us/drivers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nvidia.com/en-us/drivers&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install driver&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://us.download.nvidia.com/XFree86/Linux-x86_64/570.133.07/NVIDIA-Linux-x86_
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;64-570.133.07.run
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Check&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -al /dev/nvidia*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@pve01:~# ls -al /dev/nvidia*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crw-rw-rw- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root 195,   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 /dev/nvidia0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crw-rw-rw- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root 195, &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 /dev/nvidiactl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crw-rw-rw- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root 508,   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 /dev/nvidia-uvm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crw-rw-rw- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root 508,   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 /dev/nvidia-uvm-tools
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/dev/nvidia-caps:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x  &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; root root     &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; root root   &lt;span class=&#34;m&#34;&gt;4700&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 ..
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cr--------  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root 511, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 nvidia-cap1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cr--r--r--  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root 511, &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; 05:38 nvidia-cap2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root@pve01:~# 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;UNFINISHED BELOW&lt;/strong&gt;&lt;/em&gt;&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Configure a container&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Start a container&lt;/p&gt;
+&lt;p&gt;Terraform&lt;/p&gt;
+&lt;p&gt;Append to LXC.conf file
+lxc.cgroup2.devices.allow: c 195:* rwm
+lxc.cgroup2.devices.allow: c 234:* rwm
+lxc.cgroup2.devices.allow: c 509:* rwm
+lxc.mount.entry: /dev/nvidia0 dev/nvidia0 none bind,optional,create=file
+lxc.mount.entry: /dev/nvidiactl dev/nvidiactl none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-modeset dev/nvidia-modeset none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-uvm dev/nvidia-uvm none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-caps/nvidia-cap1 dev/nvidia-caps/nvidia-cap1 none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-caps/nvidia-cap2 dev/nvidia-caps/nvidia-cap2 none bind,optional,create=file&lt;/p&gt;
+&lt;p&gt;pct push 105 NVIDIA-Linux-x86_64-550.107.02.run /root/NVIDIA-Linux-x86_64-550.107.02.run&lt;/p&gt;
+&lt;p&gt;Within container&lt;/p&gt;
+&lt;p&gt;./NVIDIA-Linux-x86_64-550.107.02.run &amp;ndash;no-kernel-modules&lt;/p&gt;
+&lt;p&gt;apt install gpg curl
+curl -fsSL &lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/libnvidia-container/gpgkey&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nvidia.github.io/libnvidia-container/gpgkey&lt;/a&gt; | gpg &amp;ndash;dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg &amp;amp;&amp;amp; curl -s -L &lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list&lt;/a&gt; | sed &amp;rsquo;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&amp;rsquo; | tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+apt update
+apt install nvidia-container-toolkit&lt;/p&gt;
+&lt;p&gt;nano /etc/nvidia-container-runtime/config.toml
+#no-cgroups = false
+to
+no-cgroups = true&lt;/p&gt;
+&lt;p&gt;apt install ca-certificates
+apt update
+apt install ca-certificates
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL &lt;a class=&#34;link&#34; href=&#34;https://download.docker.com/linux/debian/gpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.docker.com/linux/debian/gpg&lt;/a&gt; | gpg &amp;ndash;dearmor -o /etc/apt/trusted.gpg.d/docker.gpg
+chmod a+r /etc/apt/trusted.gpg.d/docker.gpg
+echo &amp;ldquo;deb [arch=$(dpkg &amp;ndash;print-architecture) signed-by=/etc/apt/trusted.gpg.d/docker.gpg] &lt;a class=&#34;link&#34; href=&#34;https://download.docker.com/linux/debian&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.docker.com/linux/debian&lt;/a&gt; bookworm stable&amp;rdquo; | tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+apt update
+apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin&lt;/p&gt;
+&lt;p&gt;nvidia-ctk runtime configure &amp;ndash;runtime=docker&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>HOMEPAGE_ALLOWED_HOSTS env parameter</title>
