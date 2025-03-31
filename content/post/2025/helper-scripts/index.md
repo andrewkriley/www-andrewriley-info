@@ -5,11 +5,9 @@ date: 2025-04-01T00:18:54+11:00
 #image: belongil.png
 #weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 tags: 
-    - welcome
+    - proxmox
 categories:
-    - music
     - technology
-    - home
 ---
 
 ## Make managing your Homelab a breeze
