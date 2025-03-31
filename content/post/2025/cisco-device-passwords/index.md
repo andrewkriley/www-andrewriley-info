@@ -11,7 +11,7 @@ categories:
     - technology
 ---
 
-Here are some handy resources
+When you need a brush up on password types
 
 https://community.cisco.com/t5/networking-knowledge-base/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238
 <br>
