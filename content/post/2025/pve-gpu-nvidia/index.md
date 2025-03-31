@@ -1,7 +1,7 @@
 ---
 title: NVIDIA GPU access inside a Proxmox LXC
 description: Getting your NVIDIA GPU working in Proxmox and shared within an LXC.
-date: 2025-03-25T00:18:50+11:00
+date: 2025-04-01T00:18:51+11:00
 image: nvidia.png
 #weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 tags: 
@@ -32,6 +32,7 @@ https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/
 - *optional* you might need to use the "nvidia-persistenced" platform.  <br>https://gist.github.com/ngoc-minh-do/fcf0a01564ece8be3990d774386b5d0c#enable-persistence-mode
 
 
+Here's my steps from the above TLDR
 
+## Base Proxmox build prep
 
-##

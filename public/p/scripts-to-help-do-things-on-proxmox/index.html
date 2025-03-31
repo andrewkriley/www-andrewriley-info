@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="My summary of the options for using NFS and a GPU on Proxmox">
-<title>GPU&#39;s and NFS on Proxmox</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Make managing your Homelab a breeze">
+<title>Scripts to help do things on Proxmox</title>
 
-<link rel='canonical' href='http://localhost:1313/p/gpus-and-nfs-on-proxmox/'>
+<link rel='canonical' href='http://localhost:1313/p/scripts-to-help-do-things-on-proxmox/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="GPU's and NFS on Proxmox">
-<meta property='og:description' content="My summary of the options for using NFS and a GPU on Proxmox">
-<meta property='og:url' content='http://localhost:1313/p/gpus-and-nfs-on-proxmox/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Scripts to help do things on Proxmox">
+<meta property='og:description' content="Make managing your Homelab a breeze">
+<meta property='og:url' content='http://localhost:1313/p/scripts-to-help-do-things-on-proxmox/'>
 <meta property='og:site_name' content='Andrew Riley -  you can call me &#39;Riles&#39; '>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='proxmox' /><meta property='article:tag' content='nfs' /><meta property='article:tag' content='gpu' /><meta property='article:published_time' content='2025-04-01T00:18:52&#43;11:00'/><meta property='article:modified_time' content='2025-04-01T00:18:52&#43;11:00'/>
-<meta name="twitter:title" content="GPU's and NFS on Proxmox">
-<meta name="twitter:description" content="My summary of the options for using NFS and a GPU on Proxmox">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='welcome' /><meta property='article:published_time' content='2025-04-01T00:18:54&#43;11:00'/><meta property='article:modified_time' content='2025-04-01T00:18:54&#43;11:00'/>
+<meta name="twitter:title" content="Scripts to help do things on Proxmox">
+<meta name="twitter:description" content="Make managing your Homelab a breeze">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -267,9 +267,8 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#proxmox-lxc">Proxmox LXC</a></li>
-    <li><a href="#proxmox-vm">Proxmox VM</a></li>
-    <li><a href="#baremetal">Baremetal</a></li>
+    <li><a href="#make-managing-your-homelab-a-breeze">Make managing your Homelab a breeze</a></li>
+    <li><a href="#post-install-scripts">Post install scripts</a></li>
   </ol>
 </nav>
         </div>
@@ -288,8 +287,16 @@
     
     <header class="article-category">
         
+            <a href="/categories/music/" >
+                music
+            </a>
+        
             <a href="/categories/technology/" >
                 technology
+            </a>
+        
+            <a href="/categories/home/" >
+                home
             </a>
         
     </header>
@@ -297,12 +304,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/gpus-and-nfs-on-proxmox/">GPU&#39;s and NFS on Proxmox</a>
+            <a href="/p/scripts-to-help-do-things-on-proxmox/">Scripts to help do things on Proxmox</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            My summary of the options for using NFS and a GPU on Proxmox
+            Make managing your Homelab a breeze
         </h3>
         
     </div>
@@ -353,37 +360,26 @@
     <section class="article-content">
     
     
-    <h2 id="proxmox-lxc">Proxmox LXC
-</h2><ul>
-<li>Can&rsquo;t mount NFS inside an unpriviledged containers natively and make available to docker.</li>
-<li>Can mount NFS inside an unpriviledged LXC using a proxmox bind mount and make available to docker.</li>
-<li>Can mount NFS inside an priviledged LXC using &lsquo;mount&rsquo;, requires some apparmor tweaking. (lower security)</li>
-<li>Can share GPU resources from proxmox host to LXC containers using cgroup2 permissions</li>
-</ul>
-<h2 id="proxmox-vm">Proxmox VM
-</h2><ul>
-<li>Can mount NFS inside a VM and make available to docker</li>
-<li>Limitations on sharing GPU into a VM
-<ul>
-<li>considerations for PCIe passthrough (IOUMM)</li>
-<li>can share 1 GPU to multiple VM&rsquo;s (??) / can&rsquo;t share 1 GPU to multiple VM&rsquo;s (??)
-- could explore serial based display for proxmox and leave GPU available to the VM. PCIe passthrough</li>
-<li>does this work if there is a single GPU for sharing + for the proxmox host or do you need min 2 GPU&rsquo;s (host + sharing) (??)</li>
-</ul>
-</li>
-<li>vGPU&rsquo;s that enable sharing to multiple VMs (PICe) need a proxmox and nvidia subscription.</li>
-</ul>
-<h2 id="baremetal">Baremetal
-</h2><ul>
-<li>Run your Linux OS (desktop mode for easy use for virt-manager)</li>
-<li>Docker has access to the GPU</li>
-<li>Docker can mount NFS shares</li>
-<li>Use virt-manager or similar to manager KVM/QEMU/Libvirtd</li>
-<li>Best of both worlds</li>
-<li>No web GUI, consider <a class="link" href="https://www.linux-kvm.org/page/Management_Tools"  target="_blank" rel="noopener"
-    >https://www.linux-kvm.org/page/Management_Tools</a></li>
-</ul>
-
+    <h2 id="make-managing-your-homelab-a-breeze">Make managing your Homelab a breeze
+</h2><p>We are a community-driven initiative that simplifies the setup of Proxmox Virtual Environment (VE).</p>
+<p>With 300+ scripts to help you manage your Proxmox VE environment. Whether you&rsquo;re a seasoned user or a newcomer, we&rsquo;ve got you covered</p>
+<p><a class="link" href="https://community-scripts.github.io/ProxmoxVE/"  target="_blank" rel="noopener"
+    >https://community-scripts.github.io/ProxmoxVE/</a></p>
+<h2 id="post-install-scripts">Post install scripts
+</h2><p>Helper scripts<br>
+<a class="link" href="https://community-scripts.github.io/ProxmoxVE/scripts?id=all-templates"  target="_blank" rel="noopener"
+    >https://community-scripts.github.io/ProxmoxVE/scripts?id=all-templates</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash -c <span class="s2">&#34;</span><span class="k">$(</span>wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/main/misc/post-pve-install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">bash -c <span class="s2">&#34;</span><span class="k">$(</span>wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/main/misc/kernel-clean.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -391,11 +387,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/proxmox/">Proxmox</a>
-        
-            <a href="/tags/nfs/">Nfs</a>
-        
-            <a href="/tags/gpu/">Gpu</a>
+            <a href="/tags/welcome/">Welcome</a>
         
     </section>
 
@@ -429,23 +421,23 @@
             
                 
 <article class="has-image">
-    <a href="/p/nvidia-gpu-access-inside-a-proxmox-lxc/">
+    <a href="/p/hello-world/">
         
         
             <div class="article-image">
-                <img src="/p/nvidia-gpu-access-inside-a-proxmox-lxc/nvidia.8755ed4ad02864836e20f5069ecc119c.8755ed4ad02864836e20f5069ecc119c_hu_79e997e60f3e096e.png" 
+                <img src="/p/hello-world/belongil.6a3ed32a3f574f8df8518c8d7e4294cf_hu_3e54595109626610.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
-                        alt="Featured image of post NVIDIA GPU access inside a Proxmox LXC"
+                        alt="Featured image of post Hello World"
                         
-                        data-hash="md5-h1XtStAoZINuIPUGnswRnA==">
+                        data-hash="md5-aj7TKj9XT434UYyNfkKUzw==">
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">NVIDIA GPU access inside a Proxmox LXC</h2>
+            <h2 class="article-title">Hello World</h2>
         </div>
     </a>
 </article>
@@ -466,12 +458,36 @@
             
                 
 <article class="">
-    <a href="/p/scripts-to-help-do-things-on-proxmox/">
+    <a href="/p/gpus-and-nfs-on-proxmox/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Scripts to help do things on Proxmox</h2>
+            <h2 class="article-title">GPU&#39;s and NFS on Proxmox</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nvidia-gpu-access-inside-a-proxmox-lxc/">
+        
+        
+            <div class="article-image">
+                <img src="/p/nvidia-gpu-access-inside-a-proxmox-lxc/nvidia.8755ed4ad02864836e20f5069ecc119c_hu_79e997e60f3e096e.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post NVIDIA GPU access inside a Proxmox LXC"
+                        
+                        data-hash="md5-h1XtStAoZINuIPUGnswRnA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NVIDIA GPU access inside a Proxmox LXC</h2>
         </div>
     </a>
 </article>
@@ -496,19 +512,6 @@
 
         <div class="article-details">
             <h2 class="article-title">HOMEPAGE_ALLOWED_HOSTS env parameter</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/a-quick-guide-on-copying-ios-to-a-cisco-device/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">A quick guide on copying IOS to a Cisco device</h2>
         </div>
     </a>
 </article>

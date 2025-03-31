@@ -1,7 +1,7 @@
 ---
 title: GPU's and NFS on Proxmox
 description: My summary of the options for using NFS and a GPU on Proxmox
-date: 2025-04-01T00:18:50+11:00
+date: 2025-04-01T00:18:52+11:00
 #image: belongil.png
 #weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 tags: 
