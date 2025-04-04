@@ -30,7 +30,7 @@ https://digitalspaceport.com/proxmox-lxc-gpu-passthru-setup-guide/
 - configure the NVIDIA-ctk runtime for Docker
 - Reboot and check everything works. 
 - *optional* you might need to use the "nvidia-persistenced" platform.  <br>https://gist.github.com/ngoc-minh-do/fcf0a01564ece8be3990d774386b5d0c#enable-persistence-mode
-
+- Troubleshooting - https://medium.com/@PlanB./troubleshooting-gpu-passthrough-in-proxmox-common-pitfalls-and-fixes-9124c0182524
 
 Here's my steps from the above TLDR
 
