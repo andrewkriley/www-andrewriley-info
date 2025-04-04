@@ -16,8 +16,9 @@ categories:
 If you get this keyring error when running ```apt update```
 
 
-W: https://packages.cloud.google.com/apt/dists/coral-edgetpu-stable/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+***W: https://packages.cloud.google.com/apt/dists/coral-edgetpu-stable/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.***
 
+Then try this to resolve.
 
 ## root user (e.g on Proxmox)
 ```bash
