@@ -13,19 +13,9 @@ categories:
 
 ## Key is stored in legacy trusted.gpg keyring
 
-If you get this keyring error see below for a fix
+If you get this keyring error when running ```apt update```
 
 ```
-root@pve01:/etc/apt/sources.list.d# apt update
-Hit:1 http://deb.debian.org/debian bookworm InRelease
-Hit:2 http://security.debian.org/debian-security bookworm-security InRelease
-Hit:3 http://deb.debian.org/debian bookworm-updates InRelease                                          
-Hit:4 http://download.proxmox.com/debian/pve bookworm InRelease                                        
-Hit:5 https://packages.cloud.google.com/apt coral-edgetpu-stable InRelease  
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-40 packages can be upgraded. Run 'apt list --upgradable' to see them.
 W: https://packages.cloud.google.com/apt/dists/coral-edgetpu-stable/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
 ```
 
