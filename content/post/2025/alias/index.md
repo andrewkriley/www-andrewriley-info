@@ -13,7 +13,7 @@ categories:
 
 ## Add the following to your ~/.bashrc
 
-***NOTE*** ```.bashrc``` is located in the root of your homw directory. 
+***NOTE*** ```.bashrc``` is located in the root of your home directory. 
 
 ```bash
 #AR alias
