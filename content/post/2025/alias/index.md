@@ -1,7 +1,7 @@
 ---
 title: Handy Docker alias command example
 description: Shortcut your typing and speed up your deployments.
-date: 2025-04-05T01:51+11:00
+date: 2025-04-05T00:51+11:00
 #image: belongil.png
 #weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 tags: 
