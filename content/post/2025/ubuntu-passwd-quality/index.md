@@ -10,7 +10,7 @@ categories:
     - technology
 ---
 
-# Making strong Ubuntu password policies requires setting good password complexity controls
+## Making strong Ubuntu password policies requires setting good password complexity controls
 
 Inspired by https://www.server-world.info/en/note?os=Ubuntu_22.04&p=pam&f=1
 
@@ -26,12 +26,12 @@ PASS_MIN_DAYS	1
 PASS_WARN_AGE	7
 ```
 
-## /etc/pam.d/common-password
+## Edit /etc/pam.d/common-password
 ```
 password	requisite			pam_pwquality.so retry=3 remember=5
 ```
 
-## /etc/security/pwquality.conf
+## Edit /etc/security/pwquality.conf
 ```
 difok = 5
 minlen = 8
