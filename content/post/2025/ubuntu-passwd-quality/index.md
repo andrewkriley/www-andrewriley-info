@@ -47,6 +47,6 @@ usercheck = 1
 usersubstr = 1
 enforcing = 1
 enforce_for_root
-badwords = cisco123
+badwords = simplepassword
 ```
 
