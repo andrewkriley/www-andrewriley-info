@@ -43,6 +43,7 @@ minclass = 2
 maxrepeat = 2
 maxclassrepeat = 4
 gecoscheck = 1
+dictcheck = 1
 usercheck = 1
 usersubstr = 1
 enforcing = 1
