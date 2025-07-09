@@ -15,6 +15,14 @@ url = "/djriles"
 icon = "infinity"
 #newtab = true
 
+[[main]]
+identifier = "letscollaborate"
+name = "Let's Collaborate"
+url = "/letscollaborate"
+[main.params]
+icon = "infinity"
+#newtab = true
+
 [[social]]
 identifier = "github"
 name = "GitHub"
