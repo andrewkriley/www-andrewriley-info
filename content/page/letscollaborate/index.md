@@ -11,6 +11,6 @@ I like to discover a myriad of ways to approach a challenge, and I have the ener
 
 If you think I could make a difference to your organisation or project please get in touch.
 
-[here's a link to my CV](andrew_riley_CV_july_2025_1page.pdf)
+[Here's a link to my CV with more details](andrew_riley_CV_july_2025_1page.pdf)
 
 
