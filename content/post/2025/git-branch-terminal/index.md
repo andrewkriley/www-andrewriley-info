@@ -1,7 +1,7 @@
 ---
-title: Coral USB "Key is stored in legacy trusted.gpg keyring"
-description: Fix your trusted keyring for the Coral USB device
-date: 2025-04-05T00:18:50+11:00
+title: Get that nice Git branch displayed in your terminal
+description: Add the following to get the active Git branch displayed in your terminal.
+date: 2025-08-29T00:18:50+11:00
 #image: belongil.png
 #weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 tags: 
@@ -12,7 +12,7 @@ categories:
     - technology
 ---
 
-## Key is stored in legacy trusted.gpg keyring
+## Get that nice Git branch displayed in your terminal
 
 Add the following to get the active Git branch displayed in your terminal.
 
