@@ -1,7 +1,7 @@
 ---
 title: Improving the Claude New Post Skill with a Dev Branch Workflow
 description: How I updated my Claude Code skill for creating Hugo blog posts to commit to a dev branch first, validate the live URL, and confirm before merging to main.
-date: 2026-03-02T20:00:00+11:00
+date: 2026-03-02T08:00:00+11:00
 tags:
     - claude
     - hugo
