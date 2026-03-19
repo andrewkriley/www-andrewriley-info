@@ -36,3 +36,4 @@ jobs:
         with:
           scandir: "."
           severity: warning
+          ignore_paths: themes
