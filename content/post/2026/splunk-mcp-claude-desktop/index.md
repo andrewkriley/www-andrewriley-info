@@ -2,7 +2,7 @@
 title: Connecting Splunk to Claude — Token Auth, Self-Signed Certs, and the Desktop Gap
 description: How to wire up the Splunk MCP server to both Claude Code and Claude Desktop in a homelab using token-based auth and mcp-remote as a TLS proxy.
 slug: splunk-mcp-claude-desktop
-date: 2026-03-22T19:27:53Z
+date: 2026-03-22T18:27:53Z
 tags:
     - splunk
     - claude
