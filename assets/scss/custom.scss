@@ -1,0 +1,339 @@
+/*
+ * Site design layer — extends hugo-theme-stack with a modern, readable look.
+ * Static CSS only; safe for Cloudflare Pages (no build beyond Hugo).
+ */
+
+/* --------------------------------------------------------------------------
+   Design tokens (light / dark)
+   -------------------------------------------------------------------------- */
+:root {
+    --brand-hue: 258;
+    --brand-sat: 62%;
+    --brand-primary: #{unquote("hsl(var(--brand-hue) var(--brand-sat) 52%)")};
+    --brand-primary-soft: #{unquote("hsl(var(--brand-hue) 45% 94%)")};
+    --brand-glow: #{unquote("hsla(var(--brand-hue) 70% 55% / 0.12)")};
+
+    --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    --font-serif: "Source Serif 4", "Georgia", "Times New Roman", serif;
+
+    --body-background: #f4f2fb;
+    --body-text-color: #4a4a5c;
+
+    --accent-color: #{unquote("hsl(var(--brand-hue) var(--brand-sat) 48%)")};
+    --accent-color-darker: #{unquote("hsl(var(--brand-hue) var(--brand-sat) 38%)")};
+    --accent-color-text: #fff;
+
+    --card-background: rgba(255, 255, 255, 0.82);
+    --card-background-selected: rgba(255, 255, 255, 0.95);
+    --card-text-color-main: #1a1a24;
+    --card-text-color-secondary: #5c5c6e;
+    --card-text-color-tertiary: #7a7a8c;
+    --card-separator-color: rgba(80, 70, 120, 0.1);
+
+    --card-border-radius: 14px;
+    --section-separation: 48px;
+
+    --shadow-l1: 0 2px 8px rgba(40, 35, 80, 0.06), 0 12px 40px rgba(50, 40, 100, 0.08);
+    --shadow-l2: 0 8px 24px rgba(40, 35, 80, 0.1), 0 20px 50px rgba(60, 45, 120, 0.12);
+    --shadow-l3: var(--shadow-l2);
+
+    --link-background-color: 120, 100, 200;
+    --link-background-opacity: 0.22;
+    --link-background-opacity-hover: 0.38;
+}
+
+:root[data-scheme="dark"] {
+    --body-background: #14141a;
+    --body-text-color: rgba(255, 255, 255, 0.72);
+
+    --accent-color: hsl(258, 55%, 72%);
+    --accent-color-darker: hsl(258, 50%, 82%);
+    --accent-color-text: #0e0e12;
+
+    --brand-primary-soft: hsl(258, 22%, 22%);
+    --brand-glow: hsla(258, 60%, 60%, 0.15);
+
+    --card-background: rgba(36, 34, 48, 0.88);
+    --card-background-selected: rgba(44, 42, 58, 0.95);
+    --card-text-color-main: rgba(255, 255, 255, 0.94);
+    --card-text-color-secondary: rgba(255, 255, 255, 0.75);
+    --card-text-color-tertiary: rgba(255, 255, 255, 0.52);
+    --card-separator-color: rgba(255, 255, 255, 0.08);
+
+    --shadow-l1: 0 4px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    --shadow-l2: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+    --link-background-color: 180, 160, 255;
+    --link-background-opacity: 0.2;
+    --link-background-opacity-hover: 0.35;
+}
+
+/* Typography */
+:root {
+    --base-font-family: var(--font-sans);
+    --article-font-family: var(--font-serif);
+    --article-font-size: 1.65rem;
+    --article-line-height: 1.78;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --article-font-size: 1.75rem;
+    }
+}
+
+/* Page backdrop */
+body {
+    position: relative;
+    background-color: var(--body-background);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 120% 80% at 0% -10%, var(--brand-glow), transparent 55%),
+        radial-gradient(ellipse 100% 60% at 100% 0%, hsla(200, 70%, 60%, 0.08), transparent 50%),
+        radial-gradient(ellipse 80% 50% at 50% 100%, hsla(280, 50%, 60%, 0.06), transparent 45%);
+}
+
+:root[data-scheme="dark"] body::before {
+    background:
+        radial-gradient(ellipse 100% 70% at 10% 0%, var(--brand-glow), transparent 50%),
+        radial-gradient(ellipse 80% 50% at 100% 20%, hsla(200, 60%, 50%, 0.12), transparent 45%);
+}
+
+/* Main column polish */
+main.main {
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    main.main {
+        padding-bottom: 3rem;
+    }
+}
+
+/* Section titles */
+.section-title {
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    color: var(--card-text-color-secondary);
+}
+
+/* Cards: glass + hover lift */
+.section-card,
+.widget,
+.article-list--compact,
+.article-page .main-article {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(120, 100, 200, 0.08);
+    box-shadow: var(--shadow-l1);
+    transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+
+:root[data-scheme="dark"] .section-card,
+:root[data-scheme="dark"] .widget,
+:root[data-scheme="dark"] .article-list--compact,
+:root[data-scheme="dark"] .article-page .main-article {
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.section-card:hover,
+.widget:hover {
+    box-shadow: var(--shadow-l2);
+    transform: translateY(-2px);
+    border-color: rgba(120, 100, 200, 0.14);
+}
+
+/* Post list rows */
+.article-list--compact article > a {
+    transition: background-color 0.25s ease, transform 0.25s ease;
+    border-radius: calc(var(--card-border-radius) - 4px);
+    margin: 4px 8px;
+    width: calc(100% - 16px);
+}
+
+@media (min-width: 768px) {
+    .article-list--compact article > a {
+        margin: 6px 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+.article-list--compact article > a:hover {
+    background-color: var(--brand-primary-soft);
+    transform: translateX(4px);
+}
+
+.article-list--compact article .article-title {
+    font-weight: 600;
+    color: var(--card-text-color-main);
+    transition: color 0.2s ease;
+}
+
+.article-list--compact article > a:hover .article-title {
+    color: var(--accent-color);
+}
+
+:root[data-scheme="dark"] .article-list--compact article > a:hover {
+    background-color: var(--brand-primary-soft);
+}
+
+.article-list--compact article .article-image img {
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Tile grid (subsections) */
+.article-list--tile article {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.article-list--tile article:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-l2);
+}
+
+/* Single post shell */
+.article-page .main-article .article-header .article-details .article-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.article-page .main-article .article-content {
+    font-family: var(--article-font-family);
+}
+
+.article-page .main-article .article-content a {
+    font-weight: 500;
+}
+
+/* Sidebar */
+.left-sidebar .site-avatar .site-logo {
+    border-radius: 20%;
+    box-shadow: 0 8px 28px rgba(80, 60, 160, 0.2);
+    outline: 2px solid rgba(255, 255, 255, 0.35);
+    outline-offset: 3px;
+    transition: transform 0.4s cubic-bezier(0.34, 1.4, 0.64, 1), box-shadow 0.35s ease;
+}
+
+.left-sidebar .site-avatar a:hover .site-logo {
+    transform: scale(1.04);
+    box-shadow: 0 12px 36px rgba(80, 60, 160, 0.28);
+}
+
+.left-sidebar .site-name a {
+    background-image: linear-gradient(120deg, var(--accent-color), hsl(280, 55%, 55%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: opacity 0.2s ease;
+}
+
+.left-sidebar .site-name a:hover {
+    opacity: 0.88;
+}
+
+:root[data-scheme="dark"] .left-sidebar .site-name a {
+    background-image: linear-gradient(120deg, hsl(258, 60%, 78%), hsl(285, 50%, 72%));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.menu a {
+    border-radius: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.menu li.current a,
+.menu a:hover {
+    background-color: var(--brand-primary-soft);
+}
+
+.menu a:active {
+    transform: scale(0.98);
+}
+
+.menu-social a {
+    border-radius: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.25s ease;
+}
+
+.menu-social a:hover {
+    background-color: var(--brand-primary-soft);
+    transform: translateY(-2px);
+}
+
+/* Pagination */
+.pagination {
+    gap: 0.5rem;
+}
+
+.pagination a,
+.pagination span {
+    border-radius: 10px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pagination a:hover {
+    transform: translateY(-1px);
+}
+
+/* Tags / categories */
+.article-category a,
+.article-tags a {
+    border-radius: 999px;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-category a:hover,
+.article-tags a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(80, 60, 160, 0.2);
+}
+
+/* Scroll-driven reveal (class toggled via footer script) */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .section-card:hover,
+    .widget:hover,
+    .article-list--tile article:hover,
+    .left-sidebar .site-avatar a:hover .site-logo,
+    .menu a:active {
+        transform: none;
+    }
+
+    .article-list--compact article > a {
+        transition: background-color 0.2s ease;
+    }
+
+    .article-list--compact article > a:hover {
+        transform: none;
+    }
+}
