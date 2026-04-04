@@ -83,6 +83,11 @@ function migratePost(file) {
   });
   const out = matter.stringify(body, frontmatter);
   fs.mkdirSync(OUT_POSTS, { recursive: true });
+  const mdxPath = path.join(OUT_POSTS, `${slug}.mdx`);
+  if (fs.existsSync(mdxPath)) {
+    console.log("post: skip (mdx exists):", slug);
+    return;
+  }
   fs.writeFileSync(path.join(OUT_POSTS, `${slug}.md`), out, "utf8");
   console.log("post:", slug);
 }
@@ -135,8 +140,15 @@ function copyCategoryAssets() {
 }
 
 cleanPublicRoot();
-fs.rmSync(OUT_POSTS, { recursive: true, force: true });
-fs.rmSync(OUT_PAGES, { recursive: true, force: true });
+/** Only remove migrated `.md` files so hand-authored `.mdx` posts survive `npm run migrate`. */
+function clearMarkdownOnly(dir) {
+  if (!fs.existsSync(dir)) return;
+  for (const name of fs.readdirSync(dir)) {
+    if (name.endsWith(".md")) fs.unlinkSync(path.join(dir, name));
+  }
+}
+clearMarkdownOnly(OUT_POSTS);
+clearMarkdownOnly(OUT_PAGES);
 
 for (const f of walkPostIndexFiles(ROOT)) {
   migratePost(f);

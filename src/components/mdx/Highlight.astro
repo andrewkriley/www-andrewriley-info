@@ -1,0 +1,18 @@
+---
+---
+
+<span class="hl"><slot /></span>
+
+<style>
+  .hl {
+    padding: 0.08em 0.28em;
+    border-radius: 0.35em;
+    background: linear-gradient(
+      120deg,
+      color-mix(in srgb, var(--accent, hsl(258, 52%, 48%)) 22%, transparent),
+      color-mix(in srgb, var(--accent-2, hsl(280, 45%, 52%)) 18%, transparent)
+    );
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+</style>

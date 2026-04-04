@@ -1,0 +1,15 @@
+---
+---
+
+import Chip from "@/components/mdx/Chip.astro";
+import Highlight from "@/components/mdx/Highlight.astro";
+import RandomQuote from "@/components/interactive/RandomQuote.tsx";
+
+This stack is **Astro + MDX**: long-form posts stay readable Markdown, and MDX lets you drop in{" "}
+<Highlight>components</Highlight> anywhere. Tags like <Chip>homelab</Chip>
+<Chip tone="teal">music</Chip>
+<Chip tone="amber">tech</Chip> are plain Astro components imported from MDX — not hand-written HTML.
+
+Below is a tiny **Preact island** (`client:load`) so you can see real client-side interactivity on an otherwise static Cloudflare Pages deploy.
+
+<RandomQuote client:load />

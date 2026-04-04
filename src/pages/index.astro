@@ -1,6 +1,11 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getEntry } from "astro:content";
 import { getPublishedPosts, postUrl } from "@/utils/posts";
+
+const intro = await getEntry("fragments", "home-intro");
+if (!intro) throw new Error("Missing src/content/fragments/home-intro.mdx");
+const { Content: HomeIntro } = await intro.render();
 
 const posts = await getPublishedPosts();
 const recent = posts.slice(0, 8);
@@ -27,6 +32,10 @@ const categories = ["technology", "home", "music"];
       <p class="hero__desc">
         Building, creating, leading: my portfolio of tech, home, and music.
       </p>
+    </section>
+
+    <section class="card mdx-intro prose" aria-label="About this site">
+      <HomeIntro />
     </section>
 
     <div class="grid">
@@ -115,6 +124,15 @@ const categories = ["technology", "home", "music"];
     margin: 1rem 0 0;
     color: var(--text-muted);
     max-width: 36rem;
+  }
+
+  .mdx-intro {
+    padding: 1.35rem 1.5rem 1.6rem;
+    max-width: 100%;
+  }
+
+  .mdx-intro :global(p:last-child) {
+    margin-bottom: 0;
   }
 
   .grid {

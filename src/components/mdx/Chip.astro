@@ -1,0 +1,54 @@
+---
+interface Props {
+  tone?: "violet" | "teal" | "amber";
+}
+const { tone = "violet" } = Astro.props;
+---
+
+<span class:list={["chip", `chip--${tone}`]}>
+  <slot />
+</span>
+
+<style>
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: var(--font-sans, system-ui, sans-serif);
+    letter-spacing: 0.02em;
+  }
+
+  .chip--violet {
+    background: color-mix(in srgb, hsl(258, 55%, 50%) 18%, transparent);
+    color: hsl(258, 45%, 35%);
+  }
+
+  :global([data-theme="dark"]) .chip--violet {
+    background: color-mix(in srgb, hsl(258, 65%, 70%) 22%, transparent);
+    color: hsl(258, 40%, 92%);
+  }
+
+  .chip--teal {
+    background: color-mix(in srgb, hsl(175, 55%, 40%) 18%, transparent);
+    color: hsl(175, 45%, 28%);
+  }
+
+  :global([data-theme="dark"]) .chip--teal {
+    background: color-mix(in srgb, hsl(175, 50%, 55%) 22%, transparent);
+    color: hsl(175, 40%, 92%);
+  }
+
+  .chip--amber {
+    background: color-mix(in srgb, hsl(38, 90%, 48%) 16%, transparent);
+    color: hsl(28, 55%, 28%);
+  }
+
+  :global([data-theme="dark"]) .chip--amber {
+    background: color-mix(in srgb, hsl(38, 85%, 55%) 18%, transparent);
+    color: hsl(38, 90%, 92%);
+  }
+</style>

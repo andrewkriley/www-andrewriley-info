@@ -22,4 +22,10 @@ const sitePages = defineCollection({
   }),
 });
 
-export const collections = { posts, sitePages };
+/** Short MDX blocks embedded in pages (e.g. homepage intro). */
+const fragments = defineCollection({
+  type: "content",
+  schema: z.object({}),
+});
+
+export const collections = { posts, sitePages, fragments };

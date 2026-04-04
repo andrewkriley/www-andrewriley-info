@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.9",
+    "@astrojs/preact": "^3.5.4",
     "@astrojs/rss": "^4.0.14",
-    "astro": "^4.16.19"
+    "astro": "^4.16.19",
+    "preact": "^10.29.1"
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
