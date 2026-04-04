@@ -1,0 +1,91 @@
+---
+import SiteHeader from "@/components/SiteHeader.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description, image } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = image ? new URL(image, Astro.site) : undefined;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      (function () {
+        try {
+          var k = "theme-preference";
+          var t = localStorage.getItem(k);
+          if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+          else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+            document.documentElement.dataset.theme = "dark";
+          else document.documentElement.dataset.theme = "light";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <SiteHeader />
+    <main class="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>
+          © {new Date().getFullYear()} Andrew Riley — you can call me &lsquo;Riles&rsquo;
+        </p>
+        <p class="site-footer__credit">
+          Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .main {
+    min-height: 60vh;
+    padding-bottom: 3rem;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem var(--gutter);
+    margin-top: auto;
+  }
+
+  .site-footer__inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  .site-footer__credit a {
+    color: var(--accent);
+  }
+</style>

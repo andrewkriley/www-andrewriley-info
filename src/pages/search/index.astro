@@ -1,0 +1,132 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getPublishedPosts, postUrl } from "@/utils/posts";
+
+const posts = await getPublishedPosts();
+---
+
+<BaseLayout title="Search — Riles" description="Search posts on this site.">
+  <div class="page">
+    <h1 class="page-title">Search</h1>
+    <label class="sr-only" for="q">Search posts</label>
+    <input type="search" id="q" class="search-input" placeholder="Type to filter posts…" autocomplete="off" />
+
+    <ul class="results card" id="results">
+      {
+        posts.map((post) => (
+          <li class="result" data-search-item data-text={`${post.data.title} ${post.data.description ?? ""} ${post.data.tags.join(" ")} ${post.data.categories.join(" ")}`.toLowerCase()}>
+            <a href={postUrl(post.slug)} class="result__link">
+              <span class="result__title">{post.data.title}</span>
+              {post.data.description && <span class="result__desc">{post.data.description}</span>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="empty" id="empty" hidden>No matching posts.</p>
+  </div>
+</BaseLayout>
+
+<script>
+  const input = document.getElementById("q") as HTMLInputElement;
+  const items = [...document.querySelectorAll("[data-search-item]")] as HTMLElement[];
+  const empty = document.getElementById("empty") as HTMLElement;
+
+  function run() {
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    for (const el of items) {
+      const text = el.dataset.text ?? "";
+      const show = !q || text.includes(q);
+      el.hidden = !show;
+      if (show) visible++;
+    }
+    empty.hidden = visible > 0;
+  }
+
+  input?.addEventListener("input", run);
+  run();
+</script>
+
+<style>
+  .page {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem var(--gutter);
+  }
+
+  .page-title {
+    margin: 0 0 1rem;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font: inherit;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+
+  .search-input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .result {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .result:last-child {
+    border-bottom: none;
+  }
+
+  .result__link {
+    display: block;
+    padding: 1rem 1.25rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .result__link:hover {
+    background: var(--surface-2);
+    text-decoration: none;
+  }
+
+  .result__title {
+    display: block;
+    font-weight: 600;
+  }
+
+  .result__desc {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .empty {
+    color: var(--text-muted);
+    margin-top: 1rem;
+  }
+</style>

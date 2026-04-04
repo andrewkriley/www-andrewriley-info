@@ -1,0 +1,20 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="404 — Riles" description="Page not found.">
+  <div class="page">
+    <h1>404</h1>
+    <p>That page does not exist.</p>
+    <p><a href="/">Back home</a></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 3rem var(--gutter);
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getEntry } from "astro:content";
+
+const page = await getEntry("sitePages", "djriles");
+if (!page) throw new Error("Missing djriles page");
+const { Content } = await page.render();
+---
+
+<BaseLayout title={`${page.data.title} — Riles`} description="DJ Riles on YouTube and Mixcloud." image={page.data.image}>
+  <div class="page">
+    <h1 class="page-title">{page.data.title}</h1>
+    <div class="prose card body">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem var(--gutter);
+  }
+
+  .page-title {
+    margin: 0 0 1.25rem;
+  }
+
+  .body {
+    padding: 1.5rem 1.75rem 2rem;
+  }
+</style>

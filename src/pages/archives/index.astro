@@ -1,0 +1,100 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getPublishedPosts, postUrl } from "@/utils/posts";
+
+const posts = await getPublishedPosts();
+
+const byYear = new Map<number, typeof posts>();
+for (const p of posts) {
+  const y = p.data.date.getFullYear();
+  if (!byYear.has(y)) byYear.set(y, []);
+  byYear.get(y)!.push(p);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+
+<BaseLayout title="Archives — Riles" description="All posts by year.">
+  <div class="page">
+    <h1 class="page-title">Archives</h1>
+    <p class="lede">{posts.length} posts</p>
+
+    {
+      years.map((year) => (
+        <section class="year-block card">
+          <h2 class="year">{year}</h2>
+          <ul class="list">
+            {byYear.get(year)!.map((post) => (
+              <li>
+                <a href={postUrl(post.slug)} class="list__link">
+                  <span>{post.data.title}</span>
+                  <time datetime={post.data.date.toISOString()}>
+                    {post.data.date.toLocaleDateString("en-AU", { month: "short", day: "numeric" })}
+                  </time>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem var(--gutter);
+  }
+
+  .page-title {
+    margin: 0 0 0.25rem;
+    font-size: 1.75rem;
+  }
+
+  .lede {
+    margin: 0 0 2rem;
+    color: var(--text-muted);
+  }
+
+  .year-block {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .year {
+    margin: 0 0 0.75rem;
+    font-size: 1.15rem;
+  }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .list__link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.35rem 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .list__link:last-child {
+    border-bottom: none;
+  }
+
+  .list__link:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .list__link time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,0 +1,125 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+
+const nav = [
+  { href: "/", label: "Home" },
+  { href: "/archives/", label: "Archives" },
+  { href: "/search/", label: "Search" },
+  { href: "/djriles/", label: "DJ Riles" },
+  { href: "/letscollaborate/", label: "Let's Collaborate" },
+];
+
+const social = [
+  { href: "https://github.com/andrewkriley", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/andrewriley", label: "LinkedIn" },
+  { href: "https://www.mixcloud.com/rilesdj/", label: "Mixcloud" },
+  { href: "https://www.youtube.com/@rilesdj", label: "YouTube" },
+];
+
+const pathname = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-logo" href="/">Riles</a>
+    <nav class="site-nav" aria-label="Main">
+      {
+        nav.map(({ href, label }) => (
+          <a href={href} class:list={["site-nav__link", { "is-active": pathname === href || (href !== "/" && pathname.startsWith(href)) }]}>
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="site-header__actions">
+      <nav class="social-nav" aria-label="Social">
+        {
+          social.map(({ href, label }) => (
+            <a href={href} target="_blank" rel="noopener noreferrer me" class="social-nav__link">
+              {label}
+            </a>
+          ))
+        }
+      </nav>
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0.85rem var(--gutter);
+  }
+
+  .site-logo {
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-right: auto;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .site-nav__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.35rem 0.6rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link.is-active {
+    color: var(--text);
+    background: var(--surface-2);
+  }
+
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .social-nav {
+    display: none;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .social-nav {
+      display: flex;
+    }
+  }
+
+  .social-nav__link {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .social-nav__link:hover {
+    color: var(--accent);
+  }
+</style>

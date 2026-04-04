@@ -1,0 +1,219 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getPublishedPosts, postUrl } from "@/utils/posts";
+
+const posts = await getPublishedPosts();
+const recent = posts.slice(0, 8);
+
+const allTags = posts.flatMap((p) => p.data.tags);
+const tagCounts = new Map<string, number>();
+for (const t of allTags) {
+  const k = t.toLowerCase();
+  tagCounts.set(k, (tagCounts.get(k) ?? 0) + 1);
+}
+const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+
+const categories = ["technology", "home", "music"];
+---
+
+<BaseLayout
+  title="Andrew Riley — you can call me 'Riles'"
+  description="Building, creating, leading: my portfolio of tech, home, and music."
+>
+  <div class="page">
+    <section class="hero card">
+      <h1 class="hero__title">Andrew Riley</h1>
+      <p class="hero__tag">You can call me &lsquo;Riles&rsquo;</p>
+      <p class="hero__desc">
+        Building, creating, leading: my portfolio of tech, home, and music.
+      </p>
+    </section>
+
+    <div class="grid">
+      <section class="card widget">
+        <h2 class="widget__title">Categories</h2>
+        <ul class="widget__list">
+          {
+            categories.map((c) => (
+              <li>
+                <a href={`/categories/${c}/`} class="widget__link">
+                  {c}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="card widget">
+        <h2 class="widget__title">Tags</h2>
+        <div class="tag-cloud">
+          {topTags.map(([tag]) => (
+            <a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>
+              {tag}
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <section class="posts-section">
+      <h2 class="section-heading">Recent posts</h2>
+      <ul class="post-list card">
+        {
+          recent.map((post) => (
+            <li class="post-list__item">
+              <a href={postUrl(post.slug)} class="post-list__link">
+                <span class="post-list__title">{post.data.title}</span>
+                <time class="post-list__date" datetime={post.data.date.toISOString()}>
+                  {post.data.date.toLocaleDateString("en-AU", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </time>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="more">
+        <a href="/archives/">All archives →</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem var(--gutter);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero {
+    padding: 2rem 1.75rem;
+  }
+
+  .hero__title {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    letter-spacing: -0.03em;
+  }
+
+  .hero__tag {
+    margin: 0.35rem 0 0;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .hero__desc {
+    margin: 1rem 0 0;
+    color: var(--text-muted);
+    max-width: 36rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .widget {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .widget__title {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+
+  .widget__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .widget__link {
+    display: block;
+    padding: 0.35rem 0;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .widget__link:hover {
+    color: var(--accent);
+  }
+
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .section-heading {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .post-list__item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-list__item:last-child {
+    border-bottom: none;
+  }
+
+  .post-list__link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 1rem 1.25rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .post-list__link:hover {
+    background: var(--surface-2);
+    text-decoration: none;
+  }
+
+  .post-list__title {
+    font-weight: 600;
+    flex: 1;
+    min-width: 12rem;
+  }
+
+  .post-list__date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .more {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+  }
+</style>

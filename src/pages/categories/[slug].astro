@@ -1,0 +1,92 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getPublishedPosts, postUrl } from "@/utils/posts";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  const cats = new Set<string>();
+  for (const p of posts) {
+    for (const c of p.data.categories) cats.add(c.toLowerCase());
+  }
+  return [...cats].map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const posts = await getPublishedPosts();
+const filtered = posts.filter((p) => p.data.categories.some((c) => c.toLowerCase() === slug));
+const title = slug.charAt(0).toUpperCase() + slug.slice(1);
+---
+
+<BaseLayout title={`${title} — Riles`} description={`Posts in category ${title}`}>
+  <div class="page">
+    <h1 class="page-title">{title}</h1>
+    <p class="lede">{filtered.length} post{filtered.length === 1 ? "" : "s"}</p>
+    <ul class="list card">
+      {
+        filtered.map((post) => (
+          <li class="list__item">
+            <a href={postUrl(post.slug)} class="list__link">
+              <span>{post.data.title}</span>
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString("en-AU", { year: "numeric", month: "short", day: "numeric" })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem var(--gutter);
+  }
+
+  .page-title {
+    margin: 0 0 0.25rem;
+    text-transform: capitalize;
+  }
+
+  .lede {
+    margin: 0 0 1.25rem;
+    color: var(--text-muted);
+  }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .list__item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .list__item:last-child {
+    border-bottom: none;
+  }
+
+  .list__link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 1rem 1.25rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .list__link:hover {
+    background: var(--surface-2);
+    text-decoration: none;
+  }
+
+  .list__link time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,0 +1,23 @@
+{
+  "name": "www-andrewriley-info",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "migrate": "node scripts/migrate-hugo.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "build:ci": "npm run migrate && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/rss": "^4.0.14",
+    "astro": "^4.16.19"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "typescript": "^5.9.3"
+  }
+}
