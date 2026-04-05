@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/*
+ * Tokens aligned with andrewkriley/design-system (personal + shared).
+ * See: https://github.com/andrewkriley/design-system/tree/main/design-system/tokens
+ */
+:root {
+  --color-neutral-0: #0c0d0f;
+  --color-neutral-300: #5c6370;
+  --color-neutral-800: #f3f5f8;
+  --color-brand-primary: #1e3a5f;
+  --color-brand-primary-muted: #2d5a87;
+  --color-brand-accent: #c45c26;
+  --color-brand-surface: #faf8f5;
+  --color-brand-surface-alt: #f0ebe4;
+  --color-text: var(--color-neutral-0);
+  --color-text-muted: var(--color-neutral-300);
+  --color-link: var(--color-brand-primary-muted);
+  --color-link-hover: var(--color-brand-accent);
+  --color-surface: var(--color-brand-surface);
+  --color-surface-alt: var(--color-brand-surface-alt);
+  --color-border: #e8ebf0;
+}
+
+@theme inline {
+  --font-sans: var(--font-source-sans);
+  --font-heading: var(--font-source-serif);
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-text);
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.prose-mdx {
+  max-width: 65ch;
+}
+
+.prose-mdx h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.prose-mdx h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.prose-mdx p {
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.prose-mdx a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-mdx a:hover {
+  color: var(--color-link-hover);
+}
+
+.prose-mdx ul,
+.prose-mdx ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose-mdx li {
+  margin-bottom: 0.35rem;
+}
+
+.prose-mdx blockquote {
+  margin: 1.25rem 0;
+  border-left: 4px solid var(--color-brand-primary-muted);
+  padding-left: 1rem;
+  color: var(--color-text-muted);
+}
+
+.prose-mdx pre {
+  margin: 1rem 0;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-neutral-0);
+  color: var(--color-neutral-800);
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.prose-mdx code {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.9em;
+}
+
+.prose-mdx pre code {
+  font-size: 0.875rem;
+}
+
+.prose-mdx :not(pre) > code {
+  background: var(--color-surface-alt);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+}
