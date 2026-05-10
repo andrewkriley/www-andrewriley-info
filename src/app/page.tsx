@@ -29,8 +29,7 @@ export default function HomePage() {
               About Riles
             </p>
             <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              A builder with a bias for curiosity, leadership, and useful
-              momentum.
+              A builder with a bias for curiosity, leadership, and action.
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
               I love being exposed to new paradigms and inspiring others to
@@ -39,14 +38,10 @@ export default function HomePage() {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <LinkButton href="#featured-builds">
-                Explore the pillars
+                Explore my values
               </LinkButton>
-              <LinkButton
-                href="/lead"
-                variant="secondary"
-                className="border-text-on-image/35 !text-text-on-image hover:border-text-on-image hover:!text-text-on-image"
-              >
-                Lead
+              <LinkButton href="#now-building">
+                What I&apos;m building
               </LinkButton>
             </div>
           </div>
@@ -66,7 +61,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section aria-label="Pillar hero images" className="grid md:grid-cols-4">
+        {heroImages.map((image, index) => (
+          <figure
+            key={image.label}
+            className="relative min-h-72 overflow-hidden md:min-h-[28rem]"
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="(min-width: 768px) 25vw, 100vw"
+              className="object-cover opacity-90 brightness-105 contrast-95"
+            />
+            {index > 0 ? (
+              <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-8 -translate-x-1/2 bg-gradient-to-r from-white/0 via-white/35 to-white/0 blur-md md:block" />
+            ) : null}
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6 text-text-on-image">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
+                {image.label}
+              </p>
+              <p className="mt-2 text-xl font-bold">{image.title}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </section>
+
+      <section id="now-building" className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-8 rounded-card border border-border-subtle bg-surface-card p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:p-10">
           <div>
             <SectionHeading
@@ -96,28 +117,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="mt-10 grid overflow-hidden rounded-hero border border-border-subtle shadow-soft md:grid-cols-3">
-          {heroImages.map((image) => (
-            <figure
-              key={image.label}
-              className="relative min-h-72 overflow-hidden md:min-h-96"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(min-width: 768px) 33vw, 100vw"
-                className="object-cover opacity-90 brightness-105 contrast-95"
-              />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6 text-text-on-image">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
-                  {image.label}
-                </p>
-                <p className="mt-2 text-xl font-bold">{image.title}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-16">

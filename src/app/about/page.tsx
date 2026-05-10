@@ -29,8 +29,7 @@ export default function AboutPage() {
               About Riles
             </p>
             <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              A builder with a bias for curiosity, leadership, and useful
-              momentum.
+              A builder with a bias for curiosity, leadership, and action.
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
               I love being exposed to new paradigms and inspiring others to

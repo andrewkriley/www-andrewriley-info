@@ -55,6 +55,12 @@ export const featuredWork = [
 
 export const heroImages = [
   {
+    label: "Health",
+    title: "Wellbeing and movement",
+    src: "/images/hero/andrew_running1.jpg",
+    alt: "Andrew Riley running",
+  },
+  {
     label: "Build",
     title: "Technology and hands-on making",
     src: "/images/hero/andrew_building.jpg",
