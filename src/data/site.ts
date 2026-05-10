@@ -64,7 +64,7 @@ export const heroImages = [
   {
     label: "Build",
     title: "Technology and hands-on making",
-    src: "/images/hero/andrew_builder.jpg",
+    src: "/images/hero/andrew_building.jpg",
     alt: "Andrew Riley working on a build project",
   },
   {
