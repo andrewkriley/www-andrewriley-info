@@ -14,7 +14,7 @@ export default function AboutPage() {
     <section>
       <div className="relative isolate overflow-hidden bg-white text-text-on-image">
         <Image
-          src="/images/hero/andrew1.png?v=20260510-2152"
+          src="/images/hero/andrew_main.png?v=20260511"
           alt="Andrew Riley"
           fill
           priority
