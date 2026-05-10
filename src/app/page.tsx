@@ -25,13 +25,13 @@ export default function HomePage() {
 
         <div className="relative mx-auto flex min-h-[70vh] max-w-6xl items-end px-5 py-16 md:py-24">
           <div className="max-w-[42rem]">
-            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">
+            <p className="text-hero-shadow text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">
               About Riles
             </p>
-            <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl [text-shadow:0_1px_2px_rgb(0_0_0_/_.45),0_2px_12px_rgb(0_0_0_/_.35)]">
+            <h1 className="text-hero-shadow mt-5 text-5xl font-black tracking-tight md:text-7xl">
               A builder with a bias for curiosity, leadership, and action.
             </h1>
-            <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
+            <p className="text-hero-shadow mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
               I love being exposed to new paradigms and inspiring others to
               experiment alongside me. The best ideas often come at the
               intersection of different experiences.
@@ -78,10 +78,10 @@ export default function HomePage() {
               <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-8 -translate-x-1/2 bg-gradient-to-r from-white/0 via-white/35 to-white/0 blur-md md:block" />
             ) : null}
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6 text-text-on-image">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
+              <p className="text-hero-shadow text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
                 {image.label}
               </p>
-              <p className="mt-2 text-xl font-bold">{image.title}</p>
+              <p className="text-hero-shadow mt-2 text-xl font-bold">{image.title}</p>
             </figcaption>
           </figure>
         ))}

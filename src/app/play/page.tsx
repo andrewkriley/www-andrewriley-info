@@ -32,13 +32,13 @@ export default async function PlayPage() {
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/75 to-transparent" />
         <div className="relative mx-auto flex min-h-[70vh] max-w-6xl items-end px-5 py-16 md:py-24">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">
+            <p className="text-hero-shadow text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">
               Play
             </p>
-            <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
+            <h1 className="text-hero-shadow mt-5 text-5xl font-black tracking-tight md:text-7xl">
               Music is the creative current.
             </h1>
-            <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
+            <p className="text-hero-shadow mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
               Play is the music category: DJ Riles, mixes, creative energy, and
               the almost spiritual connection I have with sound.
             </p>

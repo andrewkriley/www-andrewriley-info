@@ -133,6 +133,13 @@ body {
     sans-serif;
 }
 
+/* Full-bleed photo heroes — keeps light copy readable on busy backgrounds */
+.text-hero-shadow {
+  text-shadow:
+    0 1px 2px rgb(0 0 0 / 0.45),
+    0 2px 12px rgb(0 0 0 / 0.35);
+}
+
 .prose-content {
   color: var(--text-secondary);
   font-size: 1.05rem;
