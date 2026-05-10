@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       <section className="relative isolate overflow-hidden bg-white text-text-on-image">
         <Image
-          src="/images/hero/andrew1.png?v=20260510-2047"
+          src="/images/hero/andrew1.png?v=20260510-2152"
           alt="Andrew Riley"
           fill
           priority
@@ -53,12 +53,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="featured-builds" className="mx-auto max-w-6xl px-5 py-16">
+        <SectionHeading
+          eyebrow="Primary pillars"
+          title="Health, build, play, and lead in motion."
+          description="The themes overlap on purpose. Professional leadership, technical systems, hands-on projects, music, and wellbeing all come from the same mix of curiosity, craft, energy, and momentum."
+        />
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {featuredWork.map((work) => (
+            <WorkCard key={work.title} {...work} />
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-8 rounded-card border border-border-subtle bg-surface-card p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:p-10">
           <div>
             <SectionHeading
               eyebrow="How I work"
-              title="Lead, build, play, and stay well."
+              title="Health, build, play, and lead."
               description="The work matters, but so does how people learn, decide, grow, recover, and keep energy for the next challenge."
             />
             <div className="mt-8 max-w-xl rounded-card border border-border-subtle bg-surface-muted p-5">
@@ -107,25 +120,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="featured-builds" className="mx-auto max-w-6xl px-5 py-16">
-        <SectionHeading
-          eyebrow="Primary pillars"
-          title="Lead, build, play, and health in motion."
-          description="The themes overlap on purpose. Professional leadership, technical systems, hands-on projects, music, and wellbeing all come from the same mix of curiosity, craft, energy, and momentum."
-        />
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {featuredWork.map((work) => (
-            <WorkCard key={work.title} {...work} />
-          ))}
-        </div>
-      </section>
-
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="rounded-card bg-surface-inverse p-8 text-text-inverse md:p-10">
           <SectionHeading
             eyebrow="Now building"
             title="Active work, not a frozen CV."
-            description="The site is designed around proof, progress, and learning in public across lead, build, play, and health."
+            description="The site is designed around proof, progress, and learning in public across health, build, play, and lead."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {nowBuilding.map((item) => (

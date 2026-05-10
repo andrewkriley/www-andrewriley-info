@@ -5,10 +5,10 @@ export const site = {
   description:
     "From breadboards to boardrooms: Andrew Riley's portfolio of leadership, technology and DIY builds, creative play through music, and personal health.",
   nav: [
-    { href: "/lead", label: "Lead" },
+    { href: "/health", label: "Health" },
     { href: "/build", label: "Build" },
     { href: "/play", label: "Play" },
-    { href: "/health", label: "Health" },
+    { href: "/lead", label: "Lead" },
   ],
   socials: [
     { href: "https://github.com/andrewkriley", label: "GitHub" },
@@ -20,12 +20,12 @@ export const site = {
 
 export const featuredWork = [
   {
-    title: "Professional leadership",
-    label: "Lead",
-    href: "/lead",
+    title: "Health as foundation",
+    label: "Health",
+    href: "/health",
     description:
-      "Leadership, people, process, and the work of helping others grow while moving useful ideas forward.",
-    proof: "Teams, communication, strategy, growth",
+      "Wellbeing, physical and mental health, diet, and exercise as the foundation that makes the rest sustainable.",
+    proof: "Wellbeing, movement, nutrition, recovery",
   },
   {
     title: "Systems and hands-on builds",
@@ -44,22 +44,16 @@ export const featuredWork = [
     proof: "YouTube, Mixcloud, live mixes",
   },
   {
-    title: "Health as foundation",
-    label: "Health",
-    href: "/health",
+    title: "Professional leadership",
+    label: "Lead",
+    href: "/lead",
     description:
-      "Wellbeing, physical and mental health, diet, and exercise as the foundation that makes the rest sustainable.",
-    proof: "Wellbeing, movement, nutrition, recovery",
+      "Leadership, people, process, and the work of helping others grow while moving useful ideas forward.",
+    proof: "Teams, communication, strategy, growth",
   },
 ];
 
 export const heroImages = [
-  {
-    label: "Lead",
-    title: "Professional leadership",
-    src: "/images/hero/riles_presenting1.jpeg",
-    alt: "Andrew Riley presenting professionally",
-  },
   {
     label: "Build",
     title: "Technology and hands-on making",
@@ -71,6 +65,12 @@ export const heroImages = [
     title: "DJ Riles",
     src: "/images/hero/dj_riles_vegas.png",
     alt: "DJ Riles in Las Vegas",
+  },
+  {
+    label: "Lead",
+    title: "Professional leadership",
+    src: "/images/hero/riles_presenting1.jpeg",
+    alt: "Andrew Riley presenting professionally",
   },
 ];
 
@@ -96,10 +96,10 @@ export const nowBuilding = [
 ];
 
 export const principles = [
-  "Lead means helping people, teams, and ideas move forward.",
+  "Health means protecting the physical and mental foundation underneath it all.",
   "Build means making useful things visible, repeatable, and understandable.",
   "Play means keeping creativity, energy, and curiosity alive.",
-  "Health means protecting the physical and mental foundation underneath it all.",
+  "Lead means helping people, teams, and ideas move forward.",
   "Leadership should help people grow beyond the task in front of them.",
 ];
 

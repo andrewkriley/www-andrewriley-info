@@ -6,7 +6,7 @@ import { uses } from "@/data/site";
 export const metadata: Metadata = {
   title: "Uses",
   description:
-    "The hardware, software, services, and tools Andrew Riley uses for lead, build, play, and health.",
+    "The hardware, software, services, and tools Andrew Riley uses for health, build, play, and lead.",
 };
 
 export default function UsesPage() {

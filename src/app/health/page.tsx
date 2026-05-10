@@ -7,7 +7,7 @@ import { healthPillars } from "@/data/site";
 export const metadata: Metadata = {
   title: "Health",
   description:
-    "Wellbeing, physical and mental health, diet, and exercise as a foundation for lead, build, and play.",
+    "Wellbeing, physical and mental health, diet, and exercise as a foundation for health, build, play, and lead.",
 };
 
 export default function HealthPage() {
@@ -30,7 +30,7 @@ export default function HealthPage() {
               Health
             </p>
             <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              The foundation underneath lead, build, and play.
+              The foundation underneath health, build, play, and lead.
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
               Health is the sustainability pillar: wellbeing, physical and

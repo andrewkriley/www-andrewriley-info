@@ -8,8 +8,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-30 border-b border-border-subtle bg-surface-page/88 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-1.5">
         <Link href="/" className="group">
-          <span className="block text-sm font-bold uppercase tracking-[0.22em] text-text-primary group-hover:text-brand-primary">
-            Riles
+          <span className="block text-sm font-medium text-text-secondary transition group-hover:text-text-primary">
+            Andrew Riley, but you can call me Riles
           </span>
         </Link>
         <div className="flex items-center gap-2">
