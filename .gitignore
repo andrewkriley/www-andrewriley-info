@@ -1,1 +1,11 @@
 .DS_Store
+node_modules/
+.next/
+.open-next/
+.wrangler/
+out/
+dist/
+*.tsbuildinfo
+.env
+.env*.local
+node_modules

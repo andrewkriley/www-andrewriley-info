@@ -1,58 +1,64 @@
 # www.andrewriley.info
 
-Personal website and blog for **Andrew Riley** (“Riles”), published at [https://www.andrewriley.info](https://www.andrewriley.info).
+Portfolio and digital CV for **Andrew Riley** ("Riles"), published at [https://www.andrewriley.info](https://www.andrewriley.info).
 
 ## Purpose
 
-The site is a place for writing and sharing posts—technology, music, home, and similar topics—using a static site so pages stay fast, cheap to host, and easy to version in Git.
+The 2026 version of the site is built around proof-of-work through three themes: impact, build, and play. It presents professional leadership, technology projects, AI tooling, DIY work, writing, and music through an active portfolio rather than a static resume.
 
 ## Technical stack
 
 | Layer | Choice |
 |--------|--------|
-| **Generator** | [Hugo](https://gohugo.io/) (static site) |
-| **Theme** | [hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack), vendored under `themes/hugo-theme-stack/` |
-| **Content** | Markdown with YAML front matter under `content/` |
-| **Markup** | Goldmark (with optional raw HTML where configured) |
-| **Math** | LaTeX via passthrough delimiters (`$$...$$`, `\[...\]`) |
-| **Syntax highlighting** | Hugo/Chroma, line-numbered code blocks |
-| **Styling** | Theme defaults plus overrides in `content/scss/` and `assets/` |
-
-Configuration lives in `config/_default/` (`config.toml`, `markup.toml`, `permalinks.toml`, etc.). Posts use URLs like `/p/<slug>/` as defined in the permalink config.
+| **Framework** | Next.js 16 with App Router |
+| **UI** | React 19 and TypeScript |
+| **Styling** | Tailwind CSS v4 |
+| **Content** | MDX files under `src/content/posts/` |
+| **Email** | Resend-ready; contact flow still to be finalized |
+| **Hosting** | Cloudflare with OpenNext |
 
 ## Local development
 
-Requires [Hugo](https://gohugo.io/installation/) installed locally.
-
 ```bash
-# Dev server (includes drafts)
-hugo server -D
-
-# Production build (output in public/)
-hugo
+npm install
+npm run dev
 ```
 
-To scaffold a new post:
+Useful checks:
 
 ```bash
-hugo new post/2025/<slug>/index.md
+npm run typecheck
+npm run lint
+npm run build
 ```
 
-## Deployment (Cloudflare Pages)
+## Content migration
 
-The site is deployed on **[Cloudflare Pages](https://pages.cloudflare.com/)**. Pushes to this repository trigger builds and deploys:
+The previous Hugo posts remain under `content/post/` as source material. To regenerate the MDX archive:
 
-- **`main`** — production at `https://www.andrewriley.info`
-- **`dev`** — preview deployments for work-in-progress changes
+```bash
+npm run migrate:content
+```
 
-Set the Cloudflare Pages build to run Hugo (install Hugo in the build environment if needed) and publish the `public/` directory. Keep `baseurl` in `config/_default/config.toml` aligned with the production URL before release builds.
+Migrated posts live at `src/content/posts/*.mdx` and are served at `/p/<slug>` to preserve the existing public URL shape.
 
-## Repository layout (short)
+## Cloudflare preview and deploy
 
-- `content/` — pages, posts, categories, homepage
-- `config/_default/` — Hugo config
-- `themes/hugo-theme-stack/` — theme (git submodule)
-- `static/` — static assets (e.g. favicon)
-- `public/` — build output (generated; do not edit)
+OpenNext adapts the Next.js build for Cloudflare:
 
-More detail on conventions and categories is in [`CLAUDE.md`](CLAUDE.md).
+```bash
+npm run cf:build
+npm run cf:preview
+npm run cf:deploy
+```
+
+`wrangler.jsonc` contains the Cloudflare worker/assets configuration used by the OpenNext output.
+
+## Repository layout
+
+- `src/app/` - App Router pages and layouts
+- `src/components/` - Reusable UI components
+- `src/content/posts/` - MDX post archive
+- `src/data/site.ts` - Navigation, social links, featured work, and homepage metadata
+- `scripts/migrate-hugo-content.mjs` - Hugo-to-MDX migration script
+- `content/` - Legacy Hugo content retained as migration source during the rebuild
