@@ -7,13 +7,13 @@ import { healthPillars } from "@/data/site";
 export const metadata: Metadata = {
   title: "Health",
   description:
-    "Wellbeing, physical and mental health, diet, and exercise as a foundation for impact, build, and play.",
+    "Wellbeing, physical and mental health, diet, and exercise as a foundation for lead, build, and play.",
 };
 
 export default function HealthPage() {
   return (
     <section>
-      <div className="relative isolate overflow-hidden bg-surface-inverse text-text-on-image">
+      <div className="relative isolate overflow-hidden bg-white text-text-on-image">
         <Image
           src="/images/hero/andrew_running2.jpg"
           alt="Andrew Riley running during an event"
@@ -30,7 +30,7 @@ export default function HealthPage() {
               Health
             </p>
             <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              The foundation underneath impact, build, and play.
+              The foundation underneath lead, build, and play.
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
               Health is the sustainability pillar: wellbeing, physical and
@@ -83,7 +83,7 @@ export default function HealthPage() {
           training, food, stress, sleep, and the experiments that actually stick.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <LinkButton href="/impact">Impact</LinkButton>
+          <LinkButton href="/lead">Lead</LinkButton>
           <LinkButton href="/build" variant="secondary">
             Build
           </LinkButton>

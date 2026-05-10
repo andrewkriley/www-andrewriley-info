@@ -98,7 +98,7 @@ export default function DesignSystemPage() {
     <div className="mx-auto max-w-6xl px-5 py-20">
       <SectionHeading
         eyebrow="Design system"
-        title="A blue-green system for Impact Build Play."
+        title="A blue-green system for Lead Build Play Health."
         description="This page is a working sample sheet for the site's tokens, components, and content patterns across light and dark mode. It combines the bright blue/green palette with the clean card structure used on the Uses page."
       />
 
@@ -203,7 +203,7 @@ export default function DesignSystemPage() {
         <div className="mt-5 grid gap-5 rounded-card border border-border-subtle bg-surface-card p-6 shadow-sm md:grid-cols-2">
           <div>
             <div className="flex flex-wrap gap-2">
-              {["Impact", "Build", "Play", "Lead"].map((chip) => (
+              {["Lead", "Build", "Play", "Health"].map((chip) => (
                 <span
                   key={chip}
                   className="rounded-full bg-brand-accent-soft px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-primary"
@@ -234,9 +234,10 @@ export default function DesignSystemPage() {
           <label className="grid gap-2 text-sm font-semibold text-text-primary">
             Focus area
             <select className="rounded-2xl border border-border-subtle bg-surface-page px-4 py-3 font-normal text-text-primary outline-none transition focus:border-brand-primary">
-              <option>Impact</option>
+              <option>Lead</option>
               <option>Build</option>
               <option>Play</option>
+              <option>Health</option>
             </select>
           </label>
           <label className="grid gap-2 text-sm font-semibold text-text-primary md:col-span-2">

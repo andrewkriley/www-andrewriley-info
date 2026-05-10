@@ -6,7 +6,7 @@ import { uses } from "@/data/site";
 export const metadata: Metadata = {
   title: "Uses",
   description:
-    "The hardware, software, services, and tools Andrew Riley uses for impact, build, and play.",
+    "The hardware, software, services, and tools Andrew Riley uses for lead, build, play, and health.",
 };
 
 export default function UsesPage() {
@@ -15,7 +15,7 @@ export default function UsesPage() {
       <SectionHeading
         eyebrow="Uses"
         title="The tools behind the work."
-        description="Hardware, software, services, and creative tools I use for professional impact, technology, homelab work, DIY, music, and play. Inspired by uses.tech-style pages."
+        description="Hardware, software, services, and creative tools I use for leadership, technology, homelab work, DIY, music, health, and play. Inspired by uses.tech-style pages."
       />
 
       <div className="mt-12 grid gap-6">

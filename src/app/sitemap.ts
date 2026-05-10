@@ -6,7 +6,7 @@ import { getAllPosts } from "@/lib/content";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
-    "/impact",
+    "/lead",
     "/build",
     "/play",
     "/health",

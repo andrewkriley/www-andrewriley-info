@@ -3,13 +3,12 @@ export const site = {
   nickname: "Riles",
   url: "https://www.andrewriley.info",
   description:
-    "From breadboards to boardrooms: Andrew Riley's portfolio of professional impact, technology and DIY builds, creative play through music, and personal health.",
+    "From breadboards to boardrooms: Andrew Riley's portfolio of leadership, technology and DIY builds, creative play through music, and personal health.",
   nav: [
-    { href: "/impact", label: "Impact" },
+    { href: "/lead", label: "Lead" },
     { href: "/build", label: "Build" },
     { href: "/play", label: "Play" },
     { href: "/health", label: "Health" },
-    { href: "/about", label: "About" },
   ],
   socials: [
     { href: "https://github.com/andrewkriley", label: "GitHub" },
@@ -21,9 +20,9 @@ export const site = {
 
 export const featuredWork = [
   {
-    title: "Professional impact",
-    label: "Impact",
-    href: "/impact",
+    title: "Professional leadership",
+    label: "Lead",
+    href: "/lead",
     description:
       "Leadership, people, process, and the work of helping others grow while moving useful ideas forward.",
     proof: "Teams, communication, strategy, growth",
@@ -56,8 +55,8 @@ export const featuredWork = [
 
 export const heroImages = [
   {
-    label: "Impact",
-    title: "Professional impact",
+    label: "Lead",
+    title: "Professional leadership",
     src: "/images/hero/riles_presenting1.jpeg",
     alt: "Andrew Riley presenting professionally",
   },
@@ -97,11 +96,11 @@ export const nowBuilding = [
 ];
 
 export const principles = [
-  "Impact means helping people, teams, and ideas move forward.",
+  "Lead means helping people, teams, and ideas move forward.",
   "Build means making useful things visible, repeatable, and understandable.",
   "Play means keeping creativity, energy, and curiosity alive.",
   "Health means protecting the physical and mental foundation underneath it all.",
-  "Lead in a way that helps people grow beyond the task in front of them.",
+  "Leadership should help people grow beyond the task in front of them.",
 ];
 
 export const healthPillars = [

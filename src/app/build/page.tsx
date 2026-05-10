@@ -21,7 +21,7 @@ export default function BuildPage() {
 
   return (
     <section>
-      <div className="relative isolate overflow-hidden bg-surface-inverse text-text-on-image">
+      <div className="relative isolate overflow-hidden bg-white text-text-on-image">
         <Image
           src="/images/hero/riles_building.jpeg"
           alt="Andrew Riley working on a hands-on build project"
@@ -32,7 +32,7 @@ export default function BuildPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/42 to-slate-950/12" />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/75 to-transparent" />
-        <div className="relative mx-auto flex min-h-[77vh] max-w-6xl items-end px-5 py-16 md:py-24">
+        <div className="relative mx-auto flex min-h-[70vh] max-w-6xl items-end px-5 py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">
               Build

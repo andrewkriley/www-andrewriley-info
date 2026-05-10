@@ -11,7 +11,7 @@ export function SiteFooter() {
             Andrew Riley
           </p>
           <p className="mt-3 max-w-xl text-sm leading-6 text-text-secondary">
-            Impact, build, and play across professional work, technology, DIY,
+            Lead, build, and play across professional work, technology, DIY,
             and music.
           </p>
         </div>

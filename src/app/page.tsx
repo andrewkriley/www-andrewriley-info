@@ -13,73 +13,109 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative isolate min-h-[calc(100vh-81px)] overflow-hidden bg-surface-inverse text-text-on-image">
-        <div className="absolute inset-0 -z-20 grid grid-rows-3 md:grid-cols-3 md:grid-rows-1">
-          {heroImages.map((image) => (
-            <div key={image.label} className="relative overflow-hidden">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                priority
-                sizes="(min-width: 768px) 33vw, 100vw"
-                className="object-cover opacity-90 brightness-105 contrast-95"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/68 via-black/36 to-black/10" />
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/62 to-transparent" />
+      <section className="relative isolate overflow-hidden bg-white text-text-on-image">
+        <Image
+          src="/images/hero/andrew1.png?v=20260510"
+          alt="Andrew Riley"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/72 via-slate-950/22 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/45 to-transparent" />
 
-        <div className="mx-auto flex min-h-[calc(100vh-81px)] max-w-6xl flex-col justify-end px-5 py-16 md:py-24">
-          <div className="max-w-4xl">
+        <div className="relative mx-auto flex min-h-[70vh] max-w-6xl items-end px-5 py-16 md:py-24">
+          <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">
-              Impact Build Play
+              About Riles
             </p>
             <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              From breadboards to boardrooms.
+              A builder with a bias for curiosity, leadership, and useful
+              momentum.
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
-              I&apos;m Andrew Riley, you can call me Riles. I&apos;m a tech
-              evangelist and tech leader creating impact, building useful
-              things, keeping play alive through music, and treating health as
-              the foundation.
+              I love being exposed to new paradigms and inspiring others to
+              experiment alongside me. The best ideas often come at the
+              intersection of different experiences.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <LinkButton href="#featured-builds">
-                See what I&apos;m building
+                Explore the pillars
               </LinkButton>
               <LinkButton
-                href="/about"
+                href="/lead"
                 variant="secondary"
                 className="border-text-on-image/35 !text-text-on-image hover:border-text-on-image hover:!text-text-on-image"
               >
-                About Riles
+                Lead
               </LinkButton>
-            </div>
-          </div>
-
-          <div className="mt-14">
-            <div className="max-w-xl rounded-card border border-text-on-image/15 bg-slate-950/35 p-5 text-text-on-image backdrop-blur">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-accent">
-              Current thesis
-            </p>
-              <p className="mt-5 text-2xl font-bold leading-tight">
-              Resumes tell people where you&apos;ve been. Proof-of-work shows
-              how you think, learn, and move.
-            </p>
             </div>
           </div>
         </div>
       </section>
 
+      <section className="mx-auto max-w-6xl px-5 py-16">
+        <div className="grid gap-8 rounded-card border border-border-subtle bg-surface-card p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:p-10">
+          <div>
+            <SectionHeading
+              eyebrow="How I work"
+              title="Lead, build, play, and stay well."
+              description="The work matters, but so does how people learn, decide, grow, recover, and keep energy for the next challenge."
+            />
+            <div className="mt-8 max-w-xl rounded-card border border-border-subtle bg-surface-muted p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-primary">
+                Current thesis
+              </p>
+              <p className="mt-5 text-2xl font-bold leading-tight text-text-primary">
+                Resumes tell people where you&apos;ve been. Proof-of-work shows
+                how you think, learn, and move.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-3">
+            {principles.map((principle) => (
+              <div
+                key={principle}
+                className="rounded-2xl border border-border-subtle bg-surface-muted p-5 font-semibold text-text-primary"
+              >
+                {principle}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 grid overflow-hidden rounded-hero border border-border-subtle shadow-soft md:grid-cols-3">
+          {heroImages.map((image) => (
+            <figure
+              key={image.label}
+              className="relative min-h-72 overflow-hidden md:min-h-96"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover opacity-90 brightness-105 contrast-95"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6 text-text-on-image">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
+                  {image.label}
+                </p>
+                <p className="mt-2 text-xl font-bold">{image.title}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section id="featured-builds" className="mx-auto max-w-6xl px-5 py-16">
         <SectionHeading
-          eyebrow="Featured proof"
-          title="Impact, build, play, and health in motion."
+          eyebrow="Primary pillars"
+          title="Lead, build, play, and health in motion."
           description="The themes overlap on purpose. Professional leadership, technical systems, hands-on projects, music, and wellbeing all come from the same mix of curiosity, craft, energy, and momentum."
         />
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {featuredWork.map((work) => (
             <WorkCard key={work.title} {...work} />
           ))}
@@ -91,7 +127,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Now building"
             title="Active work, not a frozen CV."
-            description="The site is designed around proof, progress, and learning in public across impact, build, and play."
+            description="The site is designed around proof, progress, and learning in public across lead, build, play, and health."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {nowBuilding.map((item) => (
@@ -128,25 +164,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16 pb-24">
-        <div className="grid gap-8 rounded-card border border-border-subtle bg-surface-card p-8 shadow-sm md:grid-cols-[0.9fr_1.1fr] md:p-10">
-          <SectionHeading
-            eyebrow="People and process"
-            title="Impact is part of the work."
-            description="The work matters, but so does how people learn, decide, and grow while doing it."
-          />
-          <div className="grid gap-3">
-            {principles.map((principle) => (
-              <div
-                key={principle}
-                className="rounded-2xl border border-border-subtle bg-surface-muted p-5 font-semibold text-text-primary"
-              >
-                {principle}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

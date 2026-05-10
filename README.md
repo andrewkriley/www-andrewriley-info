@@ -4,7 +4,7 @@ Portfolio and digital CV for **Andrew Riley** ("Riles"), published at [https://w
 
 ## Purpose
 
-The 2026 version of the site is built around proof-of-work through three themes: impact, build, and play. It presents professional leadership, technology projects, AI tooling, DIY work, writing, and music through an active portfolio rather than a static resume.
+The 2026 version of the site is built around proof-of-work through four themes: lead, build, play, and health. It presents professional leadership, technology projects, AI tooling, DIY work, writing, wellbeing, and music through an active portfolio rather than a static resume.
 
 ## Technical stack
 

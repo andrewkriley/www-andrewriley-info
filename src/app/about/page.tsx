@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section>
-      <div className="relative isolate overflow-hidden bg-surface-inverse text-text-on-image">
+      <div className="relative isolate overflow-hidden bg-white text-text-on-image">
         <Image
           src="/images/hero/andrew1.png?v=20260510"
           alt="Andrew Riley"

@@ -19,7 +19,7 @@ export default async function PlayPage() {
 
   return (
     <section>
-      <div className="relative isolate overflow-hidden bg-surface-inverse text-text-on-image">
+      <div className="relative isolate overflow-hidden bg-white text-text-on-image">
         <Image
           src="/images/play/djriles-side.jpg"
           alt="DJ Riles performing in Las Vegas"
