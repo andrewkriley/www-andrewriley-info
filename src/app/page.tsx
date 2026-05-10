@@ -28,7 +28,7 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">
               About Riles
             </p>
-            <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
+            <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl [text-shadow:0_1px_2px_rgb(0_0_0_/_.45),0_2px_12px_rgb(0_0_0_/_.35)]">
               A builder with a bias for curiosity, leadership, and action.
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
