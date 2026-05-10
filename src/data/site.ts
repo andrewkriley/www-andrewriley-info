@@ -69,7 +69,7 @@ export const heroImages = [
   {
     label: "Play",
     title: "DJ Riles",
-    src: "/images/hero/dj_riles_vegas.png",
+    src: "/images/hero/dj_riles_vegas.jpg",
     alt: "DJ Riles in Las Vegas",
   },
   {
