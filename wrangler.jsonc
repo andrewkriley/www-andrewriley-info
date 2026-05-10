@@ -1,9 +1,15 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "www-andrewriley-info",
+  "name": "www-andrewriley-info-2026",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-05-09",
   "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "pattern": "2026.andrewriley.info",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
