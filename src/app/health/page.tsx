@@ -20,10 +20,8 @@ export default function HealthPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-85"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/38 to-slate-950/10" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-950/75 to-transparent" />
         <div className="relative mx-auto flex min-h-[70vh] max-w-6xl items-end px-5 py-16 md:py-24">
           <div className="max-w-3xl">
             <p className="text-hero-shadow text-sm font-semibold uppercase tracking-[0.32em] text-brand-accent">

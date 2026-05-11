@@ -62,7 +62,7 @@ export default function HomePage() {
       </section>
 
       <section aria-label="Pillar hero images" className="grid md:grid-cols-4">
-        {heroImages.map((image, index) => (
+        {heroImages.map((image) => (
           <figure
             key={image.label}
             className="relative min-h-72 overflow-hidden md:min-h-[28rem]"
@@ -72,12 +72,9 @@ export default function HomePage() {
               alt={image.alt}
               fill
               sizes="(min-width: 768px) 25vw, 100vw"
-              className="object-cover opacity-90 brightness-105 contrast-95"
+              className="object-cover object-center"
             />
-            {index > 0 ? (
-              <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-8 -translate-x-1/2 bg-gradient-to-r from-white/0 via-white/35 to-white/0 blur-md md:block" />
-            ) : null}
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/75 to-transparent p-6 text-text-on-image">
+            <figcaption className="absolute inset-x-0 bottom-0 p-6 text-text-on-image">
               <p className="text-hero-shadow text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
                 {image.label}
               </p>
