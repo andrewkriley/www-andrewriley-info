@@ -5,10 +5,10 @@ export const site = {
   description:
     "From breadboards to boardrooms: Andrew Riley's portfolio of leadership, technology and DIY builds, creative play through music, and personal health.",
   nav: [
-    { href: "/health", label: "Health" },
     { href: "/build", label: "Build" },
-    { href: "/play", label: "Play" },
     { href: "/lead", label: "Lead" },
+    { href: "/play", label: "Play" },
+    { href: "/health", label: "Health" },
   ],
   socials: [
     { href: "https://github.com/andrewkriley", label: "GitHub" },
@@ -20,20 +20,20 @@ export const site = {
 
 export const featuredWork = [
   {
-    title: "Health as foundation",
-    label: "Health",
-    href: "/health",
-    description:
-      "Wellbeing, physical and mental health, diet, and exercise as the foundation that makes the rest sustainable.",
-    proof: "Wellbeing, movement, nutrition, recovery",
-  },
-  {
     title: "Systems and hands-on builds",
     label: "Build",
     href: "/build",
     description:
       "AI tooling, homelab infrastructure, automation, home projects, and DIY work share the same builder's mindset.",
     proof: "AI, homelab, automation, DIY",
+  },
+  {
+    title: "Professional leadership",
+    label: "Lead",
+    href: "/lead",
+    description:
+      "Leadership, people, process, and the work of helping others grow while moving useful ideas forward.",
+    proof: "Teams, communication, strategy, growth",
   },
   {
     title: "DJ Riles",
@@ -44,27 +44,27 @@ export const featuredWork = [
     proof: "YouTube, Mixcloud, live mixes",
   },
   {
-    title: "Professional leadership",
-    label: "Lead",
-    href: "/lead",
+    title: "Health as foundation",
+    label: "Health",
+    href: "/health",
     description:
-      "Leadership, people, process, and the work of helping others grow while moving useful ideas forward.",
-    proof: "Teams, communication, strategy, growth",
+      "Wellbeing, physical and mental health, diet, and exercise as the foundation that makes the rest sustainable.",
+    proof: "Wellbeing, movement, nutrition, recovery",
   },
 ];
 
 export const heroImages = [
   {
-    label: "Health",
-    title: "Wellbeing and movement",
-    src: "/images/hero/andrew_running1.jpg",
-    alt: "Andrew Riley running",
-  },
-  {
     label: "Build",
     title: "Technology and hands-on making",
     src: "/images/hero/andrew_building.jpg",
     alt: "Andrew Riley working on a build project",
+  },
+  {
+    label: "Lead",
+    title: "Professional leadership",
+    src: "/images/hero/riles_presenting1.jpeg",
+    alt: "Andrew Riley presenting professionally",
   },
   {
     label: "Play",
@@ -73,30 +73,33 @@ export const heroImages = [
     alt: "DJ Riles in Las Vegas",
   },
   {
-    label: "Lead",
-    title: "Professional leadership",
-    src: "/images/hero/riles_presenting1.jpeg",
-    alt: "Andrew Riley presenting professionally",
+    label: "Health",
+    title: "Wellbeing and movement",
+    src: "/images/hero/andrew_running1.jpg",
+    alt: "Andrew Riley running",
   },
 ];
 
 export const nowBuilding = [
   {
-    title: "This portfolio",
+    title: "Me and my family",
+    label: "Health",
     description:
-      "Rebuilding the site as proof-of-work: a digital CV shaped around active projects rather than a static resume.",
-    href: "/p/claude-new-post-skill",
+      "The personal foundation: family, wellbeing, and the life that makes everything else sustainable.",
+    href: "/health",
   },
   {
-    title: "Systems and infrastructure",
+    title: "Cisco + Splunk",
+    label: "Lead",
     description:
-      "A GitOps-driven homelab platform for learning, automation, and reliable personal infrastructure.",
-    href: "/p/homelab-platform-homeaiops",
+      "My professional career role—leading, evangelising, and helping teams grow inside Cisco and Splunk.",
+    href: "/lead",
   },
   {
-    title: "Hands-on builds",
+    title: "Cleverbits Technology",
+    label: "Build",
     description:
-      "Capturing the physical side of building: tools, materials, constraints, mistakes, and finished work.",
+      "Building Cleverbits: technology products, systems, and hands-on work that turns ideas into useful tools.",
     href: "/build",
   },
 ];
@@ -106,8 +109,16 @@ export const principles = [
   "Build means making useful things visible, repeatable, and understandable.",
   "Play means keeping creativity, energy, and curiosity alive.",
   "Lead means helping people, teams, and ideas move forward.",
-  "Leadership should help people grow beyond the task in front of them.",
 ];
+
+export const leadershipPrinciples = [
+  "Make the work understandable enough that others can contribute.",
+  "Measure success by capability built, not only by the immediate outcome.",
+  "Help people grow beyond the task directly in front of them.",
+];
+
+export const growingSectionsNote =
+  "Some areas (health logs, DIY workshop notes, and parts of /uses) are intentionally light while proof-of-work posts and active builds carry the site.";
 
 export const healthPillars = [
   {
@@ -227,28 +238,6 @@ export const uses = [
       {
         name: "Mixcloud",
         detail: "Long-form mixes and music archive.",
-      },
-      {
-        name: "Music gear",
-        detail: "Add decks, controller, headphones, and audio setup here.",
-      },
-    ],
-  },
-  {
-    category: "DIY And Making",
-    description: "Hands-on tools and projects still to be documented.",
-    items: [
-      {
-        name: "Workshop tools",
-        detail: "Add the tools you reach for most often.",
-      },
-      {
-        name: "Build materials",
-        detail: "Add preferred materials, finishes, and suppliers.",
-      },
-      {
-        name: "Project photos",
-        detail: "Use this as a future index for DIY build logs.",
       },
     ],
   },

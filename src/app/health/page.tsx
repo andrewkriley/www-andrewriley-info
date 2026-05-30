@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { LinkButton } from "@/components/link-button";
+import { GrowingSectionsNote } from "@/components/growing-sections-note";
 import { healthPillars } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -69,21 +70,12 @@ export default function HealthPage() {
         ))}
       </div>
 
-      <div className="mt-12 rounded-card border border-dashed border-brand-growth bg-brand-accent-soft p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-primary">
-          Future notes
-        </p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-text-primary">
-          Health logs and practices can grow here.
-        </h2>
-        <p className="mt-4 max-w-3xl leading-8 text-text-secondary">
-          This is ready for future posts or lightweight logs around habits,
-          training, food, stress, sleep, and the experiments that actually stick.
-        </p>
+      <div className="mt-12">
+        <GrowingSectionsNote />
         <div className="mt-8 flex flex-wrap gap-3">
-          <LinkButton href="/lead">Lead</LinkButton>
-          <LinkButton href="/build" variant="secondary">
-            Build
+          <LinkButton href="/build">Build</LinkButton>
+          <LinkButton href="/lead" variant="secondary">
+            Lead
           </LinkButton>
           <LinkButton href="/play" variant="secondary">
             Play

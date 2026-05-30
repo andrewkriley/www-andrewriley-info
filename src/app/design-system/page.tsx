@@ -184,7 +184,7 @@ export default function DesignSystemPage() {
           <LinkButton href="/uses" variant="secondary">
             Secondary button
           </LinkButton>
-          <LinkButton href="/about" variant="ghost">
+          <LinkButton href="/#about" variant="ghost">
             Ghost button
           </LinkButton>
         </div>

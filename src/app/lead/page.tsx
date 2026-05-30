@@ -4,7 +4,7 @@ import Image from "next/image";
 import { LinkButton } from "@/components/link-button";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
-import { principles } from "@/data/site";
+import { leadershipPrinciples } from "@/data/site";
 import { getFeaturedPosts } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -58,7 +58,7 @@ export default function LeadPage() {
               the way.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <LinkButton href="/about">About Riles</LinkButton>
+              <LinkButton href="/#about">About Riles</LinkButton>
               <LinkButton href="/build" variant="secondary">
                 See the builds
               </LinkButton>
@@ -66,7 +66,7 @@ export default function LeadPage() {
           </div>
 
           <div className="grid gap-3">
-            {principles.map((principle) => (
+            {leadershipPrinciples.map((principle) => (
               <div
                 key={principle}
                 className="rounded-2xl border border-border-subtle bg-surface-muted p-5 font-semibold text-text-primary"
@@ -81,12 +81,17 @@ export default function LeadPage() {
           <SectionHeading
             eyebrow="Proof"
             title="Leadership through the work."
-            description="Selected writing that shows how I reason through tools, systems, and decisions."
+            description="Examples from the build archive—how I reason through tools, systems, and decisions."
           />
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
+          </div>
+          <div className="mt-8">
+            <LinkButton href="/build#build-writing" variant="secondary">
+              Full archive on Build
+            </LinkButton>
           </div>
         </div>
       </div>

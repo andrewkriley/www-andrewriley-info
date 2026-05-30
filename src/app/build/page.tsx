@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { GrowingSectionsNote } from "@/components/growing-sections-note";
 import { PostCard } from "@/components/post-card";
-import { getPostsByCategory } from "@/lib/content";
+import { SectionHeading } from "@/components/section-heading";
+import { getAllPosts } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Build",
@@ -11,13 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function BuildPage() {
-  const posts = Array.from(
-    new Map(
-      [...getPostsByCategory("technology"), ...getPostsByCategory("home")].map(
-        (post) => [post.slug, post],
-      ),
-    ).values(),
-  );
+  const posts = getAllPosts();
 
   return (
     <section>
@@ -47,24 +43,21 @@ export default function BuildPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-5 py-16">
-      <div className="mt-10 rounded-card border border-dashed border-brand-growth bg-brand-accent-soft p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-primary">
-          DIY build logs
-        </p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-text-primary">
-          The physical build archive is next.
-        </h2>
-        <p className="mt-4 max-w-3xl leading-8 text-text-secondary">
-          This section will also hold workshop notes, materials, constraints,
-          mistakes, and finished project photos as they are gathered.
-        </p>
+      <div id="build-writing" className="mx-auto max-w-6xl px-5 py-16">
+        <SectionHeading
+          eyebrow="Writing"
+          title="Notes from the workbench."
+          description="Technical notes, experiments, and decisions from the blog archive—the proof-of-work layer for build."
+        />
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {posts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </div>
       </div>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
-        ))}
-      </div>
+
+      <div className="mx-auto max-w-6xl px-5 pb-16">
+        <GrowingSectionsNote />
       </div>
     </section>
   );

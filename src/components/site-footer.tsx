@@ -11,22 +11,22 @@ export function SiteFooter() {
             Andrew Riley
           </p>
           <p className="mt-3 max-w-xl text-sm leading-6 text-text-secondary">
-            Health, build, play, and lead across wellbeing, technology, DIY,
-            music, and professional work.
+            Build, lead, play, and health—proof-of-work across technology, DIY,
+            music, leadership, and wellbeing.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
+          <Link
+            href="/#about"
+            className="text-sm font-medium text-text-secondary hover:text-text-primary"
+          >
+            About
+          </Link>
           <Link
             href="/uses"
             className="text-sm font-medium text-text-secondary hover:text-text-primary"
           >
             /uses
-          </Link>
-          <Link
-            href="/design-system"
-            className="text-sm font-medium text-text-secondary hover:text-text-primary"
-          >
-            /design-system
           </Link>
           {site.socials.map((social) => (
             <Link

@@ -14,4 +14,21 @@ Suggested naming:
 - `post-slug-diagram.svg`
 - `post-slug-screenshot-01.webp`
 
-If a post is migrated from the old Hugo site and references local images, place replacement assets here or in a future post-specific folder.
+## Post hero images (front matter)
+
+In each post MDX file, set a cover image:
+
+```yaml
+image: cover.webp
+```
+
+The site looks for files in this order:
+
+1. `public/images/writing/<post-slug>/cover.webp` (preferred)
+2. `public/images/writing/cover.webp` (shared filename)
+
+You can also use a full path: `image: /images/hero/andrew_main.jpg`
+
+Hero images appear on post pages, cards in lists, and Open Graph metadata when the file exists.
+
+If a post is migrated from the old Hugo site and references local images, place replacement assets here using the slug folder pattern above.

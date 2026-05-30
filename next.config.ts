@@ -34,12 +34,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/letscollaborate",
-        destination: "/about",
+        destination: "/#about",
+        permanent: true,
+      },
+      {
+        source: "/about",
+        destination: "/#about",
         permanent: true,
       },
       {
         source: "/archives",
-        destination: "/writing",
+        destination: "/build#build-writing",
+        permanent: true,
+      },
+      {
+        source: "/writing",
+        destination: "/build#build-writing",
         permanent: true,
       },
       {

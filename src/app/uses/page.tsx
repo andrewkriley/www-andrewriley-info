@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { GrowingSectionsNote } from "@/components/growing-sections-note";
 import { SectionHeading } from "@/components/section-heading";
 import { uses } from "@/data/site";
 
@@ -51,6 +52,10 @@ export default function UsesPage() {
             </div>
           </section>
         ))}
+      </div>
+
+      <div className="mt-10 rounded-card border border-border-subtle bg-surface-muted p-6">
+        <GrowingSectionsNote />
       </div>
     </section>
   );
