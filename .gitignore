@@ -1,6 +1,7 @@
 .DS_Store
 **/.DS_Store
 backup/hero-images-originals/
+backup/writing-images-originals/
 node_modules/
 .next/
 .open-next/
