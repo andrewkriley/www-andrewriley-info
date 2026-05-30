@@ -11,11 +11,27 @@ export const site = {
     { href: "/health", label: "Health" },
   ],
   socials: [
-    { href: "https://github.com/andrewkriley", label: "GitHub" },
-    { href: "https://www.linkedin.com/in/andrewriley", label: "LinkedIn" },
-    { href: "https://www.youtube.com/@rilesdj", label: "YouTube" },
-    { href: "https://www.mixcloud.com/rilesdj/", label: "Mixcloud" },
-  ],
+    {
+      href: "https://github.com/andrewkriley",
+      label: "GitHub",
+      icon: "github",
+    },
+    {
+      href: "https://www.linkedin.com/in/andrewriley",
+      label: "LinkedIn",
+      icon: "linkedin",
+    },
+    {
+      href: "https://www.youtube.com/@rilesdj",
+      label: "YouTube",
+      icon: "youtube",
+    },
+    {
+      href: "https://www.mixcloud.com/rilesdj/",
+      label: "Mixcloud",
+      icon: "mixcloud",
+    },
+  ] as const,
 };
 
 export const featuredWork = [

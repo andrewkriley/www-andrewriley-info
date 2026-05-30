@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { HeaderSocialLinks } from "@/components/header-social-links";
 import { site } from "@/data/site";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -24,6 +25,7 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+          <HeaderSocialLinks />
           <ThemeToggle />
         </div>
       </div>
