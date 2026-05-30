@@ -1,0 +1,52 @@
+{
+  "name": "www-andrewriley-info",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio and digital CV for Andrew Riley.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "migrate:content": "node scripts/migrate-hugo-content.mjs",
+    "optimize:hero": "node scripts/optimize-hero-images.mjs",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && wrangler dev",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewkriley/www-andrewriley-info.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/andrewkriley/www-andrewriley-info/issues"
+  },
+  "homepage": "https://github.com/andrewkriley/www-andrewriley-info#readme",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
+    "next": "^16.2.6",
+    "next-mdx-remote": "^6.0.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.8",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^25.6.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.90.0"
+  }
+}
