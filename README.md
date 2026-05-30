@@ -32,15 +32,9 @@ npm run lint
 npm run build
 ```
 
-## Content migration
+## Posts
 
-The previous Hugo posts have been migrated into MDX. The legacy Hugo source and generated `public/` output are intentionally removed from this branch so Cloudflare serves the Next.js app rather than stale static HTML.
-
-```bash
-npm run migrate:content
-```
-
-Migrated posts live at `src/content/posts/*.mdx` and are served at `/p/<slug>` to preserve the existing public URL shape.
+Posts live at `src/content/posts/*.mdx` and are served at `/p/<slug>`.
 
 ## Cloudflare preview and deploy
 
@@ -60,4 +54,3 @@ npm run cf:deploy
 - `src/components/` - Reusable UI components
 - `src/content/posts/` - MDX post archive
 - `src/data/site.ts` - Navigation, social links, featured work, and homepage metadata
-- `scripts/migrate-hugo-content.mjs` - Hugo-to-MDX migration script
