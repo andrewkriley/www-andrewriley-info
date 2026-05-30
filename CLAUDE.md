@@ -2,42 +2,33 @@
 
 ## Project Overview
 
-Personal website/blog for Andrew Riley ("Riles") built with [Hugo](https://gohugo.io/) using the [hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack) theme. Hosted at https://www.andrewriley.info.
+Personal site / portfolio for Andrew Riley ("Riles"), built with Next.js 16 (App Router) + React 19 + TypeScript, styled with Tailwind CSS v4, content authored in MDX, deployed to Cloudflare via OpenNext. Hosted at https://www.andrewriley.info.
 
 ## Project Structure
 
 ```
 .
-├── archetypes/         # Content templates (default.md)
-├── assets/             # Site-level assets (SCSS, JS, images)
-├── config/_default/    # Hugo configuration files
-│   ├── config.toml     # Main config (baseurl, title, theme, pagination)
-│   ├── markup.toml     # Goldmark renderer, syntax highlighting, ToC
-│   ├── module.toml     # Hugo module imports
-│   ├── permalinks.toml # URL structure (/p/:slug/ for posts, /:slug/ for pages)
-│   └── related.toml    # Related content config
-├── content/
-│   ├── _index.md       # Homepage
-│   ├── categories/     # Category index pages
-│   ├── page/           # Static pages (archives, search, about, etc.)
-│   ├── post/2025/      # Blog posts — each post is a directory with index.md
-│   └── scss/           # Custom SCSS overrides
-├── public/             # Hugo build output (do not edit manually)
-├── resources/          # Hugo resource cache
-├── static/             # Static files (favicon.ico, etc.)
-└── themes/
-    └── hugo-theme-stack/ # Theme (git submodule)
+├── public/
+│   └── images/writing/    # Post hero images (by slug or flat)
+├── scripts/
+│   └── optimize-hero-images.mjs
+├── src/
+│   ├── app/               # App Router routes (lead, build, play, health, p/[slug], etc.)
+│   ├── components/        # UI components (site-header, post-card, mdx-components, ...)
+│   ├── content/
+│   │   └── posts/         # *.mdx blog posts (slug = filename)
+│   ├── data/
+│   │   └── site.ts        # Nav, social links, featured work, homepage metadata
+│   └── lib/               # content, format, post-image, youtube, utils
+├── next.config.ts         # Page extensions, allowed origins, redirects
+├── open-next.config.ts    # OpenNext Cloudflare adapter config
+├── wrangler.jsonc         # Cloudflare Worker / assets config
+└── package.json
 ```
 
-## Content Conventions
+## Posts
 
-### Creating a New Post
-
-Posts live under `content/post/2025/<slug>/index.md`. Use the archetype to scaffold:
-
-```bash
-hugo new post/2025/my-post-title/index.md
-```
+Posts are MDX files at `src/content/posts/<slug>.mdx` and render at `/p/<slug>`.
 
 ### Front Matter (YAML)
 
@@ -46,45 +37,37 @@ hugo new post/2025/my-post-title/index.md
 title: Post Title
 description: One-line summary.
 date: 2025-01-01T00:00:00+11:00
-image: cover-image.png          # optional, place image in same directory
-# weight: 1                     # optional, overrides date-based sort order
+image: cover-image.png      # optional; resolved from public/images/writing/<slug>/ or public/images/writing/
 tags:
     - linux
 categories:
     - technology
+slug: post-slug
 ---
 ```
 
-Available categories: `technology`, `music`, `home`
+Hero image resolution lives in [src/lib/post-image.ts](src/lib/post-image.ts).
 
-### Post URL Structure
-
-Posts are served at `/p/<slug>/` — the slug is derived from the directory name.
-
-## Hugo Commands
+## Scripts
 
 ```bash
-# Local dev server (with drafts)
-hugo server -D
+npm run dev          # Next.js dev server
+npm run build        # Production build
+npm run start        # Run production build
+npm run lint         # ESLint
+npm run typecheck    # tsc --noEmit
+npm run optimize:hero  # Sharp-based hero image optimisation
 
-# Build for production
-hugo
-
-# Create new post
-hugo new post/2025/<slug>/index.md
+# Cloudflare (OpenNext)
+npm run cf:build     # opennextjs-cloudflare build
+npm run cf:preview   # build + wrangler dev
+npm run cf:deploy    # build + deploy
 ```
 
 ## Deployment
 
-The site is hosted on **Cloudflare Pages**. Deployments are triggered automatically by commits to:
+Hosted on **Cloudflare** (Workers + assets via OpenNext). Commits to `main` deploy to production at https://www.andrewriley.info.
 
-- `main` — production deployment at https://www.andrewriley.info
-- `dev` — preview deployment
+## Redirects
 
-## Configuration Notes
-
-- **baseurl** in `config.toml` — update before deploying (`https://www.andrewriley.info`)
-- **Markdown rendering** — `unsafe = true` allows raw HTML in markdown
-- **Math support** — LaTeX via passthrough delimiters (`$$...$$`, `\[...\]`)
-- **Syntax highlighting** — line numbers enabled, uses CSS classes (`noClasses = false`)
-- **Theme** — `hugo-theme-stack` is vendored locally in `themes/` (not a Go module import)
+Legacy Hugo URLs (e.g. `/categories/technology`, `/djriles`, `/archives`) are preserved as permanent redirects in [next.config.ts](next.config.ts).
