@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "www-andrewriley-info-2026",
+  "name": "www-andrewriley-info",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-05-09",
   "compatibility_flags": ["nodejs_compat"],
