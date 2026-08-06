@@ -4,7 +4,7 @@ import Image from "next/image";
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
 import { getPostsByCategory } from "@/lib/content";
-import { getLatestYouTubeVideos } from "@/lib/youtube";
+import { getPopularYouTubeVideos } from "@/lib/youtube";
 
 export const metadata: Metadata = {
   title: "Play",
@@ -15,7 +15,7 @@ export const revalidate = 3600;
 
 export default async function PlayPage() {
   const posts = getPostsByCategory("music");
-  const videos = await getLatestYouTubeVideos(4);
+  const videos = await getPopularYouTubeVideos(4);
 
   return (
     <section>
@@ -46,9 +46,9 @@ export default async function PlayPage() {
 
       <div className="mx-auto max-w-6xl px-5 py-16">
         <SectionHeading
-          eyebrow="Mixes"
+          eyebrow="Most popular"
           title="Sets, energy, and moments."
-          description="A few places where the play side of the site comes through in sound."
+          description="The four most popular videos from DJ Riles on YouTube — mixes and moments that people keep coming back to."
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
