@@ -5,7 +5,8 @@
   "description": "Portfolio and digital CV for Andrew Riley.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
+    "build:next": "next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
