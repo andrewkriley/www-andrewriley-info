@@ -6,6 +6,14 @@
   "compatibility_flags": ["nodejs_compat"],
   "routes": [
     {
+      "pattern": "andrewriley.info",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.andrewriley.info",
+      "custom_domain": true
+    },
+    {
       "pattern": "2026.andrewriley.info",
       "custom_domain": true
     }
