@@ -5,29 +5,32 @@
   "description": "Portfolio and digital CV for Andrew Riley.",
   "scripts": {
     "dev": "next dev",
-    "build": "opennextjs-cloudflare build",
+    "build": "opennextjs-cloudflare build && opennextjs-cloudflare populateCache local",
     "build:next": "next build",
     "start": "next start",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "migrate:content": "node scripts/migrate-hugo-content.mjs",
-    "optimize:hero": "node scripts/optimize-hero-images.mjs",
-    "cf:build": "opennextjs-cloudflare build",
-    "cf:preview": "opennextjs-cloudflare build && wrangler dev",
-    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+    "optimize:hero": "node scripts/optimize-hero-images.mjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andrewkriley/www-andrewriley-info.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Andrew Riley",
+  "license": "MIT",
   "type": "module",
   "bugs": {
     "url": "https://github.com/andrewkriley/www-andrewriley-info/issues"
   },
   "homepage": "https://github.com/andrewkriley/www-andrewriley-info#readme",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
@@ -52,6 +55,7 @@
   },
   "overrides": {
     "undici": "^7.29.0",
-    "sharp": "^0.35.3"
+    "sharp": "^0.35.3",
+    "nanoid": "^3.3.18"
   }
 }

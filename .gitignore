@@ -10,4 +10,5 @@ dist/
 *.tsbuildinfo
 .env
 .env*.local
-node_modules
+.dev.vars
+cloudflare-env.d.ts

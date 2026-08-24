@@ -1,9 +1,19 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "www-andrewriley-info",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2026-05-09",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_date": "2026-08-08",
+  "compatibility_flags": [
+    // Node.js APIs used by Next.js / OpenNext
+    "nodejs_compat",
+    // Allow server-side fetch() (Play page YouTube, sitemap, etc.)
+    "global_fetch_strictly_public"
+  ],
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  },
   "routes": [
     {
       "pattern": "andrewriley.info",
@@ -21,5 +31,17 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  }
+  },
+  "images": {
+    // Next.js <Image> via Cloudflare Images
+    // https://opennext.js.org/cloudflare/howtos/image
+    "binding": "IMAGES"
+  },
+  "services": [
+    {
+      // Required for ISR / revalidation (Play page revalidate = 3600)
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "www-andrewriley-info"
+    }
+  ]
 }

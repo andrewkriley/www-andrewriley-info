@@ -17,6 +17,8 @@ type PostPageProps = {
   }>;
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({
     slug: post.slug,
