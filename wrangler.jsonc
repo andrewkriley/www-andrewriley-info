@@ -43,33 +43,5 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "www-andrewriley-info"
     }
-  ],
-  "env": {
-    // Preview Worker: workers.dev only — no production hostnames.
-    // Deploy with: npm run deploy:dev
-    "dev": {
-      "name": "www-andrewriley-info-dev",
-      "workers_dev": true,
-      "preview_urls": true,
-      // Required: otherwise Wrangler inherits production custom domains
-      // and would steal andrewriley.info / www / 2026 on deploy.
-      "routes": [],
-      "observability": {
-        "enabled": true
-      },
-      "assets": {
-        "directory": ".open-next/assets",
-        "binding": "ASSETS"
-      },
-      "images": {
-        "binding": "IMAGES"
-      },
-      "services": [
-        {
-          "binding": "WORKER_SELF_REFERENCE",
-          "service": "www-andrewriley-info-dev"
-        }
-      ]
-    }
-  }
+  ]
 }

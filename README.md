@@ -56,30 +56,12 @@ Connect this GitHub repository in the Cloudflare dashboard. On push to `main`:
 - https://www.andrewriley.info
 - https://2026.andrewriley.info
 
-### Dev / preview Worker
-
-`wrangler.jsonc` defines a separate `dev` environment (`www-andrewriley-info-dev`) on `*.workers.dev` with **no** production custom domains. Use this while iterating on a new site version:
-
-```bash
-npm run deploy:dev
-```
-
-Workers Builds for the preview Worker should use:
-
-| Setting | Value |
-|---------|--------|
-| Build command | `npm run build` |
-| Deploy command | `npx opennextjs-cloudflare deploy --env=dev` |
-| Non-production deploy | `npx opennextjs-cloudflare upload --env=dev` |
-
 ### Local / manual
 
 ```bash
-npm run preview      # OpenNext build + wrangler dev (default / production config)
-npm run preview:dev  # same, using the `dev` Worker name and bindings
-npm run deploy:dev   # OpenNext build + deploy preview Worker only
-npm run deploy       # OpenNext build + production deploy (custom domains)
-npm run upload       # OpenNext build + version upload (gradual rollout)
+npm run preview   # OpenNext build + wrangler dev
+npm run deploy    # OpenNext build + production deploy
+npm run upload    # OpenNext build + version upload (gradual rollout)
 ```
 
 `wrangler.jsonc` is the source of truth for the Worker name (`www-andrewriley-info`), Node.js compatibility flags, static assets, image optimization, and custom domains.
