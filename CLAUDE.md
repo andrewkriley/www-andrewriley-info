@@ -2,89 +2,101 @@
 
 ## Project Overview
 
-Personal website/blog for Andrew Riley ("Riles") built with [Hugo](https://gohugo.io/) using the [hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack) theme. Hosted at https://www.andrewriley.info.
+Portfolio and digital CV for Andrew Riley ("Riles"), published at https://www.andrewriley.info.
 
-## Project Structure
+The 2026 site is a Next.js App Router app deployed to **Cloudflare Workers** via [OpenNext](https://opennext.js.org/cloudflare). It is not a Hugo site.
+
+## Technical stack
+
+- Next.js 16 (App Router) + React 19 + TypeScript
+- Tailwind CSS v4
+- MDX posts under `src/content/posts/`
+- Cloudflare Workers + OpenNext (`@opennextjs/cloudflare`) + Wrangler
+
+## Project structure
 
 ```
 .
-├── archetypes/         # Content templates (default.md)
-├── assets/             # Site-level assets (SCSS, JS, images)
-├── config/_default/    # Hugo configuration files
-│   ├── config.toml     # Main config (baseurl, title, theme, pagination)
-│   ├── markup.toml     # Goldmark renderer, syntax highlighting, ToC
-│   ├── module.toml     # Hugo module imports
-│   ├── permalinks.toml # URL structure (/p/:slug/ for posts, /:slug/ for pages)
-│   └── related.toml    # Related content config
-├── content/
-│   ├── _index.md       # Homepage
-│   ├── categories/     # Category index pages
-│   ├── page/           # Static pages (archives, search, about, etc.)
-│   ├── post/2025/      # Blog posts — each post is a directory with index.md
-│   └── scss/           # Custom SCSS overrides
-├── public/             # Hugo build output (do not edit manually)
-├── resources/          # Hugo resource cache
-├── static/             # Static files (favicon.ico, etc.)
-└── themes/
-    └── hugo-theme-stack/ # Theme (git submodule)
+├── .github/workflows/   # CI (typecheck/lint) and secret scanning
+├── public/              # Static assets (hero images, `_headers`)
+├── scripts/             # Hero-image optimisation helper
+├── src/
+│   ├── app/             # App Router pages and layouts
+│   ├── components/      # Shared UI
+│   ├── content/posts/   # MDX archive, served at /p/<slug>
+│   ├── data/site.ts     # Nav, socials, homepage copy
+│   └── lib/             # Content helpers, YouTube, formatting
+├── next.config.ts
+├── open-next.config.ts  # OpenNext adapter (buildCommand avoids npm recursion)
+├── wrangler.jsonc       # Worker name, domains, bindings
+└── package.json
 ```
 
-## Content Conventions
-
-### Creating a New Post
-
-Posts live under `content/post/2025/<slug>/index.md`. Use the archetype to scaffold:
+## Local development
 
 ```bash
-hugo new post/2025/my-post-title/index.md
+npm install
+cp .dev.vars.example .dev.vars   # first time only
+npm run dev
 ```
 
-### Front Matter (YAML)
+Useful checks:
+
+```bash
+npm run typecheck
+npm run lint
+npm run build          # OpenNext Cloudflare build (what Workers Builds runs)
+npm run preview        # OpenNext build + wrangler dev
+```
+
+## Content
+
+Posts live at `src/content/posts/<slug>.mdx` and are served at `/p/<slug>/`.
 
 ```yaml
 ---
 title: Post Title
 description: One-line summary.
-date: 2025-01-01T00:00:00+11:00
-image: cover-image.png          # optional, place image in same directory
-# weight: 1                     # optional, overrides date-based sort order
+date: 2026-01-01T00:00:00+11:00
+image: /images/writing/<slug>/cover.jpg   # optional
 tags:
-    - linux
+  - linux
 categories:
-    - technology
+  - technology
 ---
 ```
 
-Available categories: `technology`, `music`, `home`
+Categories used on the site: `technology`, `music`, `home`.
 
-### Post URL Structure
+Site copy, nav, and featured work live in `src/data/site.ts`.
 
-Posts are served at `/p/<slug>/` — the slug is derived from the directory name.
+## Cloudflare deployment
 
-## Hugo Commands
+Canonical path is **Workers Builds** connected to this GitHub repo (`main`).
+
+Workers Builds settings:
+
+- **Build command:** `npm run build` (runs `opennextjs-cloudflare build`)
+- **Deploy command:** `npx opennextjs-cloudflare deploy`
+- **Root directory:** repository root
+- **Node:** 22 (see `.node-version`)
+
+`open-next.config.ts` sets `buildCommand` to `npx next build` so OpenNext does not re-invoke `npm run build`. It also uses the Static Assets incremental cache so prerendered `/p/<slug>` posts are served (the default dummy cache 404s those routes).
+
+Do not put custom domains only in the dashboard if they already exist in `wrangler.jsonc` — Wrangler is the source of truth for:
+
+- `andrewriley.info`
+- `www.andrewriley.info`
+- `2026.andrewriley.info`
+
+Manual deploy (when Cloudflare credentials are available locally):
 
 ```bash
-# Local dev server (with drafts)
-hugo server -D
-
-# Build for production
-hugo
-
-# Create new post
-hugo new post/2025/<slug>/index.md
+npm run deploy
 ```
 
-## Deployment
+## Notes
 
-The site is hosted on **Cloudflare Pages**. Deployments are triggered automatically by commits to:
-
-- `main` — production deployment at https://www.andrewriley.info
-- `dev` — preview deployment
-
-## Configuration Notes
-
-- **baseurl** in `config.toml` — update before deploying (`https://www.andrewriley.info`)
-- **Markdown rendering** — `unsafe = true` allows raw HTML in markdown
-- **Math support** — LaTeX via passthrough delimiters (`$$...$$`, `\[...\]`)
-- **Syntax highlighting** — line numbers enabled, uses CSS classes (`noClasses = false`)
-- **Theme** — `hugo-theme-stack` is vendored locally in `themes/` (not a Go module import)
+- Incremental cache uses Workers Static Assets (no R2). Play's `revalidate = 3600` is served from the last deploy until the next build.
+- Health, DIY workshop notes, and parts of `/uses` are intentionally light.
+- Contact/email (Resend) is not wired up yet.

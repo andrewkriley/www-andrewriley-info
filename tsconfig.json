@@ -38,9 +38,8 @@
   ],
   "exclude": [
     "node_modules",
-    "themes",
-    "content",
     "public",
-    "resources"
+    ".open-next",
+    ".wrangler"
   ]
 }

@@ -1,0 +1,3 @@
+# Copied to .dev.vars for local `next dev` / `npm run preview`.
+# NEXTJS_ENV selects which Next.js .env files OpenNext loads.
+NEXTJS_ENV=development

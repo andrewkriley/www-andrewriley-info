@@ -14,13 +14,15 @@ The 2026 version of the site is built around proof-of-work through four themes: 
 | **UI** | React 19 and TypeScript |
 | **Styling** | Tailwind CSS v4 |
 | **Content** | MDX files under `src/content/posts/` |
-| **Email** | Resend-ready; contact flow still to be finalized |
-| **Hosting** | Cloudflare with OpenNext |
+| **Hosting** | Cloudflare Workers via OpenNext |
 
 ## Local development
 
+Requires Node 20.9+ (22 is used in CI and Workers Builds; see `.node-version`).
+
 ```bash
 npm install
+cp .dev.vars.example .dev.vars
 npm run dev
 ```
 
@@ -32,32 +34,43 @@ npm run lint
 npm run build
 ```
 
-## Content migration
+`npm run build` is the Cloudflare/OpenNext production build plus local cache populate (so prerendered `/p/<slug>` posts are uploaded as static assets). Use `npm run build:next` for a plain Next.js build.
 
-The previous Hugo posts have been migrated into MDX. The legacy Hugo source and generated `public/` output are intentionally removed from this branch so Cloudflare serves the Next.js app rather than stale static HTML.
+## Cloudflare deploy
+
+The app is a Worker, not Cloudflare Pages.
+
+### Workers Builds (canonical)
+
+Connect this GitHub repository in the Cloudflare dashboard. On push to `main`:
+
+| Setting | Value |
+|---------|--------|
+| Build command | `npm run build` |
+| Deploy command | `npx opennextjs-cloudflare deploy` |
+| Node version | `22` (from `.node-version`) |
+
+`wrangler.jsonc` attaches the production hostnames:
+
+- https://andrewriley.info
+- https://www.andrewriley.info
+- https://2026.andrewriley.info
+
+### Local / manual
 
 ```bash
-npm run migrate:content
+npm run preview   # OpenNext build + wrangler dev
+npm run deploy    # OpenNext build + production deploy
+npm run upload    # OpenNext build + version upload (gradual rollout)
 ```
 
-Migrated posts live at `src/content/posts/*.mdx` and are served at `/p/<slug>` to preserve the existing public URL shape.
-
-## Cloudflare preview and deploy
-
-OpenNext adapts the Next.js build for Cloudflare:
-
-```bash
-npm run cf:build
-npm run cf:preview
-npm run cf:deploy
-```
-
-`wrangler.jsonc` contains the Cloudflare worker/assets configuration used by the OpenNext output.
+`wrangler.jsonc` is the source of truth for the Worker name (`www-andrewriley-info`), Node.js compatibility flags, static assets, image optimization, and custom domains.
 
 ## Repository layout
 
-- `src/app/` - App Router pages and layouts
-- `src/components/` - Reusable UI components
-- `src/content/posts/` - MDX post archive
-- `src/data/site.ts` - Navigation, social links, featured work, and homepage metadata
-- `scripts/migrate-hugo-content.mjs` - Hugo-to-MDX migration script
+- `src/app/` — App Router pages and layouts
+- `src/components/` — Reusable UI components
+- `src/content/posts/` — MDX post archive (`/p/<slug>`)
+- `src/data/site.ts` — Navigation, social links, featured work, and homepage metadata
+- `open-next.config.ts` — OpenNext adapter (keeps Workers Builds from recursing into `npm run build`)
+- `wrangler.jsonc` — Cloudflare Worker configuration
