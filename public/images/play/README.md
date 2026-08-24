@@ -4,7 +4,7 @@ Images used by the `/play` page and DJ Riles sections.
 
 Current assets moved from `content/page/djriles/`:
 
-- `djriles-side3.png` - current `/play` hero image.
+- `djriles-side3.jpg` - alternate DJ Riles image (optimised from a 12MB PNG).
 - `djriles-side.jpg` - alternate DJ Riles image.
 - `rilesbannerwhite.png` - white DJ Riles/Riles banner artwork.
 

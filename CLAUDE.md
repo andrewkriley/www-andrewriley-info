@@ -89,7 +89,18 @@ Do not put custom domains only in the dashboard if they already exist in `wrangl
 - `www.andrewriley.info`
 - `2026.andrewriley.info`
 
-Manual deploy (when Cloudflare credentials are available locally):
+Preview Worker (`www-andrewriley-info-dev`, `*.workers.dev` only — no production hostnames):
+
+```bash
+npm run deploy:dev
+```
+
+Workers Builds for that Worker:
+
+- **Build command:** `npm run build`
+- **Deploy command:** `npx opennextjs-cloudflare deploy --env=dev`
+
+Production deploy (when Cloudflare credentials are available locally):
 
 ```bash
 npm run deploy
