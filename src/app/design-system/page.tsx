@@ -5,45 +5,12 @@ import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
 import { WorkCard } from "@/components/work-card";
 import { featuredWork } from "@/data/site";
+import {
+  designSystemPalette,
+  designSystemProfile,
+  designSystemSource,
+} from "@/generated/design-system";
 import type { Post } from "@/lib/content";
-
-const palette = [
-  {
-    name: "Cobalt",
-    token: "brand-primary",
-    hex: "#3a55b4",
-    usage: "Primary actions, key links, strong brand anchor.",
-    className: "bg-brand-primary",
-  },
-  {
-    name: "Sky",
-    token: "brand-secondary",
-    hex: "#6caddf",
-    usage: "Eyebrows, secondary highlights, section accents.",
-    className: "bg-brand-secondary",
-  },
-  {
-    name: "Lime",
-    token: "brand-accent",
-    hex: "#ccff8c",
-    usage: "High-energy accents and small emphasis moments.",
-    className: "bg-brand-accent",
-  },
-  {
-    name: "Growth",
-    token: "brand-growth",
-    hex: "#81de76",
-    usage: "Making, progress, DIY, and positive-state highlights.",
-    className: "bg-brand-growth",
-  },
-  {
-    name: "Air",
-    token: "brand-sky",
-    hex: "#8cd9ff",
-    usage: "Soft surfaces, glows, and digital atmosphere.",
-    className: "bg-brand-sky",
-  },
-];
 
 const surfaces = [
   {
@@ -90,7 +57,7 @@ const samplePost: Post = {
 export const metadata: Metadata = {
   title: "Design System",
   description:
-    "A sample page documenting the Andrew Riley site design system, palette, tokens, and reusable elements.",
+    "Working sample sheet for the DEMO default pattern from andrewkriley/design-system, shared with runbyus.",
 };
 
 export default function DesignSystemPage() {
@@ -98,14 +65,63 @@ export default function DesignSystemPage() {
     <div className="mx-auto max-w-6xl px-5 py-20">
       <SectionHeading
         eyebrow="Design system"
-        title="A blue-green system for Health Build Play Lead."
-        description="This page is a working sample sheet for the site's tokens, components, and content patterns across light and dark mode. It combines the bright blue/green palette with the clean card structure used on the Uses page."
+        title="DEMO default — the only token set this site uses."
+        description={`${designSystemProfile.tagline} Same dark tokens as the design-system demo default tab and runbyus.`}
       />
+
+      <section className="mt-8 rounded-card border border-border-subtle bg-surface-card p-6 shadow-sm">
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-secondary">
+          Source
+        </p>
+        <p className="mt-3 text-lg font-bold text-text-primary">
+          {designSystemProfile.name} · {designSystemSource.patternId}
+        </p>
+        <p className="mt-2 text-sm leading-6 text-text-secondary">
+          {designSystemProfile.purpose}
+        </p>
+        <p className="mt-4 text-sm text-text-muted">
+          Pinned to{" "}
+          <a
+            href={designSystemSource.url}
+            className="font-semibold text-brand-secondary underline underline-offset-2"
+          >
+            {designSystemSource.repo}@{designSystemSource.ref}
+          </a>
+          . Resolution follows{" "}
+          <a
+            href={designSystemSource.consumeDoc}
+            className="font-semibold text-brand-secondary underline underline-offset-2"
+          >
+            CONSUME.md
+          </a>
+          .
+        </p>
+      </section>
+
+      <section className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="rounded-card border border-border-subtle bg-surface-card p-6 shadow-sm">
+          <h2 className="text-2xl font-bold text-text-primary">Voice</h2>
+          <p className="mt-3 leading-7 text-text-secondary">
+            {designSystemProfile.voice.summary}
+          </p>
+          <p className="mt-4 text-sm leading-6 text-text-muted">
+            Tone: {designSystemProfile.tone.primary}
+          </p>
+        </div>
+        <div className="rounded-card border border-border-subtle bg-surface-card p-6 shadow-sm">
+          <h2 className="text-2xl font-bold text-text-primary">Values</h2>
+          <ul className="mt-3 space-y-3 text-text-secondary">
+            {designSystemProfile.values.map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <section className="mt-12">
         <h2 className="text-2xl font-bold text-text-primary">Palette</h2>
         <div className="mt-5 grid gap-4 md:grid-cols-5">
-          {palette.map((colour) => (
+          {designSystemPalette.map((colour) => (
             <article
               key={colour.token}
               className="overflow-hidden rounded-card border border-border-subtle bg-surface-card shadow-sm"
@@ -119,6 +135,7 @@ export default function DesignSystemPage() {
                 <p className="mt-1 text-sm text-text-muted">
                   {colour.token}
                 </p>
+                <p className="mt-1 text-xs text-text-muted">{colour.path}</p>
                 <p className="mt-4 text-sm leading-6 text-text-secondary">
                   {colour.usage}
                 </p>

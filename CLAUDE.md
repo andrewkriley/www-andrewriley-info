@@ -19,13 +19,15 @@ The 2026 site is a Next.js App Router app deployed to **Cloudflare Workers** via
 .
 ├── .github/workflows/   # CI (typecheck/lint) and secret scanning
 ├── public/              # Static assets (hero images, `_headers`)
-├── scripts/             # Hero-image optimisation helper
+├── scripts/             # Token sync + hero-image optimisation
 ├── src/
 │   ├── app/             # App Router pages and layouts
 │   ├── components/      # Shared UI
 │   ├── content/posts/   # MDX archive, served at /p/<slug>
 │   ├── data/site.ts     # Nav, socials, homepage copy
+│   ├── generated/       # DEMO pattern tokens from andrewkriley/design-system
 │   └── lib/             # Content helpers, YouTube, formatting
+├── design-system.lock.json
 ├── next.config.ts
 ├── open-next.config.ts  # OpenNext adapter (buildCommand avoids npm recursion)
 ├── wrangler.jsonc       # Worker name, domains, bindings
@@ -43,10 +45,12 @@ npm run dev
 Useful checks:
 
 ```bash
+npm run tokens         # resolve andrewkriley/design-system into src/generated/
 npm run typecheck
 npm run lint
 npm run build          # OpenNext Cloudflare build (what Workers Builds runs)
 npm run preview        # OpenNext build + wrangler dev
+npm run deploy:dev     # isolated www-andrewriley-info-dev Worker (no prod domains)
 ```
 
 ## Content
@@ -70,6 +74,8 @@ Categories used on the site: `technology`, `music`, `home`.
 
 Site copy, nav, and featured work live in `src/data/site.ts`.
 
+Brand tokens come from the pinned [`andrewkriley/design-system`](https://github.com/andrewkriley/design-system) DEMO default pattern (`design-system.lock.json`, currently `v0.1.0` / `therileys-team`). That is the same dark token set [runbyus](https://github.com/andrewkriley/runbyus) pins. `npm run tokens` resolves it into `src/generated/`. This site does not use the `personal` or business voice profiles.
+
 ## Cloudflare deployment
 
 Canonical path is **Workers Builds** connected to this GitHub repo (`main`).
@@ -89,7 +95,19 @@ Do not put custom domains only in the dashboard if they already exist in `wrangl
 - `www.andrewriley.info`
 - `2026.andrewriley.info`
 
-Manual deploy (when Cloudflare credentials are available locally):
+Preview Worker (`www-andrewriley-info-dev`, `*.workers.dev` only — no production hostnames):
+
+```bash
+npm run deploy:dev
+```
+
+Workers Builds for that Worker:
+
+- **Build command:** `npm run build`
+- **Deploy command:** `npx opennextjs-cloudflare deploy --env=dev`
+- **Git branch:** the feature branch, not `main`
+
+Manual production deploy (when Cloudflare credentials are available locally):
 
 ```bash
 npm run deploy
