@@ -1,0 +1,33 @@
+{
+  "$description": "therileys-team hello-world design tokens. Visual editor is the personal Figma file; this JSON is what git and the plan site use. Accents softened for v0.1.1 — drop this file over design-system/tokens/therileys-team.json.",
+  "meta": {
+    "figmaFileKey": "LES62sx8sXTD4zlBNrlEyp",
+    "figmaFileUrl": "https://www.figma.com/design/LES62sx8sXTD4zlBNrlEyp",
+    "figmaPlan": "andrewriley",
+    "mode": "Dark",
+    "source": "docs/canvas.html",
+    "palette": "softened"
+  },
+  "color": {
+    "bg": { "canvas": "#0e1116", "panel": "#161b22" },
+    "text": { "primary": "#e6edf3", "muted": "#8b949e" },
+    "border": { "default": "#30363d" },
+    "accent": {
+      "default": "#749ece",
+      "success": "#578d5e",
+      "warning": "#977d49",
+      "danger": "#c56c68",
+      "violet": "#a185ce",
+      "cyan": "#56a3a7"
+    }
+  },
+  "space": { "xs": 4, "sm": 8, "md": 12, "lg": 16, "xl": 24, "2xl": 32 },
+  "radius": { "sm": 8, "md": 12, "full": 999 },
+  "type": {
+    "display": { "size": 28, "weight": 700, "lineHeight": 36 },
+    "title": { "size": 16, "weight": 500, "lineHeight": 24 },
+    "body": { "size": 14, "weight": 400, "lineHeight": 20 },
+    "caption": { "size": 12, "weight": 400, "lineHeight": 16 },
+    "label": { "size": 11, "weight": 500, "lineHeight": 16 }
+  }
+}

@@ -1,0 +1,35 @@
+/* Softened DEMO accents for runbyus/ui/tokens.css.
+   Same values as upstream/design-system/tokens/therileys-team.json. */
+:root {
+  --bg-canvas: #0e1116;
+  --bg-panel: #161b22;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --border-default: #30363d;
+  --accent-default: #749ece;
+  --accent-success: #578d5e;
+  --accent-warning: #977d49;
+  --accent-danger: #c56c68;
+  --accent-violet: #a185ce;
+  --accent-cyan: #56a3a7;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-full: 999px;
+  --type-display-size: 28px;
+  --type-display-weight: 700;
+  --type-display-line: 36px;
+  --type-title-size: 16px;
+  --type-title-weight: 500;
+  --type-title-line: 24px;
+  --type-body-size: 14px;
+  --type-body-weight: 400;
+  --type-body-line: 20px;
+  --type-caption-size: 12px;
+  --type-label-size: 11px;
+}

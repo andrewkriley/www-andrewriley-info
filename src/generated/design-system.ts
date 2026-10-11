@@ -15,7 +15,7 @@ export const designSystemProfile = {
   id: "therileys-team",
   name: "therileys-team",
   tagline: "A homelab/product UI token set — not a brand-voice profile.",
-  purpose: "Token-only DEMO pattern (dark). This is the default design-system tab and the same CSS variables runbyus pins. No brand-voice manifest.",
+  purpose: "Token-only DEMO pattern (dark). Accents are softened from v0.1.0 — primary brand #58a6ff is now #749ece. Same token set runbyus and build4galileo should consume.",
   values: [
     "Use only this pattern for product UIs — andrewriley.info and runbyus.",
     "Do not apply personal / business-primary / business-venture tokens here.",
@@ -50,15 +50,15 @@ export const designSystemPalette = [
     "name": "Accent",
     "token": "brand-primary",
     "path": "color.accent.default",
-    "hex": "#58a6ff",
-    "usage": "Primary actions and key links — --accent-default.",
+    "hex": "#749ece",
+    "usage": "Softened primary brand accent — --accent-default (#749ece, was #58a6ff).",
     "className": "bg-brand-primary"
   },
   {
     "name": "Cyan",
     "token": "brand-secondary",
     "path": "color.accent.cyan",
-    "hex": "#39d0d8",
+    "hex": "#56a3a7",
     "usage": "Secondary highlights — --accent-cyan.",
     "className": "bg-brand-secondary"
   },
@@ -66,7 +66,7 @@ export const designSystemPalette = [
     "name": "Violet",
     "token": "brand-accent",
     "path": "color.accent.violet",
-    "hex": "#a371f7",
+    "hex": "#a185ce",
     "usage": "Accent moments — --accent-violet.",
     "className": "bg-brand-accent"
   },
@@ -74,7 +74,7 @@ export const designSystemPalette = [
     "name": "Success",
     "token": "brand-growth",
     "path": "color.accent.success",
-    "hex": "#3fb950",
+    "hex": "#578d5e",
     "usage": "Positive state — --accent-success.",
     "className": "bg-brand-growth"
   }

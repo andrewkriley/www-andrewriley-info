@@ -4,5 +4,5 @@
   "kind": "pattern",
   "patternId": "therileys-team",
   "url": "https://github.com/andrewkriley/design-system/tree/v0.1.0",
-  "note": "DEMO default tab (patterns/index.json default: true). Same token set runbyus pins in runbyus/ui/tokens.css. Dark-only."
+  "note": "DEMO default tab. Accents overlaid from upstream/design-system/tokens/therileys-team.json until andrewkriley/design-system ships a soften release."
 }
