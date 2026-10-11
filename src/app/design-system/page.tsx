@@ -57,7 +57,7 @@ const samplePost: Post = {
 export const metadata: Metadata = {
   title: "Design System",
   description:
-    "Working sample sheet for the Andrew Riley personal profile from andrewkriley/design-system.",
+    "Working sample sheet for the DEMO default pattern from andrewkriley/design-system, shared with runbyus.",
 };
 
 export default function DesignSystemPage() {
@@ -65,8 +65,8 @@ export default function DesignSystemPage() {
     <div className="mx-auto max-w-6xl px-5 py-20">
       <SectionHeading
         eyebrow="Design system"
-        title="A blue-green system for Health Build Play Lead."
-        description={`${designSystemProfile.tagline} Tokens are resolved from the ${designSystemSource.profileId} profile in ${designSystemSource.repo}@${designSystemSource.ref}.`}
+        title="DEMO default — the only token set this site uses."
+        description={`${designSystemProfile.tagline} Same dark tokens as the design-system demo default tab and runbyus.`}
       />
 
       <section className="mt-8 rounded-card border border-border-subtle bg-surface-card p-6 shadow-sm">
@@ -74,7 +74,7 @@ export default function DesignSystemPage() {
           Source
         </p>
         <p className="mt-3 text-lg font-bold text-text-primary">
-          {designSystemProfile.name} · {designSystemSource.profileId}
+          {designSystemProfile.name} · {designSystemSource.patternId}
         </p>
         <p className="mt-2 text-sm leading-6 text-text-secondary">
           {designSystemProfile.purpose}

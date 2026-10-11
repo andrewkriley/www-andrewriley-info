@@ -1,32 +1,14 @@
 @import "tailwindcss";
 @import "../generated/design-tokens.css";
 
-/* Site-only extras that the personal token set does not define. */
-:root {
-  --surface-page-end: #f8fbff;
-  --surface-card: #ffffff;
-  --text-on-image: #ffffff;
-  --hero-glow: rgb(140 217 255 / 0.22);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface-page-end: #0f1b38;
-    --surface-card: #111d3b;
-    --hero-glow: rgb(58 85 180 / 0.34);
-  }
-}
-
-html[data-theme="light"] {
-  --surface-page-end: #f8fbff;
-  --surface-card: #ffffff;
-  --hero-glow: rgb(140 217 255 / 0.22);
-}
-
+/* Site extras derived from the DEMO canvas/panel tokens (runbyus-aligned). */
+:root,
+html[data-theme="light"],
 html[data-theme="dark"] {
-  --surface-page-end: #0f1b38;
-  --surface-card: #111d3b;
-  --hero-glow: rgb(58 85 180 / 0.34);
+  --surface-page-end: var(--surface-page);
+  --surface-card: var(--surface-muted);
+  --text-on-image: var(--text-primary);
+  --hero-glow: color-mix(in srgb, var(--brand-primary) 18%, transparent);
 }
 
 @theme inline {
@@ -57,9 +39,7 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, var(--hero-glow), transparent 28rem),
-    linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page-end) 100%);
+  background: var(--surface-page);
   color: var(--text-primary);
   font-family: var(--font-body);
 }

@@ -3,6 +3,7 @@ import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
+  agentRules: false,
   allowedDevOrigins: ["localhost", "127.0.0.1", "10.54.254.11"],
   images: {
     localPatterns: [

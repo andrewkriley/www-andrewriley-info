@@ -25,7 +25,7 @@ The 2026 site is a Next.js App Router app deployed to **Cloudflare Workers** via
 │   ├── components/      # Shared UI
 │   ├── content/posts/   # MDX archive, served at /p/<slug>
 │   ├── data/site.ts     # Nav, socials, homepage copy
-│   ├── generated/       # Tokens resolved from andrewkriley/design-system
+│   ├── generated/       # DEMO pattern tokens from andrewkriley/design-system
 │   └── lib/             # Content helpers, YouTube, formatting
 ├── design-system.lock.json
 ├── next.config.ts
@@ -74,7 +74,7 @@ Categories used on the site: `technology`, `music`, `home`.
 
 Site copy, nav, and featured work live in `src/data/site.ts`.
 
-Brand tokens come from the pinned [`andrewkriley/design-system`](https://github.com/andrewkriley/design-system) checkout (`design-system.lock.json`, currently `v0.1.0` / `personal`). `npm run tokens` resolves `{dot.path}` references into `src/generated/`.
+Brand tokens come from the pinned [`andrewkriley/design-system`](https://github.com/andrewkriley/design-system) DEMO default pattern (`design-system.lock.json`, currently `v0.1.0` / `therileys-team`). That is the same dark token set [runbyus](https://github.com/andrewkriley/runbyus) pins. `npm run tokens` resolves it into `src/generated/`. This site does not use the `personal` or business voice profiles.
 
 ## Cloudflare deployment
 

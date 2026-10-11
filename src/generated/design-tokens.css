@@ -1,95 +1,95 @@
-/* AUTO-GENERATED from andrewkriley/design-system@v0.1.0 (personal). Do not edit. */
+/* AUTO-GENERATED from andrewkriley/design-system@v0.1.0 (therileys-team DEMO pattern). Do not edit. */
 
 :root {
-  color-scheme: light;
-  --brand-primary: #3a55b4;
-  --brand-secondary: #6caddf;
-  --brand-accent: #ccff8c;
-  --brand-growth: #81de76;
-  --brand-sky: #8cd9ff;
-  --brand-accent-soft: rgb(204 255 140 / 0.16);
-  --surface-page: #ffffff;
-  --surface-muted: #f3f8ff;
-  --surface-inverse: #6caddf;
-  --text-primary: #24305f;
-  --text-secondary: #52627f;
-  --text-muted: #74839a;
-  --text-inverse: #081126;
-  --border-subtle: #e3eef9;
-  --shadow-soft: 0 24px 80px rgb(58 85 180 / 0.1);
-  --radius-card: 2rem;
-  --radius-hero: 2.5rem;
-  --font-heading: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+  --brand-primary: #58a6ff;
+  --brand-secondary: #39d0d8;
+  --brand-accent: #a371f7;
+  --brand-growth: #3fb950;
+  --brand-sky: #39d0d8;
+  --surface-page: #0e1116;
+  --surface-muted: #161b22;
+  --surface-inverse: #58a6ff;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #8b949e;
+  --text-inverse: #0e1116;
+  --border-subtle: #30363d;
+  --radius-card: 12px;
+  --radius-hero: 12px;
+  --brand-accent-soft: color-mix(in srgb, #58a6ff 16%, transparent);
+  --shadow-soft: 0 8px 24px rgb(0 0 0 / 0.3);
+  --font-heading: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --brand-primary: #8cd9ff;
-    --brand-secondary: #6caddf;
-    --brand-accent: #ccff8c;
-    --brand-growth: #81de76;
-    --brand-sky: #8cd9ff;
-    --brand-accent-soft: rgb(204 255 140 / 0.12);
-    --surface-page: #081126;
-    --surface-muted: #1a2a52;
-    --surface-inverse: #6caddf;
-    --text-primary: #f6fbff;
-    --text-secondary: #c9d8ec;
-    --text-muted: #98aac5;
-    --text-inverse: #081126;
-    --border-subtle: #293c69;
-    --shadow-soft: 0 24px 80px rgb(0 0 0 / 0.32);
-    --radius-card: 2rem;
-    --radius-hero: 2.5rem;
-    --font-heading: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-    --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --brand-primary: #58a6ff;
+    --brand-secondary: #39d0d8;
+    --brand-accent: #a371f7;
+    --brand-growth: #3fb950;
+    --brand-sky: #39d0d8;
+    --surface-page: #0e1116;
+    --surface-muted: #161b22;
+    --surface-inverse: #58a6ff;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #8b949e;
+    --text-inverse: #0e1116;
+    --border-subtle: #30363d;
+    --radius-card: 12px;
+    --radius-hero: 12px;
+    --brand-accent-soft: color-mix(in srgb, #58a6ff 16%, transparent);
+    --shadow-soft: 0 8px 24px rgb(0 0 0 / 0.3);
+    --font-heading: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   }
 }
 
 html[data-theme="light"] {
-  color-scheme: light;
-  --brand-primary: #3a55b4;
-  --brand-secondary: #6caddf;
-  --brand-accent: #ccff8c;
-  --brand-growth: #81de76;
-  --brand-sky: #8cd9ff;
-  --brand-accent-soft: rgb(204 255 140 / 0.16);
-  --surface-page: #ffffff;
-  --surface-muted: #f3f8ff;
-  --surface-inverse: #6caddf;
-  --text-primary: #24305f;
-  --text-secondary: #52627f;
-  --text-muted: #74839a;
-  --text-inverse: #081126;
-  --border-subtle: #e3eef9;
-  --shadow-soft: 0 24px 80px rgb(58 85 180 / 0.1);
-  --radius-card: 2rem;
-  --radius-hero: 2.5rem;
-  --font-heading: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+  --brand-primary: #58a6ff;
+  --brand-secondary: #39d0d8;
+  --brand-accent: #a371f7;
+  --brand-growth: #3fb950;
+  --brand-sky: #39d0d8;
+  --surface-page: #0e1116;
+  --surface-muted: #161b22;
+  --surface-inverse: #58a6ff;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #8b949e;
+  --text-inverse: #0e1116;
+  --border-subtle: #30363d;
+  --radius-card: 12px;
+  --radius-hero: 12px;
+  --brand-accent-soft: color-mix(in srgb, #58a6ff 16%, transparent);
+  --shadow-soft: 0 8px 24px rgb(0 0 0 / 0.3);
+  --font-heading: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --brand-primary: #8cd9ff;
-  --brand-secondary: #6caddf;
-  --brand-accent: #ccff8c;
-  --brand-growth: #81de76;
-  --brand-sky: #8cd9ff;
-  --brand-accent-soft: rgb(204 255 140 / 0.12);
-  --surface-page: #081126;
-  --surface-muted: #1a2a52;
-  --surface-inverse: #6caddf;
-  --text-primary: #f6fbff;
-  --text-secondary: #c9d8ec;
-  --text-muted: #98aac5;
-  --text-inverse: #081126;
-  --border-subtle: #293c69;
-  --shadow-soft: 0 24px 80px rgb(0 0 0 / 0.32);
-  --radius-card: 2rem;
-  --radius-hero: 2.5rem;
-  --font-heading: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --brand-primary: #58a6ff;
+  --brand-secondary: #39d0d8;
+  --brand-accent: #a371f7;
+  --brand-growth: #3fb950;
+  --brand-sky: #39d0d8;
+  --surface-page: #0e1116;
+  --surface-muted: #161b22;
+  --surface-inverse: #58a6ff;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #8b949e;
+  --text-inverse: #0e1116;
+  --border-subtle: #30363d;
+  --radius-card: 12px;
+  --radius-hero: 12px;
+  --brand-accent-soft: color-mix(in srgb, #58a6ff 16%, transparent);
+  --shadow-soft: 0 8px 24px rgb(0 0 0 / 0.3);
+  --font-heading: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 }

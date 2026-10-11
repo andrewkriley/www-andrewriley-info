@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 /**
- * Consume andrewkriley/design-system the way CONSUME.md describes:
- * load manifests/index.json + tokens/index.json, merge shared + profile
- * tokens, resolve `{dot.path}` references, then emit site CSS and metadata.
+ * Consume andrewkriley/design-system the way CONSUME.md + the demo describe.
  *
- * Source files come from the pinned git dependency (`design-system` in
- * package.json / design-system.lock.json).
+ * This site uses only the DEMO default pattern (`therileys-team`) — the same
+ * token set runbyus pins. It does not merge shared.json or apply a brand-voice
+ * profile.
  */
 import fs from "fs";
 import path from "path";
@@ -16,58 +15,69 @@ const PIN_PATH = path.join(ROOT, "design-system.lock.json");
 const DS_ROOT = path.join(ROOT, "node_modules", "design-system");
 const OUT_DIR = path.join(ROOT, "src", "generated");
 
+const FALLBACK_FONT =
+  "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif";
+
 const SITE_TOKEN_MAP = {
   "brand-primary": "color.brand.primary",
   "brand-secondary": "color.brand.primaryMuted",
   "brand-accent": "color.brand.accent",
-  "brand-growth": "color.brand.growth",
-  "brand-sky": "color.brand.sky",
-  "brand-accent-soft": "color.brand.accentSoft",
-  "surface-page": "color.brand.surface",
-  "surface-muted": "color.brand.surfaceAlt",
-  "surface-inverse": "color.brand.primaryMuted",
+  "brand-growth": "color.accent.success",
+  "brand-sky": "color.accent.cyan",
+  "surface-page": "color.bg.canvas",
+  "surface-muted": "color.bg.panel",
+  "surface-inverse": "color.accent.default",
   "text-primary": "color.semantic.text",
   "text-secondary": "color.semantic.textMuted",
-  "text-muted": "color.semantic.textSubtle",
-  "text-inverse": "color.semantic.inverse",
-  "border-subtle": "color.semantic.border",
-  "shadow-soft": "shadow.soft",
-  "radius-card": "radius.card",
-  "radius-hero": "radius.hero",
-  "font-heading": "font.heading",
-  "font-body": "font.body",
+  "text-muted": "color.semantic.textMuted",
+  "text-inverse": "color.semantic.onPrimary",
+  "border-subtle": "color.border.default",
+  "radius-card": "radius.md",
+  "radius-hero": "radius.md",
 };
 
-const BRAND_SWATCHES = [
+const PALETTE = [
   {
-    name: "Cobalt",
-    path: "color.brand.primary",
+    name: "Canvas",
+    path: "color.bg.canvas",
+    token: "surface-page",
+    className: "bg-surface-page",
+    usage: "Page background — DEMO / runbyus --bg-canvas.",
+  },
+  {
+    name: "Panel",
+    path: "color.bg.panel",
+    token: "surface-muted",
+    className: "bg-surface-muted",
+    usage: "Cards and rails — DEMO / runbyus --bg-panel.",
+  },
+  {
+    name: "Accent",
+    path: "color.accent.default",
     token: "brand-primary",
     className: "bg-brand-primary",
+    usage: "Primary actions and key links — --accent-default.",
   },
   {
-    name: "Sky",
-    path: "color.brand.primaryMuted",
+    name: "Cyan",
+    path: "color.accent.cyan",
     token: "brand-secondary",
     className: "bg-brand-secondary",
+    usage: "Secondary highlights — --accent-cyan.",
   },
   {
-    name: "Lime",
-    path: "color.brand.accent",
+    name: "Violet",
+    path: "color.accent.violet",
     token: "brand-accent",
     className: "bg-brand-accent",
+    usage: "Accent moments — --accent-violet.",
   },
   {
-    name: "Growth",
-    path: "color.brand.growth",
+    name: "Success",
+    path: "color.accent.success",
     token: "brand-growth",
     className: "bg-brand-growth",
-  },
-  {
-    name: "Air",
-    path: "color.brand.sky",
-    token: "brand-sky",
-    className: "bg-brand-sky",
+    usage: "Positive state — --accent-success.",
   },
 ];
 
@@ -81,13 +91,19 @@ function dsPath(repoRelative) {
 
 function flattenTokens(tree, prefix = "", out = {}) {
   for (const key of Object.keys(tree)) {
-    if (key.startsWith("$")) continue;
+    if (key.startsWith("$") || key === "meta") continue;
     const node = tree[key];
     const tokenPath = prefix ? `${prefix}.${key}` : key;
     if (node && typeof node === "object" && !Array.isArray(node) && "value" in node) {
       out[tokenPath] = { ...node, path: tokenPath };
     } else if (node && typeof node === "object" && !Array.isArray(node)) {
       flattenTokens(node, tokenPath, out);
+    } else if (
+      typeof node === "string" ||
+      typeof node === "number" ||
+      typeof node === "boolean"
+    ) {
+      out[tokenPath] = { value: node, path: tokenPath };
     }
   }
   return out;
@@ -119,30 +135,34 @@ function resolveAllTokens(flat) {
   return flat;
 }
 
-function deepMerge(a, b) {
-  const out = { ...a };
-  for (const key of Object.keys(b)) {
-    if (
-      b[key] &&
-      typeof b[key] === "object" &&
-      !("value" in b[key]) &&
-      a[key] &&
-      typeof a[key] === "object"
-    ) {
-      out[key] = deepMerge(a[key], b[key]);
-    } else {
-      out[key] = b[key];
+function withPatternColorAliases(tokens) {
+  const alias = (aliasPath, sourcePath) => {
+    if (tokens[sourcePath]) {
+      tokens[aliasPath] = { ...tokens[sourcePath], path: aliasPath };
     }
-  }
-  return out;
+  };
+  alias("color.brand.primary", "color.accent.default");
+  alias("color.brand.primaryMuted", "color.accent.cyan");
+  alias("color.brand.accent", "color.accent.violet");
+  alias("color.brand.surface", "color.bg.panel");
+  alias("color.brand.surfaceAlt", "color.bg.canvas");
+  alias("color.semantic.text", "color.text.primary");
+  alias("color.semantic.textMuted", "color.text.muted");
+  alias("color.semantic.link", "color.accent.default");
+  alias("color.semantic.linkHover", "color.accent.cyan");
+  alias("color.semantic.onPrimary", "color.bg.canvas");
+  alias("color.semantic.onAccent", "color.bg.canvas");
+  return tokens;
 }
 
-function tokenValue(flat, tokenPath, mode = "light") {
-  const darkPath = `dark.${tokenPath}`;
-  if (mode === "dark" && flat[darkPath]) return flat[darkPath].resolvedValue;
+function cssValue(value) {
+  return typeof value === "number" ? `${value}px` : value;
+}
+
+function tokenValue(flat, tokenPath) {
   const node = flat[tokenPath];
   if (!node) throw new Error(`Missing token ${tokenPath}`);
-  return node.resolvedValue;
+  return cssValue(node.resolvedValue);
 }
 
 function jsString(value) {
@@ -159,75 +179,84 @@ function cssBlock(selector, vars) {
   return `${selector} {\n${body}\n}`;
 }
 
-function siteVars(flat, mode) {
-  return Object.entries(SITE_TOKEN_MAP).map(([name, tokenPath]) => [
+function siteVars(flat) {
+  const mapped = Object.entries(SITE_TOKEN_MAP).map(([name, tokenPath]) => [
     name,
-    tokenValue(flat, tokenPath, mode),
+    tokenValue(flat, tokenPath),
   ]);
+  const accent = tokenValue(flat, "color.accent.default");
+  mapped.push(["brand-accent-soft", `color-mix(in srgb, ${accent} 16%, transparent)`]);
+  mapped.push(["shadow-soft", "0 8px 24px rgb(0 0 0 / 0.3)"]);
+  mapped.push(["font-heading", FALLBACK_FONT]);
+  mapped.push(["font-body", FALLBACK_FONT]);
+  return mapped;
 }
 
 function writeGeneratedCss(pin, flat) {
-  const header = `/* AUTO-GENERATED from ${pin.repo}@${pin.ref} (${pin.profileId}). Do not edit. */`;
-  const darkVars = [["color-scheme", "dark"], ...siteVars(flat, "dark")]
+  const header = `/* AUTO-GENERATED from ${pin.repo}@${pin.ref} (${pin.patternId} DEMO pattern). Do not edit. */`;
+  const vars = [["color-scheme", "dark"], ...siteVars(flat)];
+  const darkQueryVars = vars
     .map(([name, value]) => cssDecl(name, value, "    "))
     .join("\n");
-  const darkQuery = `@media (prefers-color-scheme: dark) {\n  :root {\n${darkVars}\n  }\n}`;
-
   return `${header}
 
-${cssBlock(":root", [["color-scheme", "light"], ...siteVars(flat, "light")])}
+${cssBlock(":root", vars)}
 
-${darkQuery}
+@media (prefers-color-scheme: dark) {
+  :root {
+${darkQueryVars}
+  }
+}
 
-${cssBlock('html[data-theme="light"]', [
-  ["color-scheme", "light"],
-  ...siteVars(flat, "light"),
-])}
+${cssBlock('html[data-theme="light"]', vars)}
 
-${cssBlock('html[data-theme="dark"]', [
-  ["color-scheme", "dark"],
-  ...siteVars(flat, "dark"),
-])}
+${cssBlock('html[data-theme="dark"]', vars)}
 `;
 }
 
-function writeGeneratedTs(pin, manifest, flat) {
-  const swatches = BRAND_SWATCHES.map((swatch) => ({
+function writeGeneratedTs(pin, pattern, flat) {
+  const swatches = PALETTE.map((swatch) => ({
     name: swatch.name,
     token: swatch.token,
     path: swatch.path,
-    hex: tokenValue(flat, swatch.path, "light"),
-    usage: flat[swatch.path]?.description ?? "",
+    hex: tokenValue(flat, swatch.path),
+    usage: swatch.usage,
     className: swatch.className,
   }));
 
-  return `/* AUTO-GENERATED from ${pin.repo}@${pin.ref} (${pin.profileId}). Do not edit. */
+  return `/* AUTO-GENERATED from ${pin.repo}@${pin.ref} (${pin.patternId}). Do not edit. */
 
 export const designSystemSource = {
+  kind: "pattern",
   repo: ${jsString(pin.repo)},
   ref: ${jsString(pin.ref)},
   url: ${jsString(pin.url)},
   consumeDoc: ${jsString(`https://github.com/${pin.repo}/blob/${pin.ref}/design-system/tooling/CONSUME.md`)},
-  profileId: ${jsString(pin.profileId)},
+  patternId: ${jsString(pin.patternId)},
+  profileId: ${jsString(pin.patternId)},
+  sharedWith: ["runbyus"] as const,
 } as const;
 
 export const designSystemProfile = {
-  id: ${jsString(manifest.id)},
-  name: ${jsString(manifest.name)},
-  tagline: ${jsString(manifest.tagline)},
-  purpose: ${jsString(manifest.purpose)},
-  values: ${JSON.stringify(manifest.values, null, 2)
-    .split("\n")
-    .map((line, i) => (i === 0 ? line : `  ${line}`))
-    .join("\n")} as const,
-  tone: ${JSON.stringify(manifest.tone, null, 2)
-    .split("\n")
-    .map((line, i) => (i === 0 ? line : `  ${line}`))
-    .join("\n")},
-  voice: ${JSON.stringify(manifest.voice, null, 2)
-    .split("\n")
-    .map((line, i) => (i === 0 ? line : `  ${line}`))
-    .join("\n")},
+  id: ${jsString(pattern.id)},
+  name: ${jsString(pattern.name)},
+  tagline: ${jsString(pattern.tagline)},
+  purpose: ${jsString(
+    "Token-only DEMO pattern (dark). This is the default design-system tab and the same CSS variables runbyus pins. No brand-voice manifest.",
+  )},
+  values: [
+    "Use only this pattern for product UIs — andrewriley.info and runbyus.",
+    "Do not apply personal / business-primary / business-venture tokens here.",
+    "Dark-only: there is no light variant in this token set."
+  ] as const,
+  tone: {
+    primary: "Token-only — no brand voice",
+  },
+  voice: {
+    summary: ${jsString(
+      "The DEMO pattern has no voice or tone profile. Visual language only, shared with runbyus.",
+    )},
+  },
 } as const;
 
 export const designSystemPalette = ${JSON.stringify(swatches, null, 2)} as const;
@@ -242,35 +271,30 @@ function main() {
   }
 
   const pin = readJson(PIN_PATH);
-  const manifestIndex = readJson(dsPath("design-system/manifests/index.json"));
-  const tokenIndex = readJson(dsPath("design-system/tokens/index.json"));
-  const shared = readJson(dsPath(tokenIndex.shared));
+  if (pin.kind !== "pattern" || !pin.patternId) {
+    throw new Error("design-system.lock.json must set kind=pattern and patternId.");
+  }
 
-  const manifestPath = manifestIndex.profiles.find((entry) =>
-    entry.endsWith(`/${pin.profileId}.json`),
+  const patternIndex = readJson(dsPath("design-system/patterns/index.json"));
+  const pattern = patternIndex.patterns.find((entry) => entry.id === pin.patternId);
+  if (!pattern) {
+    throw new Error(`Pattern ${pin.patternId} not listed in patterns/index.json`);
+  }
+
+  const raw = readJson(dsPath(pattern.tokensPath));
+  const flat = withPatternColorAliases(
+    resolveAllTokens(flattenTokens(raw)),
   );
-  if (!manifestPath) {
-    throw new Error(`Profile ${pin.profileId} not listed in manifests/index.json`);
-  }
-
-  const manifest = readJson(dsPath(manifestPath));
-  const setPath = tokenIndex.sets[manifest.tokenSetId];
-  if (!setPath) {
-    throw new Error(`No token set for ${manifest.tokenSetId}`);
-  }
-
-  const profileTokens = readJson(dsPath(setPath));
-  const flat = resolveAllTokens(flattenTokens(deepMerge(shared, profileTokens)));
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const cssPath = path.join(OUT_DIR, "design-tokens.css");
   const tsPath = path.join(OUT_DIR, "design-system.ts");
   fs.writeFileSync(cssPath, writeGeneratedCss(pin, flat));
-  fs.writeFileSync(tsPath, writeGeneratedTs(pin, manifest, flat));
+  fs.writeFileSync(tsPath, writeGeneratedTs(pin, pattern, flat));
 
   console.log(`Wrote ${path.relative(ROOT, cssPath)}`);
   console.log(`Wrote ${path.relative(ROOT, tsPath)}`);
-  console.log(`Pinned ${pin.repo}@${pin.ref} profile=${pin.profileId}`);
+  console.log(`Pinned ${pin.repo}@${pin.ref} pattern=${pin.patternId} (DEMO default)`);
 }
 
 main();

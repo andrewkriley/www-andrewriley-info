@@ -29,7 +29,7 @@ npm run dev
 Useful checks:
 
 ```bash
-npm run tokens     # resolve andrewkriley/design-system@v0.1.0 into CSS
+npm run tokens     # resolve DEMO default (therileys-team) into CSS
 npm run typecheck
 npm run lint
 npm run build
@@ -95,5 +95,5 @@ npm run upload       # OpenNext build + version upload (gradual rollout)
 - `src/data/site.ts` — Navigation, social links, featured work, and homepage metadata
 - `open-next.config.ts` — OpenNext adapter (keeps Workers Builds from recursing into `npm run build`)
 - `wrangler.jsonc` — Cloudflare Worker configuration
-- `design-system.lock.json` — pinned `andrewkriley/design-system` ref and profile
+- `design-system.lock.json` — pinned `andrewkriley/design-system` DEMO pattern (`therileys-team`, shared with runbyus)
 - `scripts/sync-design-system.mjs` — resolves tokens into `src/generated/`

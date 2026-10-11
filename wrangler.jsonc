@@ -57,7 +57,7 @@
       "routes": [],
       "vars": {
         "ENVIRONMENT": "preview",
-        "DESIGN_SYSTEM_REF": "andrewkriley/design-system@v0.1.0"
+        "DESIGN_SYSTEM_REF": "andrewkriley/design-system@v0.1.0#therileys-team"
       },
       "observability": {
         "enabled": true
