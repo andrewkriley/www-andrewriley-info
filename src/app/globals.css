@@ -1,98 +1,31 @@
 @import "tailwindcss";
+@import "../generated/design-tokens.css";
 
+/* Site-only extras that the personal token set does not define. */
 :root {
-  color-scheme: light;
-  --brand-primary: #3a55b4;
-  --brand-secondary: #6caddf;
-  --brand-accent: #ccff8c;
-  --brand-growth: #81de76;
-  --brand-sky: #8cd9ff;
-  --brand-accent-soft: rgb(204 255 140 / 0.16);
-  --surface-page: #ffffff;
   --surface-page-end: #f8fbff;
   --surface-card: #ffffff;
-  --surface-muted: #f3f8ff;
-  --surface-inverse: #6caddf;
-  --text-primary: #24305f;
-  --text-secondary: #52627f;
-  --text-muted: #74839a;
-  --text-inverse: #081126;
   --text-on-image: #ffffff;
-  --border-subtle: #e3eef9;
-  --shadow-soft: 0 24px 80px rgb(58 85 180 / 0.1);
-  --radius-card: 2rem;
-  --radius-hero: 2.5rem;
   --hero-glow: rgb(140 217 255 / 0.22);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: dark;
-    --brand-primary: #8cd9ff;
-    --brand-secondary: #6caddf;
-    --brand-accent: #ccff8c;
-    --brand-growth: #81de76;
-    --brand-sky: #8cd9ff;
-    --brand-accent-soft: rgb(204 255 140 / 0.12);
-    --surface-page: #081126;
     --surface-page-end: #0f1b38;
     --surface-card: #111d3b;
-    --surface-muted: #1a2a52;
-    --surface-inverse: #6caddf;
-    --text-primary: #f6fbff;
-    --text-secondary: #c9d8ec;
-    --text-muted: #98aac5;
-    --text-inverse: #081126;
-    --text-on-image: #ffffff;
-    --border-subtle: #293c69;
-    --shadow-soft: 0 24px 80px rgb(0 0 0 / 0.32);
     --hero-glow: rgb(58 85 180 / 0.34);
   }
 }
 
 html[data-theme="light"] {
-  color-scheme: light;
-  --brand-primary: #3a55b4;
-  --brand-secondary: #6caddf;
-  --brand-accent: #ccff8c;
-  --brand-growth: #81de76;
-  --brand-sky: #8cd9ff;
-  --brand-accent-soft: rgb(204 255 140 / 0.16);
-  --surface-page: #ffffff;
   --surface-page-end: #f8fbff;
   --surface-card: #ffffff;
-  --surface-muted: #f3f8ff;
-  --surface-inverse: #6caddf;
-  --text-primary: #24305f;
-  --text-secondary: #52627f;
-  --text-muted: #74839a;
-  --text-inverse: #081126;
-  --text-on-image: #ffffff;
-  --border-subtle: #e3eef9;
-  --shadow-soft: 0 24px 80px rgb(58 85 180 / 0.1);
   --hero-glow: rgb(140 217 255 / 0.22);
 }
 
 html[data-theme="dark"] {
-  color-scheme: dark;
-  --brand-primary: #8cd9ff;
-  --brand-secondary: #6caddf;
-  --brand-accent: #ccff8c;
-  --brand-growth: #81de76;
-  --brand-sky: #8cd9ff;
-  --brand-accent-soft: rgb(204 255 140 / 0.12);
-  --surface-page: #081126;
   --surface-page-end: #0f1b38;
   --surface-card: #111d3b;
-  --surface-muted: #1a2a52;
-  --surface-inverse: #6caddf;
-  --text-primary: #f6fbff;
-  --text-secondary: #c9d8ec;
-  --text-muted: #98aac5;
-  --text-inverse: #081126;
-  --text-on-image: #ffffff;
-  --border-subtle: #293c69;
-  --shadow-soft: 0 24px 80px rgb(0 0 0 / 0.32);
   --hero-glow: rgb(58 85 180 / 0.34);
 }
 
@@ -128,9 +61,7 @@ body {
     radial-gradient(circle at top left, var(--hero-glow), transparent 28rem),
     linear-gradient(180deg, var(--surface-page) 0%, var(--surface-page-end) 100%);
   color: var(--text-primary);
-  font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: var(--font-body);
 }
 
 /* Full-bleed photo heroes — keeps light copy readable on busy backgrounds */

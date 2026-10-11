@@ -43,5 +43,38 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "www-andrewriley-info"
     }
-  ]
+  ],
+  "env": {
+    // Isolated preview Worker: workers.dev only — no production hostnames.
+    // Deploy this branch with: npm run deploy:dev
+    // Workers Builds preview command: npx opennextjs-cloudflare deploy --env=dev
+    "dev": {
+      "name": "www-andrewriley-info-dev",
+      "workers_dev": true,
+      "preview_urls": true,
+      // Required: otherwise Wrangler inherits production custom domains
+      // and would steal andrewriley.info / www / 2026 on deploy.
+      "routes": [],
+      "vars": {
+        "ENVIRONMENT": "preview",
+        "DESIGN_SYSTEM_REF": "andrewkriley/design-system@v0.1.0"
+      },
+      "observability": {
+        "enabled": true
+      },
+      "assets": {
+        "directory": ".open-next/assets",
+        "binding": "ASSETS"
+      },
+      "images": {
+        "binding": "IMAGES"
+      },
+      "services": [
+        {
+          "binding": "WORKER_SELF_REFERENCE",
+          "service": "www-andrewriley-info-dev"
+        }
+      ]
+    }
+  }
 }

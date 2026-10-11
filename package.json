@@ -4,16 +4,22 @@
   "private": true,
   "description": "Portfolio and digital CV for Andrew Riley.",
   "scripts": {
+    "tokens": "node scripts/sync-design-system.mjs",
+    "predev": "npm run tokens",
     "dev": "next dev",
+    "prebuild": "npm run tokens",
     "build": "opennextjs-cloudflare build && opennextjs-cloudflare populateCache local",
     "build:next": "next build",
     "start": "next start",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "preview:dev": "opennextjs-cloudflare build && opennextjs-cloudflare preview --env=dev",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "deploy:dev": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --env=dev",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "upload:dev": "opennextjs-cloudflare build && opennextjs-cloudflare upload --env=dev",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "npm run tokens && tsc --noEmit",
     "optimize:hero": "node scripts/optimize-hero-images.mjs"
   },
   "repository": {
@@ -38,6 +44,7 @@
     "next-mdx-remote": "^6.0.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "design-system": "github:andrewkriley/design-system#v0.1.0",
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {

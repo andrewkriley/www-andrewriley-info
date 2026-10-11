@@ -29,6 +29,7 @@ npm run dev
 Useful checks:
 
 ```bash
+npm run tokens     # resolve andrewkriley/design-system@v0.1.0 into CSS
 npm run typecheck
 npm run lint
 npm run build
@@ -56,12 +57,32 @@ Connect this GitHub repository in the Cloudflare dashboard. On push to `main`:
 - https://www.andrewriley.info
 - https://2026.andrewriley.info
 
+### Dev / preview Worker
+
+`wrangler.jsonc` defines a separate `dev` environment (`www-andrewriley-info-dev`) on `*.workers.dev` with **no** production custom domains. Use it for this design-system branch (and any other non-production deploy):
+
+```bash
+npm run deploy:dev
+```
+
+Workers Builds for the preview Worker should use:
+
+| Setting | Value |
+|---------|--------|
+| Build command | `npm run build` |
+| Deploy command | `npx opennextjs-cloudflare deploy --env=dev` |
+| Git branch | this feature branch, not `main` |
+
+If preview builds stay on the production Worker instead, set the Preview command to `npx opennextjs-cloudflare deploy --env=dev` so branch deploys cannot inherit `andrewriley.info` routes.
+
 ### Local / manual
 
 ```bash
-npm run preview   # OpenNext build + wrangler dev
-npm run deploy    # OpenNext build + production deploy
-npm run upload    # OpenNext build + version upload (gradual rollout)
+npm run preview      # OpenNext build + wrangler dev (production config)
+npm run preview:dev  # same, using the `dev` Worker name and bindings
+npm run deploy:dev   # OpenNext build + deploy preview Worker only
+npm run deploy       # OpenNext build + production deploy (custom domains)
+npm run upload       # OpenNext build + version upload (gradual rollout)
 ```
 
 `wrangler.jsonc` is the source of truth for the Worker name (`www-andrewriley-info`), Node.js compatibility flags, static assets, image optimization, and custom domains.
@@ -74,3 +95,5 @@ npm run upload    # OpenNext build + version upload (gradual rollout)
 - `src/data/site.ts` — Navigation, social links, featured work, and homepage metadata
 - `open-next.config.ts` — OpenNext adapter (keeps Workers Builds from recursing into `npm run build`)
 - `wrangler.jsonc` — Cloudflare Worker configuration
+- `design-system.lock.json` — pinned `andrewkriley/design-system` ref and profile
+- `scripts/sync-design-system.mjs` — resolves tokens into `src/generated/`
