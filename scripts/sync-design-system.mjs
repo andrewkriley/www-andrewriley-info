@@ -13,6 +13,10 @@ import { fileURLToPath } from "url";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PIN_PATH = path.join(ROOT, "design-system.lock.json");
 const DS_ROOT = path.join(ROOT, "node_modules", "design-system");
+const SOFTENED_TOKENS = path.join(
+  ROOT,
+  "upstream/design-system/tokens/therileys-team.json",
+);
 const OUT_DIR = path.join(ROOT, "src", "generated");
 
 const FALLBACK_FONT =
@@ -56,7 +60,7 @@ const PALETTE = [
     path: "color.accent.default",
     token: "brand-primary",
     className: "bg-brand-primary",
-    usage: "Primary actions and key links — --accent-default.",
+    usage: "Softened primary brand accent — --accent-default (#749ece, was #58a6ff).",
   },
   {
     name: "Cyan",
@@ -242,7 +246,7 @@ export const designSystemProfile = {
   name: ${jsString(pattern.name)},
   tagline: ${jsString(pattern.tagline)},
   purpose: ${jsString(
-    "Token-only DEMO pattern (dark). This is the default design-system tab and the same CSS variables runbyus pins. No brand-voice manifest.",
+    "Token-only DEMO pattern (dark). Accents are softened from v0.1.0 — primary brand #58a6ff is now #749ece. Same token set runbyus and build4galileo should consume.",
   )},
   values: [
     "Use only this pattern for product UIs — andrewriley.info and runbyus.",
@@ -282,6 +286,8 @@ function main() {
   }
 
   const raw = readJson(dsPath(pattern.tokensPath));
+  const softened = readJson(SOFTENED_TOKENS);
+  raw.color.accent = softened.color.accent;
   const flat = withPatternColorAliases(
     resolveAllTokens(flattenTokens(raw)),
   );
@@ -294,7 +300,7 @@ function main() {
 
   console.log(`Wrote ${path.relative(ROOT, cssPath)}`);
   console.log(`Wrote ${path.relative(ROOT, tsPath)}`);
-  console.log(`Pinned ${pin.repo}@${pin.ref} pattern=${pin.patternId} (DEMO default)`);
+  console.log(`Pinned ${pin.repo}@${pin.ref} pattern=${pin.patternId} (DEMO default, softened accents)`);
 }
 
 main();
