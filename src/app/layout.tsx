@@ -9,29 +9,18 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Andrew Riley - From Breadboards to Boardrooms",
+    default: "Andrew Riley - Build, Lead, Play, Health",
     template: "%s | Andrew Riley",
   },
   description: site.description,
   openGraph: {
-    title: "Andrew Riley - From Breadboards to Boardrooms",
+    title: "Andrew Riley - Build, Lead, Play, Health",
     description: site.description,
     url: site.url,
     siteName: "Andrew Riley",
     type: "website",
   },
 };
-
-const themeScript = `
-try {
-  const theme = window.localStorage.getItem("theme-preference");
-  if (theme === "light" || theme === "dark") {
-    document.documentElement.dataset.theme = theme;
-  } else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-} catch {}
-`;
 
 export default function RootLayout({
   children,
@@ -40,9 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
       <body>
         <SiteHeader />
         <main>{children}</main>

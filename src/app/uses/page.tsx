@@ -15,8 +15,8 @@ export default function UsesPage() {
     <section className="mx-auto max-w-6xl px-5 py-20">
       <SectionHeading
         eyebrow="Uses"
-        title="The tools behind the work."
-        description="Hardware, software, services, and creative tools I use for leadership, technology, homelab work, DIY, music, health, and play. Inspired by uses.tech-style pages."
+        title="The tools behind the operating loop."
+        description="Hardware, software, services, and creative tools are listed here by role: what helps me build, lead, play, and stay sustainable. The tool matters less than the method it enables."
       />
 
       <div className="mt-12 grid gap-6">

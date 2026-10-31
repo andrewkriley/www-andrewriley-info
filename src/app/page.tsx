@@ -9,6 +9,7 @@ import {
   featuredWork,
   heroImages,
   nowBuilding,
+  operatingLoop,
   principles,
   site,
 } from "@/data/site";
@@ -35,12 +36,12 @@ export default function HomePage() {
               About Riles
             </p>
             <h1 className="text-hero-shadow mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              A builder with a bias for curiosity, leadership, and action.
+              Systems, people, creativity, and sustainable momentum.
             </h1>
             <p className="text-hero-shadow mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
-              I love being exposed to new paradigms and inspiring others to
-              experiment alongside me. The best ideas often come at the
-              intersection of different experiences.
+              I build useful systems, make the work understandable, keep
+              creativity in the loop, and protect the health that makes all of
+              it sustainable.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <LinkButton href="#now-building">
@@ -59,7 +60,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Now building"
             title="Active work, not a frozen CV."
-            description="Three active domains that map to the pillars: family and wellbeing, professional leadership at Cisco and Splunk, and Cleverbits Technology."
+            description="Three active domains feed the same operating loop: family and wellbeing, professional leadership, and product-shaped technology experiments."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {nowBuilding.map((item) => (
@@ -84,13 +85,47 @@ export default function HomePage() {
       <section id="featured-builds" className="mx-auto max-w-6xl px-5 py-16">
         <SectionHeading
           eyebrow="Primary pillars"
-          title="Health, build, play, and lead in motion."
-          description="The themes overlap on purpose. Professional leadership, technical systems, hands-on projects, music, and wellbeing all come from the same mix of curiosity, craft, energy, and momentum."
+          title="One loop, four ways of working."
+          description="Build, Lead, Play, and Health are not separate personas. They are a loop for turning ideas into systems, sharing the work, keeping energy alive, and sustaining the foundation underneath it."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {featuredWork.map((work) => (
             <WorkCard key={work.title} {...work} />
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-16">
+        <div className="rounded-card bg-surface-inverse p-8 text-text-inverse md:p-10">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-accent">
+              Operating loop
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+              The same method shows up everywhere.
+            </h2>
+            <p className="mt-4 text-lg leading-8 opacity-80">
+              A homelab service, a product idea, a leadership conversation, a
+              DJ set, and a health routine all have the same shape: make the
+              system visible, tune the feedback, and keep it humane.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-4">
+            {operatingLoop.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-3xl border border-white/10 bg-white/5 p-6"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-accent">
+                  {item.pillar}
+                </p>
+                <h3 className="mt-3 text-xl font-bold">{item.title}</h3>
+                <p className="mt-4 leading-7 opacity-80">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -124,7 +159,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="How I work"
             title="Proof beats pedigree."
-            description="The work matters, but so does how people learn, decide, grow, recover, and keep energy for the next challenge."
+            description="The work matters, but so does the method: how people learn, decide, recover, and keep energy for the next challenge."
           />
           <p className="mt-6 text-2xl font-bold leading-tight text-text-primary">
             Resumes tell people where you&apos;ve been. Proof-of-work shows how
@@ -139,7 +174,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="About"
               title="How I show up in the work."
-              description="I like to discover many ways to approach a challenge, then learn as much as possible from the process. I care about the technical build, but I care just as much about whether the people around it are learning, contributing, and seeing new possibilities."
+              description="I like to discover many ways to approach a challenge, then learn as much as possible from the process. I care about the technical build, but I care just as much about whether the people around it can understand, contribute, and see new possibilities."
             />
             <div className="mt-8 flex flex-wrap gap-3">
               <LinkButton href="/build#build-writing">See the archive</LinkButton>

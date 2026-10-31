@@ -3,7 +3,8 @@ import Image from "next/image";
 
 import { LinkButton } from "@/components/link-button";
 import { GrowingSectionsNote } from "@/components/growing-sections-note";
-import { healthPillars } from "@/data/site";
+import { SectionHeading } from "@/components/section-heading";
+import { healthPillars, healthPractices } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Health",
@@ -29,12 +30,12 @@ export default function HealthPage() {
               Health
             </p>
             <h1 className="text-hero-shadow mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              The foundation underneath health, build, play, and lead.
+              The foundation that keeps the loop moving.
             </h1>
             <p className="text-hero-shadow mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
-              Health is the sustainability pillar: wellbeing, physical and
-              mental health, diet, and exercise. It is not separate from the
-              work; it is what keeps the work possible.
+              Health is the sustainability pillar: family, wellbeing, physical
+              and mental health, diet, movement, and recovery. It is not
+              separate from the work; it is what keeps the work possible.
             </p>
           </div>
         </div>
@@ -49,10 +50,19 @@ export default function HealthPage() {
             Sustainable output starts with a cared-for system.
           </h2>
           <p className="mt-5 max-w-3xl leading-8 text-text-inverse/80">
-            This section can become the home for notes, routines, experiments,
-            and practices around energy, movement, recovery, food, and mindset.
+            The same builder method applies here: notice the signals, design
+            useful routines, instrument what matters, and keep the system
+            humane enough to last.
           </p>
         </div>
+
+      <div className="mt-12">
+        <SectionHeading
+          eyebrow="Sustainable method"
+          title="Health is operational discipline."
+          description="The goal is not optimization theatre. It is enough capacity, clarity, and recovery to keep showing up for family, work, creativity, and service."
+        />
+      </div>
 
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {healthPillars.map((pillar) => (
@@ -67,6 +77,17 @@ export default function HealthPage() {
               {pillar.description}
             </p>
           </article>
+        ))}
+      </div>
+
+      <div className="mt-10 grid gap-3">
+        {healthPractices.map((practice) => (
+          <div
+            key={practice}
+            className="rounded-2xl border border-border-subtle bg-surface-muted p-5 font-semibold text-text-primary"
+          >
+            {practice}
+          </div>
         ))}
       </div>
 

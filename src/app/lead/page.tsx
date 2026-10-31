@@ -33,13 +33,12 @@ export default function LeadPage() {
               Lead
             </p>
             <h1 className="text-hero-shadow mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              From breadboards to boardrooms.
+              Make complex work understandable enough to move.
             </h1>
             <p className="text-hero-shadow mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
-              Tech evangelist. Tech leader. Lead is the professional thread:
-              how ideas become useful, how teams learn together, and how
-              leadership helps people grow beyond the work directly in front of
-              them.
+              Lead is how the builder method scales through people: clarify
+              the context, name the constraints, create shared language, and
+              help teams build capability beyond the immediate task.
             </p>
           </div>
         </div>
@@ -49,13 +48,13 @@ export default function LeadPage() {
         <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-card border border-border-subtle bg-surface-card p-8 shadow-sm">
             <h2 className="text-2xl font-bold text-text-primary">
-              How I think about leadership
+              Leadership is a system design problem
             </h2>
             <p className="mt-5 leading-8 text-text-secondary">
-              I like to discover many ways to approach a challenge, then make
-              the work understandable enough that others can contribute. The
-              outcome matters, but so does the capability a team builds along
-              the way.
+              Good leadership creates the conditions for useful work: clear
+              goals, visible trade-offs, trusted feedback loops, and enough
+              shared understanding that people can make strong decisions when
+              the leader is not in the room.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <LinkButton href="/#about">About Riles</LinkButton>
@@ -81,7 +80,7 @@ export default function LeadPage() {
           <SectionHeading
             eyebrow="Proof"
             title="Leadership through the work."
-            description="Examples from the build archive—how I reason through tools, systems, and decisions."
+            description="Examples from the build archive: how I reason through tools, systems, constraints, and decisions in public."
           />
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {posts.map((post) => (

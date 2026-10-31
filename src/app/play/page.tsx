@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { PostCard } from "@/components/post-card";
 import { SectionHeading } from "@/components/section-heading";
+import { playPractices } from "@/data/site";
 import { getPostsByCategory } from "@/lib/content";
 import { getPopularYouTubeVideos } from "@/lib/youtube";
 
@@ -34,17 +35,41 @@ export default async function PlayPage() {
               Play
             </p>
             <h1 className="text-hero-shadow mt-5 text-5xl font-black tracking-tight md:text-7xl">
-              Music is the creative current.
+              Creativity keeps the system human.
             </h1>
             <p className="text-hero-shadow mt-6 max-w-2xl text-xl leading-9 text-text-on-image/85">
-              Play is the music category: DJ Riles, mixes, creative energy, and
-              the almost spiritual connection I have with sound.
+              Play is not a side quest. DJ Riles, mixes, and creative energy
+              are how I practice improvisation, pattern recognition, and the
+              kind of connection that keeps technical work from becoming cold.
             </p>
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-6xl px-5 py-16">
+        <SectionHeading
+          eyebrow="Creative method"
+          title="Play is rehearsal for adaptive work."
+          description="The same instincts that help a set land with a room also help a system land with people: listen, sense the transition, and keep the energy moving."
+        />
+
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {playPractices.map((practice) => (
+            <article
+              key={practice.title}
+              className="rounded-card border border-border-subtle bg-surface-card p-7 shadow-sm"
+            >
+              <h2 className="text-2xl font-bold text-text-primary">
+                {practice.title}
+              </h2>
+              <p className="mt-4 leading-8 text-text-secondary">
+                {practice.description}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-16">
         <SectionHeading
           eyebrow="Most popular"
           title="Sets, energy, and moments."
@@ -63,6 +88,7 @@ export default async function PlayPage() {
               allowFullScreen
             />
           ))}
+        </div>
         </div>
 
         {posts.length > 0 ? (

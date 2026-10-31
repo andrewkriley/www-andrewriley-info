@@ -3,7 +3,7 @@ export const site = {
   nickname: "Riles",
   url: "https://www.andrewriley.info",
   description:
-    "From breadboards to boardrooms: Andrew Riley's portfolio of leadership, technology and DIY builds, creative play through music, and personal health.",
+    "Andrew Riley's proof-of-work portfolio across build, lead, play, and health: systems, people, creativity, and sustainable momentum.",
   nav: [
     { href: "/build", label: "Build" },
     { href: "/lead", label: "Lead" },
@@ -36,36 +36,63 @@ export const site = {
 
 export const featuredWork = [
   {
-    title: "Systems and hands-on builds",
+    title: "Build makes ideas real",
     label: "Build",
     href: "/build",
     description:
-      "AI tooling, homelab infrastructure, automation, home projects, and DIY work share the same builder's mindset.",
-    proof: "AI, homelab, automation, DIY",
+      "Technical and physical work become repeatable systems: AI tooling, infrastructure, automation, web delivery, and DIY experiments.",
+    proof: "Constrain, automate, observe, document",
   },
   {
-    title: "Professional leadership",
+    title: "Lead makes work legible",
     label: "Lead",
     href: "/lead",
     description:
-      "Leadership, people, process, and the work of helping others grow while moving useful ideas forward.",
-    proof: "Teams, communication, strategy, growth",
+      "Leadership turns complexity into shared understanding so teams can learn, decide, and move with confidence.",
+    proof: "Context, clarity, capability, trust",
   },
   {
-    title: "DJ Riles",
+    title: "Play keeps curiosity alive",
     label: "Play",
     href: "/play",
     description:
-      "Music is the creative outlet: emotional, almost spiritual, and a place to explore energy and connection.",
-    proof: "YouTube, Mixcloud, live mixes",
+      "Music and creative play keep the system human: energy, improvisation, connection, and pattern recognition.",
+    proof: "DJ Riles, mixes, experimentation",
   },
   {
-    title: "Health as foundation",
+    title: "Health sustains the loop",
     label: "Health",
     href: "/health",
     description:
-      "Wellbeing, physical and mental health, diet, and exercise as the foundation that makes the rest sustainable.",
-    proof: "Wellbeing, movement, nutrition, recovery",
+      "The body, mind, family, and recovery practices are the foundation that make the rest possible for longer.",
+    proof: "Wellbeing, movement, recovery, family",
+  },
+];
+
+export const operatingLoop = [
+  {
+    title: "Make the idea visible",
+    pillar: "Build",
+    description:
+      "Prototype the smallest useful version, then make the shape of the system understandable.",
+  },
+  {
+    title: "Make the work shared",
+    pillar: "Lead",
+    description:
+      "Turn private reasoning into language, decisions, and practices other people can build on.",
+  },
+  {
+    title: "Make the energy renewable",
+    pillar: "Play",
+    description:
+      "Keep curiosity, rhythm, improvisation, and joy in the loop so the work does not become brittle.",
+  },
+  {
+    title: "Make the system sustainable",
+    pillar: "Health",
+    description:
+      "Protect the physical and mental foundation that lets the work continue with integrity.",
   },
 ];
 
@@ -197,39 +224,58 @@ export const heroImages = [
 
 export const nowBuilding = [
   {
-    title: "Me and my family",
+    title: "Family and foundation",
     label: "Health",
     description:
-      "The personal foundation: family, wellbeing, and the life that makes everything else sustainable.",
+      "The life system underneath the work: family, wellbeing, recovery, and practices that keep output sustainable.",
     href: "/health",
   },
   {
     title: "Cisco + Splunk",
     label: "Lead",
     description:
-      "My professional career role—leading, evangelising, and helping teams grow inside Cisco and Splunk.",
+      "Professional leadership, evangelism, enablement, and the work of helping teams make sense of change.",
     href: "/lead",
   },
   {
-    title: "Cleverbits Technology",
+    title: "House platform and Cleverbits",
     label: "Build",
     description:
-      "Building Cleverbits: technology products, systems, and hands-on work that turns ideas into useful tools.",
+      "Product-shaped experiments, AI tooling, infrastructure, and hands-on systems that turn ideas into usable tools.",
     href: "/build",
   },
 ];
 
 export const principles = [
-  "Health means protecting the physical and mental foundation underneath it all.",
-  "Build means making useful things visible, repeatable, and understandable.",
-  "Play means keeping creativity, energy, and curiosity alive.",
-  "Lead means helping people, teams, and ideas move forward.",
+  "Build means making useful things visible, repeatable, and observable.",
+  "Lead means turning complexity into shared understanding and capability.",
+  "Play means keeping creativity, energy, and experimentation alive.",
+  "Health means protecting the foundation that makes every other pillar sustainable.",
 ];
 
 export const leadershipPrinciples = [
-  "Make the work understandable enough that others can contribute.",
+  "Make the work understandable enough that others can contribute with confidence.",
   "Measure success by capability built, not only by the immediate outcome.",
+  "Name constraints, trade-offs, and decisions so teams can move without guessing.",
   "Help people grow beyond the task directly in front of them.",
+];
+
+export const playPractices = [
+  {
+    title: "Improvisation",
+    description:
+      "DJing is live systems thinking: read the room, choose a direction, adapt quickly, and keep the energy moving.",
+  },
+  {
+    title: "Pattern recognition",
+    description:
+      "Mixing tracks, building systems, and leading teams all depend on noticing transitions before they become obvious.",
+  },
+  {
+    title: "Connection",
+    description:
+      "Play keeps the work emotionally honest. It is a reminder that useful systems should still feel human.",
+  },
 ];
 
 export const growingSectionsNote =
@@ -237,36 +283,43 @@ export const growingSectionsNote =
 
 export const healthPillars = [
   {
-    title: "Wellbeing",
+    title: "Wellbeing as operating capacity",
     description:
-      "The broader operating system: energy, sleep, recovery, routines, and the conditions that make good work and good life possible.",
+      "Energy, sleep, recovery, routines, and family context are part of the operating system, not separate from it.",
   },
   {
-    title: "Physical health",
+    title: "Physical capability",
     description:
       "Strength, mobility, endurance, and staying capable enough to keep building, leading, and showing up.",
   },
   {
-    title: "Mental health",
+    title: "Mental clarity",
     description:
       "Clarity, emotional regulation, stress management, reflection, and noticing when the system needs care.",
   },
   {
-    title: "Diet",
+    title: "Fuel and rhythm",
     description:
       "Food as fuel and rhythm: practical nutrition, consistency, hydration, and choices that support energy rather than perfection.",
   },
   {
-    title: "Exercise",
+    title: "Movement and recovery",
     description:
       "Movement as maintenance and play: walking, training, outdoor work, and the habits that keep the body engaged.",
   },
 ];
 
+export const healthPractices = [
+  "Sustainable work needs recovery designed in, not bolted on after burnout.",
+  "Family context matters because the work has to fit inside a real life.",
+  "Health is evidence too: consistency, sleep, movement, nutrition, and emotional regulation show up in the quality of decisions.",
+];
+
 export const uses = [
   {
     category: "Tech Stack (This Site)",
-    description: "The stack behind this portfolio rebuild.",
+    description:
+      "The public proof-of-work surface: fast to change, easy to preview, and deployable without touching production routes.",
     items: [
       {
         name: "Next.js 16",
@@ -286,21 +339,25 @@ export const uses = [
       },
       {
         name: "Cloudflare",
-        detail: "Target hosting platform via OpenNext and Wrangler.",
+        detail:
+          "Worker runtime for the public site, with a separate dev Worker for branch reviews.",
       },
     ],
   },
   {
     category: "Dev And AI Tools",
-    description: "Tools that help me build, reason, and move faster.",
+    description:
+      "Tools that turn thinking into branches, diffs, tests, reviews, and deployable proof.",
     items: [
       {
         name: "Cursor",
-        detail: "AI-first editor for rapid prototyping and codebase work.",
+        detail:
+          "AI-first editor for codebase work, design-system consumption, and branch-level iteration.",
       },
       {
         name: "Claude",
-        detail: "Planning, writing, technical debugging, and workflow design.",
+        detail:
+          "Planning, writing, technical debugging, and structured workflow design.",
       },
       {
         name: "Git",
@@ -308,17 +365,19 @@ export const uses = [
       },
       {
         name: "GitLab CI/CD",
-        detail: "Pipelines for homelab and infrastructure automation.",
+        detail:
+          "Pipelines and release gates for repeatable checks before promotion.",
       },
     ],
   },
   {
     category: "Homelab And Automation",
-    description: "The practical infrastructure playground.",
+    description:
+      "The practical lab where ideas become infrastructure, telemetry, and operating habits.",
     items: [
       {
         name: "Proxmox",
-        detail: "Virtualisation platform for the home lab.",
+        detail: "Virtualisation layer for repeatable compute experiments.",
       },
       {
         name: "Terraform / OpenTofu",
@@ -326,7 +385,8 @@ export const uses = [
       },
       {
         name: "Ansible",
-        detail: "Configuration management and server setup.",
+        detail:
+          "Configuration management for repeatable setup and operational drift control.",
       },
       {
         name: "Home Assistant",
@@ -334,13 +394,15 @@ export const uses = [
       },
       {
         name: "Splunk",
-        detail: "Logs, observability, and experiments with MCP access.",
+        detail:
+          "Logs, dashboards, telemetry, and operational feedback loops.",
       },
     ],
   },
   {
     category: "Music",
-    description: "The creative outlet and energy source.",
+    description:
+      "The creative practice that keeps improvisation, pattern recognition, and energy alive.",
     items: [
       {
         name: "DJ Riles",
