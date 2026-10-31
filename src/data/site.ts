@@ -69,6 +69,105 @@ export const featuredWork = [
   },
 ];
 
+export const builderMethods = [
+  {
+    step: "01",
+    title: "Find the useful problem",
+    description:
+      "Start with a real workflow, household need, operator pain, or product gap. The build has to serve someone, not just prove a tool can be wired together.",
+  },
+  {
+    step: "02",
+    title: "Constrain the system",
+    description:
+      "Define the guardrails early: least privilege, no secrets in code, clear ownership boundaries, and a small set of tools that are allowed to touch production.",
+  },
+  {
+    step: "03",
+    title: "Make it repeatable",
+    description:
+      "Turn one-off work into scripts, GitOps manifests, CI checks, and release paths so future changes can be explained and replayed.",
+  },
+  {
+    step: "04",
+    title: "Prove before promoting",
+    description:
+      "Use branch builds, preview environments, type checks, linting, rendered manifests, rollout status, and health probes before trusting a change.",
+  },
+  {
+    step: "05",
+    title: "Instrument the result",
+    description:
+      "A useful system tells you what it is doing. Logs, traces, dashboards, and status notes are part of the build, not cleanup afterwards.",
+  },
+  {
+    step: "06",
+    title: "Write the trail",
+    description:
+      "Capture decisions, runbooks, and public-safe evidence so the next person can understand how the system works and why it exists.",
+  },
+];
+
+export const buildEvidence = [
+  {
+    title: "This website ships through the harness",
+    description:
+      "The public GitHub source can be built in a cluster preview, checked with the same commands as CI, and promoted to an isolated Cloudflare Workers dev environment before production.",
+    proof: "Next.js, OpenNext, k3s preview, Cloudflare Workers",
+  },
+  {
+    title: "Release paths are treated as product",
+    description:
+      "Changes move through branches, tests, review, versioned releases, and GitOps reconciliation instead of dashboard-only edits or undocumented hand work.",
+    proof: "GitLab, Flux, typed checks, rollout probes",
+  },
+  {
+    title: "Operators get tools, not tribal knowledge",
+    description:
+      "Operational actions are wrapped as constrained workflows with policy, runbooks, and role boundaries rather than raw credentials spread across machines.",
+    proof: "OpenWork, policy gates, runbooks, least privilege",
+  },
+  {
+    title: "Observability is part of the build",
+    description:
+      "Dashboards and telemetry track applications, model routing, GPU use, network health, and releases so the system can be explained after it changes.",
+    proof: "Splunk, OpenTelemetry, structured logs, GPU metrics",
+  },
+  {
+    title: "Local AI has a control plane",
+    description:
+      "Model front doors, aliases, policy metadata, and telemetry make AI workloads intentional instead of a pile of direct provider calls.",
+    proof: "LiteLLM, local inference, policy metadata, usage telemetry",
+  },
+  {
+    title: "Physical and digital builds rhyme",
+    description:
+      "Networking, Home Assistant, visibility tooling, and web delivery use the same method: constrain, automate, observe, and document.",
+    proof: "Homelab, automation, security visibility, documentation",
+  },
+];
+
+export const buildCaseStudies = [
+  {
+    title: "Website delivery path",
+    description:
+      "A public site that can move from branch to cluster preview to Cloudflare Worker without production hostnames being touched.",
+    status: "Active",
+  },
+  {
+    title: "House AI and operator console",
+    description:
+      "A local-first AI control plane that routes models, gates tools, records decisions, and keeps operators inside safer workflows.",
+    status: "In progress",
+  },
+  {
+    title: "Observability layer",
+    description:
+      "A practical telemetry surface for apps, infrastructure, GPUs, logs, and model usage so build decisions have feedback.",
+    status: "Live",
+  },
+];
+
 export const heroImages = [
   {
     label: "Build",
