@@ -3,6 +3,7 @@ import path from "node:path";
 
 import matter from "gray-matter";
 import linkedInPosts from "@/content/linkedin-posts.json";
+import { readTopics, type JournalTopic } from "@/lib/journal-topics";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
@@ -12,6 +13,7 @@ export type Post = {
   description: string;
   date: string;
   tags: string[];
+  topics: JournalTopic[];
   categories: string[];
   image?: string;
   imageCreditUrl?: string;
@@ -28,6 +30,7 @@ type FrontMatter = {
   description?: string;
   date?: string | Date;
   tags?: string[];
+  topics?: string[];
   categories?: string[];
   image?: string;
   imageCreditUrl?: string;
@@ -62,6 +65,7 @@ function readPostFile(fileName: string): Post {
     description: frontMatter.description ?? "",
     date: normaliseDate(frontMatter.date),
     tags: asStringArray(frontMatter.tags),
+    topics: readTopics(frontMatter.topics, slug),
     categories: asStringArray(frontMatter.categories),
     image: frontMatter.image,
     imageCreditUrl: frontMatter.imageCreditUrl,
@@ -85,6 +89,7 @@ export function getAllPosts(): Post[] {
     description: post.description,
     date: post.date,
     tags: ["linkedin"],
+    topics: readTopics(post.topics, post.slug),
     categories: ["LinkedIn"],
     image: post.images[0]?.src,
     content: post.text,

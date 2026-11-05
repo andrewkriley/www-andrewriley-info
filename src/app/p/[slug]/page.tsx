@@ -11,6 +11,7 @@ import { getAllPosts, getPost } from "@/lib/content";
 import { formatDate } from "@/lib/format";
 import { getPostImageSrc } from "@/lib/post-image";
 import { site } from "@/data/site";
+import { TopicTags } from "@/components/topic-tags";
 
 type PostPageProps = {
   params: Promise<{
@@ -100,6 +101,7 @@ export default async function PostPage({ params }: PostPageProps) {
             {post.title}
           </h1>
           <p className="mt-5 text-text-muted">{formatDate(post.date)}</p>
+          <TopicTags topics={post.topics} />
           {post.sourceUrl ? <p className="mt-4 text-sm text-text-secondary">Originally published on <a href={post.sourceUrl} target="_blank" rel="noreferrer" className="font-semibold text-brand-primary hover:underline">LinkedIn ↗</a></p> : null}
           {post.description && !post.plainText ? (
             <p className="mt-6 text-xl leading-9 text-text-secondary">

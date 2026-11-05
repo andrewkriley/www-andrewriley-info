@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const importer = fileURLToPath(new URL("./import-linkedin-posts.mjs", import.meta.url));
 const profile = "https://www.linkedin.com/in/andrewriley/";
-const post = { urn: "urn:li:activity:7523107221660975104", kind: "post", authorUrl: profile, text: "Original post. <script>never execute this text</script> {untrusted}", images: [] };
+const post = { urn: "urn:li:activity:7523107221660975104", kind: "post", authorUrl: profile, text: "Original post. <script>never execute this text</script> {untrusted}", images: [], topics: ["ai", "software-development"] };
 
 function fixture(entry) {
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), "journal-import-"));
@@ -25,6 +25,7 @@ test("a verified original keeps its text and date and imports only once", () => 
   const first = fs.readFileSync(output, "utf8");
   const [result] = JSON.parse(first);
   assert.equal(result.text, post.text);
+  assert.deepEqual(result.topics, post.topics);
   assert.equal(result.date, "2026-11-02T19:42:14.217Z");
   assert.equal(f.run().status, 0);
   assert.equal(fs.readFileSync(output, "utf8"), first);
@@ -48,3 +49,11 @@ test("refuses an entry when an attached image has not been saved", () => {
   assert.notEqual(f.run().status, 0);
   assert.equal(fs.existsSync(path.join(f.directory, "src/content/linkedin-posts.json")), false);
 });
+
+for (const topics of [undefined, [], ["AI"], ["unknown-topic"], [null]]) {
+  test(`refuses unreviewed or invalid topics: ${JSON.stringify(topics)}`, () => {
+    const f = fixture({ ...post, topics });
+    assert.notEqual(f.run().status, 0);
+    assert.equal(fs.existsSync(path.join(f.directory, "src/content/linkedin-posts.json")), false);
+  });
+}
