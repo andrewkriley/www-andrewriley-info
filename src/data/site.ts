@@ -3,12 +3,13 @@ export const site = {
   nickname: "Riles",
   url: "https://www.andrewriley.info",
   description:
-    "From breadboards to boardrooms: Andrew Riley's portfolio of leadership, technology and DIY builds, creative play through music, and personal health.",
+    "Andrew Riley — technology leader, architect and builder connecting complex technology with meaningful outcomes.",
   nav: [
-    { href: "/build", label: "Build" },
-    { href: "/lead", label: "Lead" },
-    { href: "/play", label: "Play" },
-    { href: "/health", label: "Health" },
+    { href: "/work", label: "Work" },
+    { href: "/about", label: "About" },
+    { href: "/journal", label: "Journal" },
+    { href: "/beyond", label: "Beyond Work" },
+    { href: "/connect", label: "Connect" },
   ],
   socials: [
     {
