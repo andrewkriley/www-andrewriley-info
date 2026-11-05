@@ -7,7 +7,7 @@ import { caseStudies } from "@/data/case-studies";
 export const metadata: Metadata = { title: "Work", description: "Enterprise architecture, leadership, hands-on engineering and Applied AI exploration." };
 
 export default function WorkPage() {
-  return <main>
+  return <>
     <EditorialHero eyebrow="Selected work" title="Work that connects people, technology and outcomes." description="I've spent my career working across the boundaries between business ambition, technical architecture and the people responsible for making change happen." image="/images/hero/riles_presenting3.jpg" imageAlt="Andrew Riley presenting to an audience" primary={{href:"#selected",label:"Explore the work"}} secondary={{href:"/about",label:"My story"}} />
     <section id="selected" className="mx-auto max-w-6xl px-5 py-14">
       <h2 className="text-3xl font-bold text-text-primary">Selected evidence</h2>
@@ -20,5 +20,5 @@ export default function WorkPage() {
     </section>
     <section id="applied-ai" className="bg-surface-card py-16"><div className="mx-auto max-w-6xl px-5"><p className="text-xs font-semibold uppercase tracking-widest text-brand-primary">Applied AI · Personal lab</p><h2 className="mt-3 text-3xl font-bold">Beyond the demo: systems that can be understood and governed.</h2><p className="mt-5 max-w-3xl leading-8 text-text-secondary">I'm exploring how agents receive identities and permissions, how sensitive actions are approved, and how their behaviour is observed. These are hands-on lab experiments — not claims of production enterprise AI delivery. They help connect new technical possibilities with the enterprise architecture discipline I've developed over my career.</p></div></section>
     <section id="engineering" className="mx-auto grid max-w-6xl gap-8 px-5 py-16 md:grid-cols-2 md:items-center"><div className="relative aspect-[5/4] overflow-hidden rounded-2xl"><Image src="/images/hero/andrew_building.jpg" alt="Andrew Riley working on a hands-on project" fill sizes="(min-width: 768px) 45vw, 100vw" className="object-cover"/></div><div><p className="text-xs font-semibold uppercase tracking-widest text-brand-primary">Engineering through experimentation</p><h2 className="mt-3 text-3xl font-bold">Build to learn. Test assumptions. Share the results.</h2><p className="mt-5 leading-8 text-text-secondary">Homelab infrastructure, automation and AI tooling give me a practical environment to explore how systems actually behave. The most useful experiments are the ones that improve the next decision.</p></div></section>
-  </main>;
+  </>;
 }
