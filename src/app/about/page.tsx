@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
-
-export const metadata: Metadata = {
-  title: "About",
-  description: "About Andrew Riley, also known as Riles.",
-};
-
-export default function AboutPage() {
-  redirect("/#about");
-}
+import { EditorialHero } from "@/components/editorial-hero";
+import { CareerTimeline } from "@/components/career-timeline";
+export const metadata: Metadata={title:"About",description:"Andrew Riley's story, from engineering and operations to enterprise architecture and technology leadership."};
+export default function AboutPage(){return <><EditorialHero eyebrow="The story" title="From breadboards to boardrooms. And back again." description="I've always been interested in how things work — and what becomes possible when people understand them. My career started close to engineering, operations and delivery. I've never lost the desire to get hands-on." image="/images/hero/riles_presenting2.jpg" imageAlt="Andrew Riley presenting" primary={{href:"#journey",label:"Explore my journey"}} secondary={{href:"/connect",label:"Connect"}}/><section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2"><div><h2 className="text-3xl font-bold">How I approach a challenge</h2><p className="mt-5 leading-8 text-text-secondary">I start with possibilities: What if we approached this differently? What would need to be true? How could we test it? Then comes the discipline — understanding the problem, examining alternatives, making trade-offs and turning an idea into something useful.</p><h2 className="mt-10 text-3xl font-bold">How I lead</h2><p className="mt-5 leading-8 text-text-secondary">Leadership means creating the conditions for people to do their best work: making complexity understandable, encouraging experimentation and developing capability.</p><h2 className="mt-10 text-3xl font-bold">What I'm exploring now</h2><p className="mt-5 leading-8 text-text-secondary">I'm exploring AI through hands-on projects, drawing on what I've learned from enterprise architecture, security, cloud and organisational change. The lab is where I test ideas; enterprise experience is how I frame their value and limitations.</p></div><div id="journey" className="rounded-2xl border border-border-subtle bg-surface-card p-7"><h2 className="mb-8 text-2xl font-bold">Career journey</h2><CareerTimeline/></div></section></>}
