@@ -6,7 +6,7 @@ import { ProofStrip } from "@/components/proof-strip";
 import { PostCard } from "@/components/post-card";
 import { getFeaturedPosts } from "@/lib/content";
 export default function HomePage(){const posts=getFeaturedPosts(3);return <>
-<EditorialHero eyebrow="Technology leader / Architect / Builder" title="Turning complex technology into meaningful outcomes." description="I&apos;m Andrew Riley — Riles to most people. I bring a curious, practical perspective to technology decisions, shaped by work across enterprise, cloud, healthcare and engineering." image="/images/hero/andrew_main.jpg" imageAlt="Portrait of Andrew Riley" sectionLinks={[{href:"#how-i-work",label:"How I work"},{href:"#experience",label:"My experience"},{href:"#journal",label:"Journal"},{href:"#beyond-work",label:"Beyond work"},{href:"#connect",label:"Let's connect"}]}/>
+<EditorialHero eyebrow="Technology leader / Architect / Builder" title="Turning complex technology into meaningful outcomes." description="I&apos;m Andrew Riley — Riles to most people. I bring a curious, practical perspective to technology decisions, shaped by work across enterprise, cloud, healthcare and engineering." image="/images/hero/andrew_main.jpg" imageAlt="Portrait of Andrew Riley" imagePosition="right center" portrait sectionLinks={[{href:"#how-i-work",label:"How I work"},{href:"#experience",label:"My experience"},{href:"#journal",label:"Journal"},{href:"#beyond-work",label:"Beyond work"},{href:"#connect",label:"Let's connect"}]}/>
 <ProofStrip/>
 
 <HowIWork/>

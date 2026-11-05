@@ -7,12 +7,14 @@ type EditorialHeroProps = {
   description: string;
   image: string;
   imageAlt: string;
+  imagePosition?: string;
+  portrait?: boolean;
   primary?: { href: string; label: string };
   secondary?: { href: string; label: string };
   sectionLinks?: { href: string; label: string }[];
 };
 
-export function EditorialHero({ eyebrow, title, description, image, imageAlt, primary, secondary, sectionLinks }: EditorialHeroProps) {
+export function EditorialHero({ eyebrow, title, description, image, imageAlt, imagePosition = "center", portrait = false, primary, secondary, sectionLinks }: EditorialHeroProps) {
   return (
     <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.15fr_0.85fr] md:py-24">
       <div>
@@ -27,8 +29,8 @@ export function EditorialHero({ eyebrow, title, description, image, imageAlt, pr
           {sectionLinks.map((link, index) => <Link key={link.href} href={link.href} className={`rounded-xl px-4 py-3 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-primary ${index === 0 ? "bg-brand-primary text-text-inverse hover:opacity-90" : "border border-border-subtle text-text-primary hover:bg-surface-muted"}`}>{link.label}</Link>)}
         </nav> : null}
       </div>
-      <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border-subtle bg-surface-muted sm:aspect-[5/4] md:aspect-[4/5]">
-        <Image src={image} alt={imageAlt} fill priority sizes="(min-width: 768px) 40vw, 100vw" className="object-cover object-center" />
+      <div className={`relative aspect-[4/5] overflow-hidden rounded-3xl border border-border-subtle bg-surface-muted ${portrait ? "" : "sm:aspect-[5/4] md:aspect-[4/5]"}`}>
+        <Image src={image} alt={imageAlt} fill priority sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" style={{ objectPosition: imagePosition }} />
       </div>
     </section>
   );
