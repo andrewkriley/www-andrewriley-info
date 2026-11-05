@@ -33,3 +33,7 @@ After the GitHub dev deployment is verified, disable the legacy Workers Builds t
 Update `CLOUDFLARE_API_TOKEN` in the GitHub settings link above with the existing account token's value, then rerun the failed Actions job. Stored secret values cannot be read back from GitHub, and the Cloudflare token details page cannot reveal an existing token value. Do not rotate the token as a troubleshooting shortcut: other services may depend on it. If its value is unavailable, arrange a deliberate credential update separately.
 
 References: https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/ and https://developers.cloudflare.com/workers/ci-cd/builds/configuration/#api-token
+
+## Initial migration check
+
+The first Actions run, https://github.com/andrewkriley/www-andrewriley-info/actions/runs/42111930266, stopped at account-token verification with HTTP 401. It did not install, build or deploy. The existing repository secret needs to be updated with the active account-owned token's value before this route can complete. The legacy Workers Builds triggers have been left unchanged pending a successful replacement deployment.
