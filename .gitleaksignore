@@ -1,0 +1,3 @@
+# Public Cloudflare account-token ID from its dashboard URL, not the credential.
+# Only this exact historical finding is excluded; all other findings remain active.
+edfefe4f15848e65e3483509fea25ff329936d83:scripts/verify-cloudflare-account-token.mjs:generic-api-key:6

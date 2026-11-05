@@ -1,0 +1,112 @@
+name: Deploy with Cloudflare account token
+
+on:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Deployment destination (production requires approval)
+        type: choice
+        options: [dev, production]
+        default: dev
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  dev:
+    name: Deploy dev.andrewriley.info
+    if: github.event_name == 'push' || inputs.target == 'dev'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: cloudflare-shared-dev
+      cancel-in-progress: false
+    environment:
+      name: development
+      url: https://dev.andrewriley.info
+    env:
+      CLOUDFLARE_ACCOUNT_ID: 23eb211b6d50300b28d04731a5b48bbc
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - name: Verify the account-owned deployment token
+        run: node scripts/verify-cloudflare-account-token.mjs
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - run: npm ci
+      - name: Configure local build variables
+        run: cp .dev.vars.example .dev.vars
+      - name: Validate content and code
+        run: |
+          node --test scripts/*.test.mjs
+          node scripts/check-journal.mjs
+          npm run typecheck
+          npm run lint
+          node scripts/check-deployment-target.mjs dev
+      - name: Build and deploy the dev Worker
+        run: npm run deploy:dev
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Verify the live dev pages and images
+        run: node scripts/check-preview.mjs https://dev.andrewriley.info
+      - name: Record preview
+        run: echo 'Preview verified at https://dev.andrewriley.info' >> "$GITHUB_STEP_SUMMARY"
+
+  production:
+    name: Deploy production (approval required)
+    # Enable only after the production environment has an approved reviewer and main-only policy.
+    if: github.event_name == 'workflow_dispatch' && inputs.target == 'production' && github.ref == 'refs/heads/main' && vars.ENABLE_PRODUCTION_ACCOUNT_DEPLOYMENT == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: cloudflare-production
+      cancel-in-progress: false
+    environment:
+      name: production
+      url: https://www.andrewriley.info
+    env:
+      CLOUDFLARE_ACCOUNT_ID: 23eb211b6d50300b28d04731a5b48bbc
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - name: Verify the account-owned deployment token
+        run: node scripts/verify-cloudflare-account-token.mjs
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - run: npm ci
+      - name: Configure local build variables
+        run: cp .dev.vars.example .dev.vars
+      - name: Validate content and code
+        run: |
+          node --test scripts/*.test.mjs
+          node scripts/check-journal.mjs
+          npm run typecheck
+          npm run lint
+          node scripts/check-deployment-target.mjs production
+      - name: Build and deploy the production Worker
+        run: npm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Verify production pages
+        run: |
+          node --input-type=module <<'JS'
+          for (const path of ['/', '/journal', '/about', '/work']) {
+            const response = await fetch(new URL(path, 'https://www.andrewriley.info'), { signal: AbortSignal.timeout(15000) });
+            if (!response.ok || !(await response.text()).includes('ANDREW RILEY')) throw new Error(`Production verification failed: ${path}`);
+          }
+          JS
+      - name: Record publication
+        run: echo 'Production verified at https://www.andrewriley.info' >> "$GITHUB_STEP_SUMMARY"

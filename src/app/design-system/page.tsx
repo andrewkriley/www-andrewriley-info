@@ -50,6 +50,7 @@ const samplePost: Post = {
     "A compact example of how article cards should feel across the site.",
   date: "2026-05-10T00:00:00+10:00",
   tags: ["sample"],
+  topics: ["software-development"],
   categories: ["technology"],
   content: "",
 };

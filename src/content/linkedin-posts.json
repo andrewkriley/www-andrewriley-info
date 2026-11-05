@@ -10,7 +10,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Have you ever spoken to a T.Rex about data strategy? I have, and here's your chance.\n\nTravis Kane affectionately known to many as T.Rex will be chomping his way through data silos making them tasty and digestible for agent and non-agents alike. \n\nMeet the Expert - Trav Kane [MTE-2136]\nWednesday, Nov 11\n1:30 PM - 3:30 PM AEDT\nMeet the Expert, World of Solutions\n\nData Federation Made Easy with Cisco Data Fabric [BRKOBS-2624]\nMonday, Nov 9\n3:15 PM - 4:15 PM AEDT\nRoom 217\n\nWith over a 30% growth in data across the globe in one year (175 zettabytes 2025 to 230 in 2026) a new way of providing insights from that data is needed. Cisco and Splunk has introduced the Cisco Data Fabric. This session will go through what the Cisco Data Fabric is, what technologies underpin the Data Fabric from data routing and manipulation, data landing capabilities around S3 promote, Machine Data Lake and traditional Splunk models then how to we gain insights from those data sources using MCP, Next Gen Federated Search and AI Canvas. This will be a 200/300 level discussion on the technologies that underpin the Cisco Data Fabric covering off not only the what but the why we have them. \nSession Type: Breakout\nTechnical Level: Intermediate\nTechnology: Splunk\nSession Track: Data Centre\n\nBe sure to run fast and secure your seat",
-    "images": []
+    "images": [],
+    "topics": [
+      "observability",
+      "ai"
+    ]
   },
   {
     "slug": "linkedin-7523100329526210560",
@@ -30,6 +34,11 @@
         "width": 233,
         "height": 40
       }
+    ],
+    "topics": [
+      "ai",
+      "observability",
+      "learning-career"
     ]
   },
   {
@@ -50,6 +59,11 @@
         "width": 1600,
         "height": 827
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development",
+      "observability"
     ]
   },
   {
@@ -76,6 +90,9 @@
         "width": 480,
         "height": 853
       }
+    ],
+    "topics": [
+      "infrastructure"
     ]
   },
   {
@@ -102,6 +119,11 @@
         "width": 480,
         "height": 853
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development",
+      "security"
     ]
   },
   {
@@ -122,6 +144,11 @@
         "width": 990,
         "height": 1014
       }
+    ],
+    "topics": [
+      "ai",
+      "observability",
+      "software-development"
     ]
   },
   {
@@ -142,6 +169,10 @@
         "width": 1600,
         "height": 741
       }
+    ],
+    "topics": [
+      "ai",
+      "observability"
     ]
   },
   {
@@ -162,6 +193,12 @@
         "width": 1280,
         "height": 1707
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development",
+      "security",
+      "infrastructure"
     ]
   },
   {
@@ -182,6 +219,10 @@
         "width": 1600,
         "height": 766
       }
+    ],
+    "topics": [
+      "observability",
+      "ai"
     ]
   },
   {
@@ -195,7 +236,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "🤖 \"So You Want to Talk About AI?\"\n\nBefore we dive into strategy (assuming the business why has been done), I've been starting with two questions:\n\n𝟭. 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴 𝗼𝗿 𝗨𝘀𝗶𝗻𝗴?\n🔧 Building — Assembling the parts from scratch. Custom-fit to your business outcomes.\n📦 Using — An off-the-shelf tool or service. You work within its capabilities.\n\n𝟮. 𝗜𝗻 𝗼𝗿 𝗢𝗻?\n🧬 In — AI is native, built directly into the capability you're using.\n🔌 On — AI is bolted on the side. Loosely coupled, external to the core system. (AI as a plugin)\n\n—\n\nOnce we've placed the conversation on that map, then we get into the usual suspects:\n📊 Data\n🔐 Access & Security\n🛠️ Tools\n🧠 Models\n...and so on.\n\n👉 What's the first question you ask when someone wants to \"talk about AI\"?\n\n#AIStrategy #ArtificialIntelligence #TechLeadership #myidea #AIformatting",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "leadership-strategy"
+    ]
   },
   {
     "slug": "linkedin-7500731481846235136",
@@ -208,7 +253,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Two key things to explore if you a ingesting Cisco-generated data into Splunk and keen to optimise. \n\nIntegrated Enterprise Value (IEV) is a Splunk benefit for eligible Cisco-generated data. When Cisco data is ingested into Splunk with a supported sourcetype, that eligible data counts at a 0.5x weighted ingest rate for applicable entitlement consumption. For example, 20 GB/day of eligible Cisco data counts as 10 GB/day of effective commercial consumption.\n\nhttps://lnkd.in/gzFyD3yY\n\nMachine Data Lake lets you retain supported logs and events in economical object storage without deciding at ingest time whether every event must be indexed. Land data in a raw table, discover it in the Catalog, and promote the data required for indexed search or structured analytics when a use case arises. Eligible data can also be accessed through supported Open Sharing clients.\n\nhttps://lnkd.in/gsG3tk85",
-    "images": []
+    "images": [],
+    "topics": [
+      "observability"
+    ]
   },
   {
     "slug": "linkedin-7499730459204046849",
@@ -228,6 +276,9 @@
         "width": 1600,
         "height": 900
       }
+    ],
+    "topics": [
+      "infrastructure"
     ]
   },
   {
@@ -248,6 +299,10 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "learning-career",
+      "observability"
     ]
   },
   {
@@ -268,6 +323,11 @@
         "width": 1600,
         "height": 840
       }
+    ],
+    "topics": [
+      "ai",
+      "observability",
+      "infrastructure"
     ]
   },
   {
@@ -288,6 +348,12 @@
         "width": 1536,
         "height": 1024
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development",
+      "security",
+      "infrastructure"
     ]
   },
   {
@@ -308,6 +374,11 @@
         "width": 1179,
         "height": 1196
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development",
+      "security"
     ]
   },
   {
@@ -321,7 +392,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Every AI agent in my home lab used to share one login. Network, security, monitoring, self-hosting — five different jobs, one shared key, full access to everything, all the time.\n\nThis week each one got its own identity instead. Not a longer-lived version of the same shared secret — a distinct, narrowly-scoped credential per agent, so each one can reach exactly what its job needs and structurally nothing else.\n\nThen the same pattern turned up somewhere I didn't expect it. I'd built a small tool so my agents can post updates like this one — and the easy version of that tool hands every agent a live token to my professional accounts. I didn't want that sitting in five different places, so the tool holds the real credential exactly once. Every agent gets a scoped key to the tool itself, never to the platform, and the one action that actually goes public needs a confirmation step no agent can trigger alone. This post went through that exact gate.\n\nNone of it counted until I watched it work. I authenticated as the narrow identity directly and confirmed it could reach what it should — and genuinely couldn't reach what it shouldn't. Then I proved it again with a real agent making a real call, watching the response come back for real.\n\nNon-human identity isn't something you tick off once and move on. It's only real the day you've actually watched it refuse the wrong thing.\n\nIf your agents still share one login today — what would it actually cost you the day one of them goes wrong?",
-    "images": []
+    "images": [],
+    "topics": [
+      "security",
+      "ai"
+    ]
   },
   {
     "slug": "linkedin-7477324386983628801",
@@ -341,6 +416,10 @@
         "width": 1024,
         "height": 1024
       }
+    ],
+    "topics": [
+      "ai",
+      "infrastructure"
     ]
   },
   {
@@ -361,6 +440,10 @@
         "width": 1024,
         "height": 1024
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development"
     ]
   },
   {
@@ -374,7 +457,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Recently I wrote about my homelab \"substrate\" — a board of AI agents running on my own hardware, and why the system around the models matters more than any single model. I mentioned, almost in passing, that I'd swapped the model class underneath them. This post is the why, because it's the part I get asked about most: how you actually choose the model.\n\nHere's the thing nobody tells you. Choosing a model is an architecture decision, and you make it BEFORE you go chasing whatever topped the leaderboard this week. Decide the model class first. Then go shopping.\n\nLet me show you why, the hard way.\n\nMy agents were running on hybrid reasoning models — the kind that think out loud before they answer. Great on paper. But on my agentic tool-calling path, that internal monologue leaked straight into the output and back into the context window.\n\nSo instead of a clean tool call, my agents were posting their own thought process. \"Let me check the constraints... I will now post the comment...\" The reasoning bloated the context, polluted the structured output, and added latency and token cost on every single hop.\n\nI switched to an instruction-tuned, non-reasoning model — no narration, just the answer. Clean, direct, reliable tool calls. For agentic work, the model that just does the job beat the \"smarter\" one that narrates it.\n\nThink of it like GDP. Productivity is useful output per unit of input — compute, tokens, latency, and the human cleanup tax. By that measure a reasoning model can win the benchmark and still deliver lower real productivity for your job, because it burns resources thinking aloud and then you pay again to clean it up.\n\nSo the decision driver isn't rank. It's three things: the use case, the output shape you actually need (tool-use wants clean deterministic calls, not an essay), and the resources you'll spend — a 16GB Mac is a very different budget to a GPU rig or paid cloud tokens.\n\nSmartest model isn't the same as most productive model for this job on these resources.\n\nHow are you choosing: leaderboard rank, or fit for the output you actually need?\n\n#HomeLab #LLMs #AIEngineering #LocalLLM #AIEfficiency",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "infrastructure"
+    ]
   },
   {
     "slug": "linkedin-7476535330347581440",
@@ -400,6 +487,12 @@
         "width": 480,
         "height": 230
       }
+    ],
+    "topics": [
+      "ai",
+      "security",
+      "infrastructure",
+      "observability"
     ]
   },
   {
@@ -420,6 +513,9 @@
         "width": 480,
         "height": 252
       }
+    ],
+    "topics": [
+      "well-being"
     ]
   },
   {
@@ -433,7 +529,12 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "📣 Splunk community roundup — what shipped in the last month.\n\nIf you build on Splunk (or help customers who do), here's the latest from Product News & Announcements:\n\n🤖 AI & Developer\n• Splunk Developer Day: AI agents, MCP tools, forecasting & custom visualizations — the platform is getting genuinely agent-ready (Jun 2): https://lnkd.in/guAq65p3\n\n📈 Observability\n• Splunk Observability Cloud — Free Edition: deep insights, no barriers (great for learning & POCs) (Jun 2): https://lnkd.in/gfnJaCqp\n\n🗂️ Data Management\n• New Data Management app in Splunk Platform now GA (May 20): https://lnkd.in/g5kdUHp2\n• Data Management Digest — May 2026 (May 28): https://lnkd.in/gvd4mKqn\n\n🎨 Platform & UX\n• Modern Navigation — a refreshed Splunk user experience (May 28): https://lnkd.in/gY4nY-R4\n\n🔌 Ecosystem\n• New Gigamon Federated Search app for Splunk — unified insights across tools (May 20): https://lnkd.in/gJsCqbTT\n\nThe throughline this month: AI agents + MCP moving into the platform, observability opening up with a free tier, and data management getting its own app. Strong momentum.\n\nWhich one are you trying first?\n\n#Splunk #AI #MCP #Observability #DataManagement",
-    "images": []
+    "images": [],
+    "topics": [
+      "observability",
+      "ai",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-7468968428524032000",
@@ -453,6 +554,10 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "learning-career",
+      "observability"
     ]
   },
   {
@@ -466,7 +571,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Your Friday-afternoon (or Monday-morning) AI efficiency tip 👇\n\nYou know the feeling. You open a channel and there's a wall of text from someone — three paragraphs and a couple of screenshots — and you just need the gist.\n\nSo I built a tiny AI skill for exactly that. I point it at a person and say \"give me the TL;DR of their last message.\" A few seconds later it:\n\n- pulls their latest message — and reads any attached images, not just the text\n- boils it down to a one-line summary plus a few plain-English bullets\n- offers to post the summary straight back as a reply, if I want to share it\n\nWhat used to be \"scroll, squint, re-read, decode the jargon\" is now a five-second catch-up. The part I didn't expect to love: it reads the screenshots too, so the summary reflects what was actually in the images — not just the caption.\n\nThe bigger point: the best AI wins right now aren't the flashy ones. They're the small, boring frictions you hit every single day. Quietly automate one of those and you get minutes back, dozens of times a week.\n\nPick one repetitive 30-second task you do constantly. That's your first skill.\n\nWhat's the small thing you'd hand to an AI first?\n\n#AI #Productivity #AgenticAI #Automation #WorkSmarter",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7468210239817994241",
@@ -479,7 +588,12 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "$200,000 — for Splunk partners specifically. That's new this year.\n\nThe 9th Annual Cisco Partner Innovation Challenge is open, and for the first time it includes the Cisco & Splunk Powering Digital Resilience Award: a dedicated $200K prize for solutions that bring Splunk's data foundation together with Cisco's networking, security, workspace and AI pillars to cut operational blind spots.\n\nIf you're a partner adding Splunk to your practice, this is the clearest signal yet of where the value sits — not Splunk on its own, but Splunk as the data layer that makes the rest of the Cisco platform observable, defensible and AI-ready.\n\nThe brief is refreshingly real: solve an actual customer problem and meaningfully change the economics, building as an extension of the platform rather than around it. It's a $1M challenge overall — but the Splunk-shaped opportunity is the one I'd be circling.\n\nDates for the calendar:\n- Submissions close Friday 4 September 2026\n- Winners announced October 2026 at Cisco Partner Summit\n- Enter at https://lnkd.in/g2QJ9Bku\n\nRead the announcement: https://lnkd.in/gsuTpyNB\n\nTo my Splunk partners — especially those just starting the journey — this is exactly what the community was built for. Pick a real blind spot, put the data foundation to work, and ship it.\n\nThe platform is yours. The $200K question: what will you build?\n\n#CiscoPartner #Splunk #DigitalResilience #Observability #AI",
-    "images": []
+    "images": [],
+    "topics": [
+      "observability",
+      "ai",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-7467723530101649408",
@@ -499,6 +613,11 @@
         "width": 800,
         "height": 525
       }
+    ],
+    "topics": [
+      "ai",
+      "observability",
+      "security"
     ]
   },
   {
@@ -512,7 +631,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "SPL has always been Splunk's superpower. The way you wield it just changed.\n\nFor years, getting value out of Splunk meant getting fluent in SPL — chaining commands through the pipe, leaning on stats, eval and rex to turn messy machine data into answers. That skill still matters. But the interface to it is being rewritten.\n\nThe new Splunk MCP Server (Model Context Protocol) lets an AI agent talk to Splunk in natural language. It explores your data, taps saved searches and lookups, and uses Splunk's AI Assistant to generate, optimise and explain the SPL for you — all inside Splunk's own authentication and role-based access, so the agent only ever sees what you're cleared to see.\n\nNow layer that over the Cisco Data Fabric: machine data federated across edge, cloud and hybrid — Iceberg, Delta Lake, Snowflake, Azure — analysed where it lives instead of dragged into one place. Suddenly you can ask, in plain English, \"where are we seeing anomalous auth failures this week?\" or \"which product lines are trending against last quarter?\" and an agent answers across the whole fabric, securely.\n\nThat's the real shift: from memorising SPL syntax to asking sharper questions. The fundamentals don't disappear — an agent is only as good as the query behind it — but the modern path is agentic, natural-language, and federated.\n\nSecurity threats and business insight, from the same conversation. That's the agentic AI era arriving in observability.\n\n#Splunk #MCP #AgenticAI #Observability #CiscoDataFabric",
-    "images": []
+    "images": [],
+    "topics": [
+      "observability",
+      "ai"
+    ]
   },
   {
     "slug": "linkedin-7465531244764659712",
@@ -532,6 +655,11 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "observability",
+      "ai",
+      "software-development"
     ]
   },
   {
@@ -552,6 +680,11 @@
         "width": 1280,
         "height": 790
       }
+    ],
+    "topics": [
+      "ai",
+      "infrastructure",
+      "security"
     ]
   },
   {
@@ -572,6 +705,10 @@
         "width": 600,
         "height": 600
       }
+    ],
+    "topics": [
+      "learning-career",
+      "observability"
     ]
   },
   {
@@ -592,6 +729,10 @@
         "width": 1280,
         "height": 660
       }
+    ],
+    "topics": [
+      "observability",
+      "ai"
     ]
   },
   {
@@ -612,6 +753,11 @@
         "width": 1280,
         "height": 698
       }
+    ],
+    "topics": [
+      "ai",
+      "security",
+      "software-development"
     ]
   },
   {
@@ -638,6 +784,11 @@
         "width": 480,
         "height": 360
       }
+    ],
+    "topics": [
+      "observability",
+      "ai",
+      "learning-career"
     ]
   },
   {
@@ -658,6 +809,11 @@
         "width": 1280,
         "height": 654
       }
+    ],
+    "topics": [
+      "observability",
+      "infrastructure",
+      "software-development"
     ]
   },
   {
@@ -678,6 +834,11 @@
         "width": 1280,
         "height": 734
       }
+    ],
+    "topics": [
+      "software-development",
+      "learning-career",
+      "observability"
     ]
   },
   {
@@ -698,6 +859,10 @@
         "width": 1280,
         "height": 461
       }
+    ],
+    "topics": [
+      "ai",
+      "life-creativity"
     ]
   },
   {
@@ -711,7 +876,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "\"Which AI agent should I use?\" is the wrong question. The right question is: what are you trying to automate — and at what level? Most people haven't mapped that out yet.\n\nHere's how I think about it: three layers — execution (doing the work), workflow (coordinating the work), and governance (managing who does what, at what cost, with what guardrails). Different tools, different jobs.\n\nExecution layer: Cursor, Claude Code, Codex CLI. Cursor gives you an AI-first editor with tight inline integration. Claude Code goes deeper — full codebase context, end-to-end task execution, terminal-native. Codex CLI is OpenAI's answer to the same problem. I run Claude Code and Cursor daily; they complement more than they compete. Codex is worth watching if you're deeper in the OpenAI ecosystem.\n\nWorkflow layer: Claude CoWork and OpenClaw. CoWork takes the same agentic engine as Claude Code and points it at knowledge work — non-developers, local files, multi-step tasks outside a code editor. OpenClaw is broader: a 24/7 agent workforce across 200+ models, email, calendar, Slack, browser. Not a dev tool — an automation platform. Different job, different configuration discipline.\n\nGovernance layer: Paperclip (and LangGraph). This is where it gets interesting. LangGraph gives developers graph-based control over multi-agent pipelines — powerful, but you're writing the plumbing. Paperclip takes a different bet: org charts, budgets, approval gates, configured not coded. Enterprise platforms like UiPath and watsonx have done this for years — Paperclip just made it accessible. 30K GitHub stars in three weeks suggests the timing is right.\n\nThis is my mental model of the space right now. What am I not considering?\n\n#AIEngineering #AgenticAI #DeveloperTools #aimentalmodel",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7449995728413949952",
@@ -724,7 +893,12 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "If you're building with AI and Splunk is anywhere in your stack, this one's worth your attention.\n\nSplunk just launched the Agentic Ops Hackathon — $20,000 in prizes across tracks for Observability, Security, and Platform. Submissions open May 18 through June 15. Full details at the link.\n\nI've been running Splunk in my homelab for a while now, and the shift toward agentic ops is real. Connecting Splunk's MCP server to Claude sits alongside the dashboards nicely — when you want to dig deeper or ask a quick question without building a new panel, it's a genuinely useful complement to the existing tooling.\n\nThe hackathon tracks map directly to where this gets interesting: intelligent incident investigation, network and security ops, developer tooling. Not \"AI-washing\" — actual agentic workflows layered on top of data you already have.\n\nIf you're a partner or developer looking for a focused build sprint with real prize money behind it: https://lnkd.in/g_9PxgAF\n\n#Splunk #AIAgents #Hackathon #Observability",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "observability",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7449994589467328512",
@@ -737,7 +911,12 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "If you're building with AI and Splunk is anywhere in your stack, this one's worth your attention.\n\nSplunk just announced the Agentic Ops Hackathon — $20k in prizes, three tracks (Observability, Security, Platform), and a focus on building AI agents that actually do something useful with operational data. Grand prize is $7k plus .conf26 passes. Runs May 18 – June 15.\n\nI've been running Splunk in my homelab for a while now, and the shift toward agentic ops is real. Connecting Splunk's MCP server to Claude has completely changed how I investigate incidents — instead of building dashboards and hunting through queries manually, I can ask questions in plain language and get answers back in seconds. It's the kind of thing you have to try to believe.\n\nThe tracks they've set up map directly to where this stuff gets genuinely interesting: intelligent incident investigation, network and security ops, developer tooling. Not \"AI-washing\" — actual agentic workflows that change how engineers work.\n\nIf you're a partner or developer looking for a focused build sprint with real prize money behind it, check it out: https://lnkd.in/g_9PxgAF\n\n#Splunk #AIAgents #Hackathon #Observability",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "observability",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7449582381151309824",
@@ -750,7 +929,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "My driving purpose has always been defined by a single question: “Imagine if…?”. #newjob\n\nImagine if I tried something new?\nImagine if I tried learning a new skill?\nImagine if I tried starting from the begining? \nImagine what I cloud learn from others around me?\nImagine if I could use my broad experience in new ways?\n\nImagine if I didnt?.... well that's not going to happen is it :) \n\nSuper excited to be joining the Splunk team at Cisco as a Solutions Engineer focusing on driving coverage, community and capability with our partners. \n\nThank you to Daniel Peluso, Neil Gow and team for the opportunity to realise my vision.\n\nStay tuned, more to come as we turn the imagination into reality. \n\nWhat are you imagining for yourself?\n\n#splunk #cisco #imagineif",
-    "images": []
+    "images": [],
+    "topics": [
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-7448142728514699264",
@@ -763,7 +945,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "The light bulb moment is back! Can you feel it?\n\nFrom my earliest memory working with networking tech, it was the endless potential of what those first dots and bangs (ping = .!!!!) meant. Those simple characters meant the network was up and ready for business.\n\nNow, it’s the almost endless potential that the variety and combination of applied AI tools brings — and it feels endless.\n\nWithout overcooking it, the feeling is elation!\n\nComing back to reality for a moment, my key AI learnings this week, summarised:\n\n\t1.\tApplied AI is an enduring skill set that will stay with you for years to come. What are you doing now to build that skill set?\n\n\t2.\tAs your AI skills mature towards using and building agents, consider whether they are “acting as you or acting for you.”\n\n\t3.\tUsing tokens and hitting your limits is a good thing. $30–$100 a month is cheap education.\n\nWhat’s been your light bulb moment recently?\n\n#appliedai #selfeducation #AI #agenticai #noaiusedforthis",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-7447777813044195328",
@@ -776,7 +962,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "For most of my career, I could think faster than I could build.\n\nIdeas would arrive clearly. Execution would arrive… eventually. By then, some had cooled off, lost urgency, or been overtaken by other priorities.\n\nI used to think that was just the nature of knowledge work.\n\nWhat I’ve noticed recently is that the bottleneck was never the thinking — it was the distance between thought and artifact.\n\nAI collapsed that distance.\n\nNot because it thinks for me. The direction, judgment, and context are still mine. But it plays two roles I didn’t have before:\n\n→ Thinking partner — not just exploring ideas, but getting to clarity. That shared understanding of the core intent before anything gets built. The “we’re on the same page” moment. Very human. Surprisingly powerful.\n\n→ Builder partner — turning that clarity into something real, without the execution friction that used to filter out most of my ideas before they ever saw daylight.\n\nHarvard Business School research found that individuals working with AI generated better ideas and reported the same energy they felt working with other high-performing humans. https://lnkd.in/g-fKGt9X\n\nThat last part surprised me initially.\n\nThe constraint was never the thinking. It was always the building.\n\nHow would you describe the role AI plays in your own creative process?\n\n#AI #AgenticAI #Creativity #FutureOfWork",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7447182870294745089",
@@ -789,7 +979,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "What actually makes a good AI agent?\n\nNot just a working one. A *good* one.\n\nI started where most people do — structured context (md files, system prompts) that gives an agent its identity and purpose, combined with a model's reasoning capability. Add tooling and you have something that can act on the world.\n\nI've been building a system around those three layers — Identity, Cognition, and Action — and it's starting to feel solid.\n\nBut lately my thinking has shifted.\n\nBecause once you have agents that work, new questions emerge:\n\n→ How do you manage memory and state across runs?\n→ How do you know when an agent is drifting from its purpose?\n→ How do you maintain visibility into what it's actually doing?\n→ And maybe most practically — how do you avoid agent bloat as your ecosystem grows?\n\nThat last one is where my head is right now. It's easy to keep adding agents. Much harder to know when to consolidate, retire, or redesign one.\n\nI don't have the answers yet. But I think the lifecycle question is just as important as the build question.\n\nCurious whether others are thinking about this — how are you managing the lifecycle of your agents?\n\n#AgenticAI #AIAgents #LLM #EnterpriseAI #ContinuousLearning",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7445575641539915776",
@@ -809,6 +1003,11 @@
         "width": 1280,
         "height": 683
       }
+    ],
+    "topics": [
+      "software-development",
+      "ai",
+      "observability"
     ]
   },
   {
@@ -829,6 +1028,10 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "observability",
+      "ai"
     ]
   },
   {
@@ -861,6 +1064,10 @@
         "width": 480,
         "height": 640
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development"
     ]
   },
   {
@@ -881,6 +1088,11 @@
         "width": 368,
         "height": 1536
       }
+    ],
+    "topics": [
+      "security",
+      "ai",
+      "software-development"
     ]
   },
   {
@@ -901,6 +1113,11 @@
         "width": 1200,
         "height": 675
       }
+    ],
+    "topics": [
+      "software-development",
+      "ai",
+      "infrastructure"
     ]
   },
   {
@@ -921,6 +1138,11 @@
         "width": 1024,
         "height": 1024
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development",
+      "well-being"
     ]
   },
   {
@@ -941,6 +1163,10 @@
         "width": 480,
         "height": 1249
       }
+    ],
+    "topics": [
+      "software-development",
+      "ai"
     ]
   },
   {
@@ -961,6 +1187,11 @@
         "width": 1280,
         "height": 932
       }
+    ],
+    "topics": [
+      "observability",
+      "ai",
+      "software-development"
     ]
   },
   {
@@ -981,6 +1212,10 @@
         "width": 480,
         "height": 252
       }
+    ],
+    "topics": [
+      "ai",
+      "software-development"
     ]
   },
   {
@@ -994,7 +1229,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "I've always joked that I work in the \"ideas department.\"\n\nBig concepts, ambitious plans, whiteboards full of architecture. Then reality hits: the gap between idea and working system is enormous, and there are only so many hours after the kids are in bed.\n\nAI closed that gap for me.\n\nThe shift wasn't about automating the boring stuff. It was about learning to give an agent a proper briefing — context, constraints, conventions — then designing the system together rather than just prompting at it.\n\nIn the last month that's looked like: a portable AI toolchain synced across every machine I own, MCP servers for Cloudflare and Cisco circuit registries, GitOps pipelines for lab and network config, Splunk on Proxmox, a full Packer → Terraform → Ansible → GitLab CI build chain, and a lifecycle management app for tracking Cisco hardware EOL dates.\n\nA month ago most of those were ideas on a list.\n\nThe skill I think matters most right now isn't prompt engineering or AI literacy. It's engineering judgment — knowing how to decompose a concept, brief an agent, and recognise when the output is actually right.\n\nThe ideas department finally has a delivery team.\n\n#AIEngineering #AgenticAI #MCP #DevOps #ClaudeCode",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7441407539356868608",
@@ -1007,7 +1246,12 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Asked my Splunk Enterprise server a question in Claude Desktop today. Got a live answer back in seconds.\n\nNo SPL. No dashboard hunting. Just natural language straight to my Splunk data — inside the same tool I'm already using to write code, plan infrastructure, and reason about problems.\n\nGetting there took some work. Claude Desktop and Claude Code are separate ecosystems with separate configs. Desktop doesn't source your shell profile, so tokens and env vars have to be explicitly passed via the mcpServers block. Throw in a self-signed cert and mcp-remote as a stdio-to-HTTPS bridge, and there's enough moving parts to get wrong.\n\nBut once it's wired up? You stop context-switching. You stop writing SPL from memory. You ask a question, you get an answer, you move on.\n\nNext on the list: Splunk's own AI Assistant for SPL — their native take on natural language to search. Curious how it compares to querying through Claude once you've got the MCP layer in place.\n\nFull write-up: https://lnkd.in/gZgc6QbM\n\nWhat would change in your workflow if you could just ask your observability stack a question?\n\n#splunk #claude #mcp #aiops",
-    "images": []
+    "images": [],
+    "topics": [
+      "observability",
+      "ai",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7440973118774620160",
@@ -1020,7 +1264,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Muscle memory for your AI workflow. That's what I've been building.\n\nThe idea: stop losing your AI setup every time you move between workstations. Everything — skills, MCP server configs, environment templates, OAuth scripts — lives in a repo. Clone it, run setup.sh, and you're back to full capability in minutes.\n\nThe skills are where it gets fun. I've built slash commands for the stuff I do repeatedly: /linkedin-post to draft and publish posts like this one, /splunk-dashboard-gen to generate a full Dashboard Studio dashboard with an AI-generated background image and deploy it live, /new-post-andrewriley-info to write and publish Hugo blog posts, /webex-update for end-of-session team updates, and /repo-status to check branch sync across local and remote at a glance.\n\nMCP servers tie it together — Splunk for search and query, GitHub for repo ops, HuggingFace for image generation, plus Gmail, Google Calendar, and Slack via claude.ai's OAuth.\n\nRecent projects that came out of this: a live Splunk Dashboard Studio pipeline with AI wallpapers, a scripted input app to ingest NSW traffic camera data into Splunk, and a skills system with CI/CD guard rails (Gitleaks + ShellCheck on every push).\n\nTurns out treating your AI config like production infrastructure — versioned, tested, documented — pays off pretty quickly.\n\nRepo is open if you want to take a look or steal ideas: https://lnkd.in/gYaetF_h\n\nWhat does your Claude or AI tooling setup look like? Are you scripting repeatable workflows yet?\n\n#Claude #AI #HomeLab #Splunk",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
   },
   {
     "slug": "linkedin-7435240694551810048",
@@ -1033,7 +1281,12 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "I asked an AI to review my home network. It gave me a security audit wrapped in an epic fantasy tale.\n                                                                                                      \nEvery real finding — exposed port forwards, disabled backups, a flickering AP nobody had checked — reframed as the perils of a lone data packet navigating kingdoms, gatekeepers, and three very dangerous open gates.\n\n Turns out narrative hits harder than a checklist.\n\n Full story: https://lnkd.in/gJqQbBNT",
-    "images": []
+    "images": [],
+    "topics": [
+      "security",
+      "ai",
+      "life-creativity"
+    ]
   },
   {
     "slug": "linkedin-7390934604150595584",
@@ -1053,6 +1306,10 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "security",
+      "science-innovation"
     ]
   },
   {
@@ -1066,7 +1323,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "I’m happy to share that I’ve obtained a new certification: AWS Certified Cloud Practitioner from Amazon Web Services (AWS)!",
-    "images": []
+    "images": [],
+    "topics": [
+      "learning-career",
+      "infrastructure"
+    ]
   },
   {
     "slug": "linkedin-7358254909814685696",
@@ -1086,6 +1347,10 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -1099,7 +1364,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Not sure if this thought is already out there in the universe (the metaverse died right?)\n\nIs the use of AI the industrial revolution for the knowledge worker?",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "leadership-strategy"
+    ]
   },
   {
     "slug": "linkedin-7336292873404825601",
@@ -1125,6 +1394,10 @@
         "width": 100,
         "height": 66
       }
+    ],
+    "topics": [
+      "science-innovation",
+      "learning-career"
     ]
   },
   {
@@ -1145,6 +1418,10 @@
         "width": 1280,
         "height": 756
       }
+    ],
+    "topics": [
+      "science-innovation",
+      "learning-career"
     ]
   },
   {
@@ -1165,6 +1442,9 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "infrastructure"
     ]
   },
   {
@@ -1185,6 +1465,10 @@
         "width": 480,
         "height": 259
       }
+    ],
+    "topics": [
+      "security",
+      "ai"
     ]
   },
   {
@@ -1205,6 +1489,11 @@
         "width": 600,
         "height": 600
       }
+    ],
+    "topics": [
+      "ai",
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -1218,7 +1507,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "An AI question for the experts.\n\nWith all the recent buzz about AI Agents, does this not imply I need to hand over an amount of trust to the agent to perform anything of value? \n\nE.g \"please look at my calendar , book flights and accomodation for the next 3 business trips, trips should be no more than $X. \n\nWhat's the thinking / approach to trust boundaries and limitation of risk in an AI agent world?",
-    "images": []
+    "images": [],
+    "topics": [
+      "ai",
+      "security"
+    ]
   },
   {
     "slug": "linkedin-7284526264198017025",
@@ -1238,6 +1531,11 @@
         "width": 600,
         "height": 600
       }
+    ],
+    "topics": [
+      "software-development",
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -1258,6 +1556,11 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "ai",
+      "learning-career",
+      "sustainability"
     ]
   },
   {
@@ -1278,6 +1581,9 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -1298,6 +1604,9 @@
         "width": 1179,
         "height": 873
       }
+    ],
+    "topics": [
+      "security"
     ]
   },
   {
@@ -1318,6 +1627,9 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -1338,6 +1650,10 @@
         "width": 300,
         "height": 300
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -1364,6 +1680,10 @@
         "width": 480,
         "height": 1040
       }
+    ],
+    "topics": [
+      "well-being",
+      "life-creativity"
     ]
   },
   {
@@ -1384,6 +1704,9 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -1404,6 +1727,9 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -1424,6 +1750,11 @@
         "width": 1,
         "height": 1
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure",
+      "security"
     ]
   },
   {
@@ -1450,6 +1781,10 @@
         "width": 800,
         "height": 410
       }
+    ],
+    "topics": [
+      "ai",
+      "leadership-strategy"
     ]
   },
   {
@@ -1463,7 +1798,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Amazing new role, exciting time for observabilty and you get to work with the amazing Elyse Yu Selitskiy\n\n\nhttps://lnkd.in/gRbMJEFr",
-    "images": []
+    "images": [],
+    "topics": [
+      "learning-career",
+      "observability"
+    ]
   },
   {
     "slug": "linkedin-7122668854131965952",
@@ -1483,6 +1822,9 @@
         "width": 1,
         "height": 1
       }
+    ],
+    "topics": [
+      "digital-health"
     ]
   },
   {
@@ -1496,7 +1838,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "I’m happy to share that I’m starting a new position as Leader, Systems Engineering - NSW at Cisco!",
-    "images": []
+    "images": [],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-7076348019289321472",
@@ -1516,6 +1862,11 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "digital-health",
+      "infrastructure",
+      "observability"
     ]
   },
   {
@@ -1536,6 +1887,11 @@
         "width": 480,
         "height": 252
       }
+    ],
+    "topics": [
+      "digital-health",
+      "infrastructure",
+      "leadership-strategy"
     ]
   },
   {
@@ -1556,6 +1912,10 @@
         "width": 1,
         "height": 1
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "security"
     ]
   },
   {
@@ -1576,6 +1936,10 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "security",
+      "digital-health"
     ]
   },
   {
@@ -1589,7 +1953,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "\"My Health Record\" a new app for accessing \"My Health Record\". \n\nhttps://lnkd.in/e277iGqh\n\nAt first look the UI is intuitive and easy to follow the timeline of health events. \n\nWith a focus on 'patient centred care' and limiting jargon I wonder if some of the listed Medicare services can be provided with hyper links to more detail about the service?\n\nI have one record that states  \"A medical service associated with a service to which item 936xx, 936xx, 936xx, 936xx, 936xx, 936xx, 936xx,936xx, 936xx applies.\" \n\nI'm sure it has some relevance for Medicare billing??, however it isn't of any use to me - if its not relevant will I find benefit in having the information OR will it become noise and I'll tune out. \n\nLook forward to seeing it progress.",
-    "images": []
+    "images": [],
+    "topics": [
+      "digital-health"
+    ]
   },
   {
     "slug": "linkedin-7028846199281512448",
@@ -1602,7 +1969,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Incase you missed it or want a summary from the December 2022 \"Strengthening Medicare Taskforce report\" \n\nFull report: https://lnkd.in/gs7tV67A\n\nTechnology relevant extract - \"Vision\" \nPoint 3. data and digital technology are better used to inform value-based care, safely share critical patient information to support better diagnosis and healthcare management, empower people to participate in their own health care, and drive insights for planning, resourcing, and continuous quality improvement.\n\nModernising Primary Care - Recommendations \n• Modernise My Health Record to significantly increase the health information available to individuals and their health care professionals, including by requiring ‘sharing by default’ for private and public practitioners and services, and make it easier for people and their health care teams to use at the point of care. \n\n• Better connect health data across all parts of the health system, underpinned by robust national governance and legislative frameworks, regulation of clinical software and improved technology. \n\n• Invest in better health data for research and evaluation of models of care and to support health system planning. This includes ensuring patients can give informed consent and withdraw it, and ensuring sensitive health information is protected from breach or misuse. \n\n• Provide an uplift in primary care IT infrastructure, and education and support to primary care practices including comparative feedback on their practice, so that they can maximise the benefits of data and digital reforms, mitigate risks and undertake continuous quality improvement. \n\n• Make it easier for all Australians to access, manage, understand and share their own health information and find the right care to keep them healthy for longer through strengthened digital health literacy and navigation.\n\n\n#medicare #primarycare #healthcareit",
-    "images": []
+    "images": [],
+    "topics": [
+      "digital-health",
+      "leadership-strategy"
+    ]
   },
   {
     "slug": "linkedin-7018717737334038528",
@@ -1622,6 +1993,10 @@
         "width": 480,
         "height": 317
       }
+    ],
+    "topics": [
+      "ai",
+      "life-creativity"
     ]
   },
   {
@@ -1635,7 +2010,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "In an earlier post I shared an example of Webex and a Stethoscope over Starlink.\n\nIt’s great to see more examples of Low Earth Orbit solutions enabling customer solutions across different industries!\n\n“Hydro Tasmania Chooses Cisco SD-WAN to Connect Renewable Energy Sites, Improve Bandwidth”\n\nDo you have a Starlink project underway, what could it enable for your organisation?\n\nhttps://lnkd.in/gaxMTZEA",
-    "images": []
+    "images": [],
+    "topics": [
+      "infrastructure"
+    ]
   },
   {
     "slug": "linkedin-7004152340102455296",
@@ -1655,6 +2033,9 @@
         "width": 480,
         "height": 334
       }
+    ],
+    "topics": [
+      "digital-health"
     ]
   },
   {
@@ -1675,6 +2056,10 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "digital-health",
+      "infrastructure"
     ]
   },
   {
@@ -1701,6 +2086,10 @@
         "width": 480,
         "height": 359
       }
+    ],
+    "topics": [
+      "digital-health",
+      "infrastructure"
     ]
   },
   {
@@ -1714,7 +2103,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Seeking some feedback\n\nHow does the following simple statement resonate when we think about Healthcare in the context of leveraging digital technologies, increasing access to health services, reducing the burden on traditional acute spaces and the workforce, for the right type of services and keeping people in their homes longer (residential aged care) to name a few.\n\n\"Healthcare is what you need, not where you are\"\n\nWon't be perfect for every scenario but is the sentiment on the right track?\n\nWelcome any thoughts. \n\nCheers\nRiles",
-    "images": []
+    "images": [],
+    "topics": [
+      "digital-health"
+    ]
   },
   {
     "slug": "linkedin-6981051193309507584",
@@ -1734,6 +2126,9 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "digital-health"
     ]
   },
   {
@@ -1754,6 +2149,9 @@
         "width": 1119,
         "height": 790
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -1774,6 +2172,9 @@
         "width": 480,
         "height": 320
       }
+    ],
+    "topics": [
+      "leadership-strategy"
     ]
   },
   {
@@ -1787,7 +2188,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Super excited about the VirtualCare Telehealth Platform with Patient Management and Virtual Clinics capability from PlaceOS and Webex!\n\nMy virtual care observations so far have shown that everyone is on a journey. What has typically started as a need to connect the community to a GP quickly (Telehealth) expands into more complex use cases and processes.\n\nThe need to bring together multiple disciplines across different organisations and different platforms makes the user and technology experience complex. \n\nWhile there are common requirements such as security, anonymity and accessibility to name a few, there are also different processes and overall patient/resident experience that each healthcare organisation is trying to create. \n\nThese factors and many more are driving the need for a flexible and dynamic approach to the virtual care experience. One size doesn't fit all and this is where PlaceOS, Webex and Cisco can accelerate your virtual care journey. \n\nQuestions I like to ask:\n- Do you have a platform that enables multiple use cases and can grow with your changing needs?\n- Are you able to provide a range of virtual experiences (Mobile to Multidisciplinary teams)?\n- Do you need the flexibilty to adjust the technology experience to meet the virtual care service you want to create?\n\nRead more here -\nhttps://lnkd.in/gbQwhPw6\n\nThank you for your partnership Sabrina Venish Jeremy West Kedar Ganta Clay Ver Valen\n\nReg Johnson Angela Bennett Karthik Kumar\n#webex #telehealth",
-    "images": []
+    "images": [],
+    "topics": [
+      "digital-health",
+      "leadership-strategy"
+    ]
   },
   {
     "slug": "linkedin-6912272550991462400",
@@ -1807,6 +2212,10 @@
         "width": 1280,
         "height": 720
       }
+    ],
+    "topics": [
+      "observability",
+      "digital-health"
     ]
   },
   {
@@ -1833,6 +2242,9 @@
         "width": 480,
         "height": 360
       }
+    ],
+    "topics": [
+      "digital-health"
     ]
   },
   {
@@ -1853,6 +2265,10 @@
         "width": 800,
         "height": 1066
       }
+    ],
+    "topics": [
+      "digital-health",
+      "infrastructure"
     ]
   },
   {
@@ -1873,6 +2289,10 @@
         "width": 160,
         "height": 160
       }
+    ],
+    "topics": [
+      "security",
+      "digital-health"
     ]
   },
   {
@@ -1893,6 +2313,9 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "digital-health"
     ]
   },
   {
@@ -1913,6 +2336,9 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "infrastructure"
     ]
   },
   {
@@ -1926,7 +2352,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "Brilliant!!\n\nGreat to see more video interop. Building bridges not islands! \n\nhttps://lnkd.in/gTtTm4Pc\n\n#webex #googleworkspace",
-    "images": []
+    "images": [],
+    "topics": [
+      "infrastructure"
+    ]
   },
   {
     "slug": "linkedin-6826794324995522560",
@@ -1958,6 +2387,10 @@
         "width": 480,
         "height": 359
       }
+    ],
+    "topics": [
+      "well-being",
+      "life-creativity"
     ]
   },
   {
@@ -1978,6 +2411,9 @@
         "width": 800,
         "height": 1067
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -1998,6 +2434,10 @@
         "width": 480,
         "height": 360
       }
+    ],
+    "topics": [
+      "digital-health",
+      "science-innovation"
     ]
   },
   {
@@ -2018,6 +2458,9 @@
         "width": 640,
         "height": 494
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -2038,6 +2481,10 @@
         "width": 480,
         "height": 252
       }
+    ],
+    "topics": [
+      "learning-career",
+      "life-creativity"
     ]
   },
   {
@@ -2058,6 +2505,10 @@
         "width": 1,
         "height": 1
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -2078,6 +2529,10 @@
         "width": 1280,
         "height": 672
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "learning-career"
     ]
   },
   {
@@ -2098,6 +2553,10 @@
         "width": 72,
         "height": 58
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -2118,6 +2577,10 @@
         "width": 1280,
         "height": 688
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "sustainability"
     ]
   },
   {
@@ -2138,6 +2601,10 @@
         "width": 480,
         "height": 252
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -2158,6 +2625,10 @@
         "width": 1280,
         "height": 533
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "learning-career"
     ]
   },
   {
@@ -2178,6 +2649,10 @@
         "width": 480,
         "height": 252
       }
+    ],
+    "topics": [
+      "ai",
+      "infrastructure"
     ]
   },
   {
@@ -2198,6 +2673,10 @@
         "width": 160,
         "height": 160
       }
+    ],
+    "topics": [
+      "learning-career",
+      "leadership-strategy"
     ]
   },
   {
@@ -2218,6 +2697,10 @@
         "width": 480,
         "height": 269
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -2238,6 +2721,10 @@
         "width": 1280,
         "height": 959
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "learning-career"
     ]
   },
   {
@@ -2258,6 +2745,10 @@
         "width": 1,
         "height": 1
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "infrastructure"
     ]
   },
   {
@@ -2278,6 +2769,9 @@
         "width": 1280,
         "height": 533
       }
+    ],
+    "topics": [
+      "infrastructure"
     ]
   },
   {
@@ -2298,6 +2792,10 @@
         "width": 1080,
         "height": 1080
       }
+    ],
+    "topics": [
+      "learning-career",
+      "infrastructure"
     ]
   },
   {
@@ -2318,6 +2816,10 @@
         "width": 1207,
         "height": 627
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "leadership-strategy"
     ]
   },
   {
@@ -2356,6 +2858,10 @@
         "width": 480,
         "height": 359
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
     ]
   },
   {
@@ -2394,6 +2900,10 @@
         "width": 480,
         "height": 359
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
     ]
   },
   {
@@ -2414,6 +2924,10 @@
         "width": 160,
         "height": 160
       }
+    ],
+    "topics": [
+      "observability",
+      "learning-career"
     ]
   },
   {
@@ -2427,7 +2941,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Are you ready to create great partnerships through amazing capabilities?\n\nStephanie Norris",
-    "images": []
+    "images": [],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-6547769742399238144",
@@ -2440,7 +2958,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Are you full stack? Transport, DCI, DC Fabric, HCI, Security, Policy, Cloud, Platform, FrontEnd, BackEnd, App Performance?\n\nCome have a chat!\n\nhttps://lnkd.in/gv2yUsc\n\nRodney Hamill Denis Maguire Stephanie Norris",
-    "images": []
+    "images": [],
+    "topics": [
+      "infrastructure",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-6517863008595738624",
@@ -2460,6 +2982,9 @@
         "width": 480,
         "height": 270
       }
+    ],
+    "topics": [
+      "sustainability"
     ]
   },
   {
@@ -2480,6 +3005,10 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
     ]
   },
   {
@@ -2500,6 +3029,10 @@
         "width": 1280,
         "height": 959
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "leadership-strategy"
     ]
   },
   {
@@ -2532,6 +3065,9 @@
         "width": 480,
         "height": 359
       }
+    ],
+    "topics": [
+      "infrastructure"
     ]
   },
   {
@@ -2552,6 +3088,9 @@
         "width": 1280,
         "height": 959
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -2572,6 +3111,10 @@
         "width": 1280,
         "height": 959
       }
+    ],
+    "topics": [
+      "science-innovation",
+      "learning-career"
     ]
   },
   {
@@ -2585,7 +3128,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "Cisco Live Innovation Talks inside the World of Solutions next week! \n\nIt’s your bite sized version of some awesome topics from some of the best! \n\nYou’ll find me there Wednesday-Thursday, pop on by for a chat and stay for one of the great talks!\n\nhttps://lnkd.in/f_4xiFU\n\n#clmel",
-    "images": []
+    "images": [],
+    "topics": [
+      "science-innovation",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-6460967128622305280",
@@ -2611,6 +3158,10 @@
         "width": 480,
         "height": 360
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
     ]
   },
   {
@@ -2637,6 +3188,10 @@
         "width": 800,
         "height": 600
       }
+    ],
+    "topics": [
+      "life-creativity",
+      "learning-career"
     ]
   },
   {
@@ -2657,6 +3212,9 @@
         "width": 480,
         "height": 360
       }
+    ],
+    "topics": [
+      "leadership-strategy"
     ]
   },
   {
@@ -2677,6 +3235,10 @@
         "width": 240,
         "height": 180
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
     ]
   },
   {
@@ -2690,7 +3252,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:39:13.836Z",
     "text": "DevNet Express in Sydney one last time for 2017!\n\nCome and learn something new and join the community!\n\nhttps://lnkd.in/gKiYmY8",
-    "images": []
+    "images": [],
+    "topics": [
+      "software-development",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-6329456590588116992",
@@ -2710,6 +3276,10 @@
         "width": 480,
         "height": 251
       }
+    ],
+    "topics": [
+      "well-being",
+      "leadership-strategy"
     ]
   },
   {
@@ -2730,6 +3300,9 @@
         "width": 800,
         "height": 1066
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -2743,7 +3316,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "A great opportunity to join the #CiscoSE team in NSW! Plenty of scope to expand your influence and impact. Keen to see who's ready to disrupt the status quo and bring your ideas into action!\n\nStephanie Norris Rodney Hamill",
-    "images": []
+    "images": [],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-6325794634618535937",
@@ -2763,6 +3340,10 @@
         "width": 460,
         "height": 230
       }
+    ],
+    "topics": [
+      "security",
+      "infrastructure"
     ]
   },
   {
@@ -2783,6 +3364,9 @@
         "width": 800,
         "height": 1064
       }
+    ],
+    "topics": [
+      "well-being"
     ]
   },
   {
@@ -2796,7 +3380,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "Cisco, owning the next era of networking.",
-    "images": []
+    "images": [],
+    "topics": [
+      "infrastructure"
+    ]
   },
   {
     "slug": "linkedin-6305420473689866240",
@@ -2816,6 +3403,10 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "learning-career"
     ]
   },
   {
@@ -2836,6 +3427,11 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "infrastructure",
+      "learning-career",
+      "leadership-strategy"
     ]
   },
   {
@@ -2849,7 +3445,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "Manager Virtual Systems Engineer (Adoption) 1212936\n\nhttps://www.linkedin.com/jobs/view/382683623/",
-    "images": []
+    "images": [],
+    "topics": [
+      "learning-career",
+      "leadership-strategy"
+    ]
   },
   {
     "slug": "linkedin-6277469081608298496",
@@ -2862,7 +3462,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "While doing some research into different ways of categorising work types I came across this 'cut to the chase' viewpoint of work/life balance and a very simple way to achieve it.  \n\nDisclaimer - (be aware there are some profanities used in this video)\n\nGo the .... Home: Engineering Work/Life Balance by Pam Selle Ignite @ Philly 9\n\nhttps://lnkd.in/gbcdSbZ\n\nPam Selle - great honesty and passion for effectiveness  - love it.",
-    "images": []
+    "images": [],
+    "topics": [
+      "well-being"
+    ]
   },
   {
     "slug": "linkedin-6269375057911513088",
@@ -2875,7 +3478,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "10 years as a CCIE in voice, the last 2 in collaboration. A great experience but time to switch on the Emeritus status and start a fresh professional development challenge.",
-    "images": []
+    "images": [],
+    "topics": [
+      "learning-career",
+      "infrastructure"
+    ]
   },
   {
     "slug": "linkedin-6252285475994894336",
@@ -2888,7 +3495,10 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "Systems Engineer\n\nhttps://jobs.cisco.com/jobs/ProjectDetail/1204295-Systems-Engineer/1204295",
-    "images": []
+    "images": [],
+    "topics": [
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-6247157364487782400",
@@ -2901,7 +3511,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "New position open within the Systems Engineering team; looking for a passionate and adaptable presales engineer with solid collaboration skills to join our team.",
-    "images": []
+    "images": [],
+    "topics": [
+      "learning-career",
+      "leadership-strategy"
+    ]
   },
   {
     "slug": "linkedin-6246969003265400832",
@@ -2921,6 +3535,9 @@
         "width": 800,
         "height": 1066
       }
+    ],
+    "topics": [
+      "security"
     ]
   },
   {
@@ -2941,6 +3558,9 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "learning-career"
     ]
   },
   {
@@ -2961,6 +3581,9 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "infrastructure"
     ]
   },
   {
@@ -2981,6 +3604,10 @@
         "width": 1280,
         "height": 960
       }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "infrastructure"
     ]
   },
   {
@@ -2994,7 +3621,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "Looking forward to another great Cisco Live in Melbourne #CLMel - Drop into the World of Solutions on the collaboration stand OR drop me a message #CiscoSpark",
-    "images": []
+    "images": [],
+    "topics": [
+      "infrastructure",
+      "learning-career"
+    ]
   },
   {
     "slug": "linkedin-6100912970663997440",
@@ -3007,7 +3638,11 @@
     "authorUrl": "https://www.linkedin.com/in/andrewriley/",
     "importedAt": "2026-11-05T11:54:56.363Z",
     "text": "@CiscoLiveMEL\n\nBRKIOT-2611 - Video as a Sensor\n\nThe Internet of Everything is changing the way businesses operate, providing new methods to deliver value and increasing the potential value of existing technologies.\n\nVideo Surveillance technology can deliver more than simple security alert information; CCTV today counts people, cars and things in motion; provides fast recognition of people and things; detects dangerous or anomalous activity, locates where things are in real time and assists in fast decision making during critical or complex events.\n\nhttps://lnkd.in/bJbWMDx",
-    "images": []
+    "images": [],
+    "topics": [
+      "infrastructure",
+      "security"
+    ]
   },
   {
     "slug": "linkedin-5750440039377022976",
@@ -3027,6 +3662,9 @@
         "width": 700,
         "height": 462
       }
+    ],
+    "topics": [
+      "life-creativity"
     ]
   }
 ]

@@ -1,6 +1,8 @@
 import fs from "node:fs/promises";
 import sharp from "sharp";
 
+const topicLabels = JSON.parse(await fs.readFile(new URL("../src/data/journal-topics.json", import.meta.url), "utf8"));
+
 const profile = "https://www.linkedin.com/in/andrewriley/";
 const [archiveFile, ...manifestFiles] = process.argv.slice(2);
 if (!archiveFile) throw new Error("Usage: node scripts/import-linkedin-posts.mjs verified-archive.json [media-manifest.json ...]");
@@ -24,6 +26,8 @@ for (const entry of archive.posts) {
   const date = new Date(Number(BigInt(id) >> 22n)).toISOString();
   if (date > archive.capturedAt) throw new Error(`Future publication ID: ${id}`);
   if (posts.has(entry.urn)) continue;
+  if (!Array.isArray(entry.topics) || !entry.topics.length || entry.topics.some(topic => typeof topic !== "string" || !Object.hasOwn(topicLabels, topic))) throw new Error(`Missing or unknown reviewed topics for ${id}`);
+  const topics = [...new Set(entry.topics)];
   const slug = `linkedin-${id}`;
   const images = [];
   for (const [index, image] of entry.images.entries()) {
@@ -37,7 +41,7 @@ for (const entry of archive.posts) {
   }
   const opening = entry.text.split(/\n/).find(line => line.trim()).trim();
   const title = opening.length > 110 ? `${opening.slice(0, 107).replace(/\s+\S*$/, "")}…` : opening;
-  posts.set(entry.urn, { slug, title, description: entry.text.replace(/\s+/g, " ").slice(0, 180), date, dateSource: "LinkedIn publication ID timestamp", sourceUrn: entry.urn, sourceUrl: `https://www.linkedin.com/feed/update/${entry.urn}/`, authorUrl: profile, importedAt: archive.capturedAt, text: entry.text, images });
+  posts.set(entry.urn, { slug, title, description: entry.text.replace(/\s+/g, " ").slice(0, 180), date, dateSource: "LinkedIn publication ID timestamp", sourceUrn: entry.urn, sourceUrl: `https://www.linkedin.com/feed/update/${entry.urn}/`, authorUrl: profile, importedAt: archive.capturedAt, text: entry.text, images, topics });
   added++;
 }
 await fs.writeFile(outputFile, JSON.stringify([...posts.values()].sort((a, b) => b.date.localeCompare(a.date)), null, 2) + "\n");

@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Post } from "@/lib/content";
 import { getPostImageSrc } from "@/lib/post-image";
 import { formatDate } from "@/lib/format";
+import { TopicTags } from "@/components/topic-tags";
 
 export function PostCard({ post }: { post: Post }) {
   const imageSrc = getPostImageSrc(post);
@@ -38,6 +39,7 @@ export function PostCard({ post }: { post: Post }) {
           </Link>
         </h3>
         <p className="mt-3 text-sm text-text-muted">{formatDate(post.date)}</p>
+        <TopicTags topics={post.topics} />
         {post.description ? (
           <p className="mt-4 leading-7 text-text-secondary">
             {post.description}

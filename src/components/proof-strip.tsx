@@ -1,1 +1,19 @@
-export function ProofStrip(){const facts=[{value:"25+",label:"Years in enterprise technology"},{value:"10",label:"Architects led at Cisco"},{value:"2×",label:"Manager Excellence Awards"}];return <section aria-label="Experience highlights" className="mx-auto grid max-w-6xl gap-3 px-5 py-8 sm:grid-cols-3">{facts.map(f=><div key={f.label} className="rounded-2xl border border-border-subtle bg-surface-card p-6"><p className="text-3xl font-bold text-brand-primary">{f.value}</p><p className="mt-2 text-sm text-text-secondary">{f.label}</p></div>)}</section>}
+import Link from "next/link";
+import { experienceHighlights } from "@/data/experience";
+
+export function ProofStrip() {
+  return <section id="experience" aria-label="Experience highlights" className="scroll-mt-44 md:scroll-mt-24 mx-auto grid max-w-6xl gap-4 px-5 py-8 lg:grid-cols-3">
+    {experienceHighlights.map(highlight => <article key={highlight.title} className="flex flex-col rounded-2xl border border-border-subtle bg-surface-card p-6">
+      <h2 className="text-2xl font-bold leading-tight text-brand-primary">{highlight.title}</h2>
+      <p className="mt-4 leading-7 text-text-secondary">{highlight.description}</p>
+      <div className="mt-auto pt-6">
+        <p className="border-t border-border-subtle pt-5 text-xs font-semibold uppercase tracking-widest text-text-muted">From the journal</p>
+        <ul className="mt-4 space-y-4">{highlight.examples.map(example => <li key={example.href}>
+          <Link href={example.href} className="text-sm font-semibold leading-6 text-brand-primary hover:underline">{example.label} →</Link>
+          <p className="mt-1 text-xs leading-5 text-text-muted">{example.context}</p>
+        </li>)}</ul>
+      </div>
+    </article>)}
+    <p className="pt-2 lg:col-span-3"><Link href="/work#experience" className="text-sm font-semibold text-brand-primary hover:underline">Explore my experience and projects →</Link></p>
+  </section>;
+}
