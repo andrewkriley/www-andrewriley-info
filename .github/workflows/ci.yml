@@ -26,6 +26,12 @@ jobs:
       - name: Cloudflare local env
         run: cp .dev.vars.example .dev.vars
 
+      - name: Content and deployment safety checks
+        run: |
+          node --test scripts/*.test.mjs
+          node scripts/check-journal.mjs
+          node scripts/check-deployment-target.mjs dev
+
       - name: Typecheck
         run: npm run typecheck
 

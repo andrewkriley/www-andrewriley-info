@@ -47,7 +47,7 @@
   "env": {
     // Shared development Worker: dev.andrewriley.info only, no production hostnames.
     // Deploy this branch with: npm run deploy:dev
-    // Workers Builds preview command: npx opennextjs-cloudflare deploy --env=dev
+    // GitHub Actions uses the account-owned deployment token (see docs/deployment.md).
     "dev": {
       "name": "www-andrewriley-info-dev",
       "workers_dev": true,
