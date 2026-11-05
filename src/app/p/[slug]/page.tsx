@@ -6,6 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 
 import { mdxComponents } from "@/components/mdx-components";
+import { LinkedInPostBody } from "@/components/linkedin-post-body";
 import { getAllPosts, getPost } from "@/lib/content";
 import { formatDate } from "@/lib/format";
 import { getPostImageSrc } from "@/lib/post-image";
@@ -62,7 +63,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <>
-      {imageSrc ? (
+      {imageSrc && !post.plainText ? (
         <div className="relative isolate min-h-[42vh] overflow-hidden bg-surface-muted md:min-h-[50vh]">
           <Image
             src={imageSrc}
@@ -77,11 +78,12 @@ export default async function PostPage({ params }: PostPageProps) {
       ) : null}
 
       <article className="mx-auto max-w-3xl px-5 py-16 md:py-24">
+        {post.imageCreditUrl ? <p className="mb-8 text-sm text-text-muted">{post.imageCreditText} <a href={post.imageCreditUrl} target="_blank" rel="noreferrer" className="text-brand-primary hover:underline">View original image on LinkedIn ↗</a></p> : null}
         <Link
-          href="/build#build-writing"
+          href="/journal"
           className="text-sm font-semibold text-brand-primary hover:text-brand-secondary"
         >
-          Back to writing
+          Back to journal
         </Link>
         <header className="mt-8">
           <div className="flex flex-wrap gap-2">
@@ -98,7 +100,8 @@ export default async function PostPage({ params }: PostPageProps) {
             {post.title}
           </h1>
           <p className="mt-5 text-text-muted">{formatDate(post.date)}</p>
-          {post.description ? (
+          {post.sourceUrl ? <p className="mt-4 text-sm text-text-secondary">Originally published on <a href={post.sourceUrl} target="_blank" rel="noreferrer" className="font-semibold text-brand-primary hover:underline">LinkedIn ↗</a></p> : null}
+          {post.description && !post.plainText ? (
             <p className="mt-6 text-xl leading-9 text-text-secondary">
               {post.description}
             </p>
@@ -106,7 +109,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </header>
 
         <div className="prose-content mt-12">
-          <MDXRemote
+          {post.plainText ? <LinkedInPostBody post={post} /> : <MDXRemote
             source={post.content}
             components={mdxComponents}
             options={{
@@ -114,7 +117,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 remarkPlugins: [remarkGfm],
               },
             }}
-          />
+          />}
         </div>
       </article>
     </>

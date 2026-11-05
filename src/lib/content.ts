@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import matter from "gray-matter";
+import linkedInPosts from "@/content/linkedin-posts.json";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
@@ -13,7 +14,13 @@ export type Post = {
   tags: string[];
   categories: string[];
   image?: string;
+  imageCreditUrl?: string;
+  imageCreditText?: string;
   content: string;
+  sourceUrl?: string;
+  sourceUrn?: string;
+  plainText?: boolean;
+  images?: { src: string; alt: string; width: number; height: number }[];
 };
 
 type FrontMatter = {
@@ -23,6 +30,8 @@ type FrontMatter = {
   tags?: string[];
   categories?: string[];
   image?: string;
+  imageCreditUrl?: string;
+  imageCreditText?: string;
   slug?: string;
 };
 
@@ -55,6 +64,8 @@ function readPostFile(fileName: string): Post {
     tags: asStringArray(frontMatter.tags),
     categories: asStringArray(frontMatter.categories),
     image: frontMatter.image,
+    imageCreditUrl: frontMatter.imageCreditUrl,
+    imageCreditText: frontMatter.imageCreditText,
     content,
   };
 }
@@ -64,11 +75,25 @@ export function getAllPosts(): Post[] {
     return [];
   }
 
-  return fs
+  const journalPosts = fs
     .readdirSync(postsDirectory)
     .filter((fileName) => fileName.endsWith(".mdx"))
-    .map(readPostFile)
-    .sort(
+    .map(readPostFile);
+  const importedPosts: Post[] = linkedInPosts.map(post => ({
+    slug: post.slug,
+    title: post.title,
+    description: post.description,
+    date: post.date,
+    tags: ["linkedin"],
+    categories: ["LinkedIn"],
+    image: post.images[0]?.src,
+    content: post.text,
+    sourceUrl: post.sourceUrl,
+    sourceUrn: post.sourceUrn,
+    plainText: true,
+    images: post.images,
+  }));
+  return [...journalPosts, ...importedPosts].sort(
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
 }
