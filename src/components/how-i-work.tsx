@@ -2,7 +2,7 @@ import Link from "next/link";
 import { workingPillars } from "@/data/experience";
 
 export function HowIWork() {
-  return <section id="how-i-work" className="scroll-mt-24 mx-auto max-w-6xl px-5 py-16" aria-labelledby="how-i-work-heading">
+  return <section id="how-i-work" className="scroll-mt-44 md:scroll-mt-24 mx-auto max-w-6xl px-5 py-16" aria-labelledby="how-i-work-heading">
     <h2 id="how-i-work-heading" className="text-3xl font-bold">How I work</h2>
     <p className="mt-4 max-w-3xl leading-7 text-text-secondary">Five steps, with a real example of each.</p>
     <ol className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-5">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { experienceHighlights } from "@/data/experience";
 
 export function ProofStrip() {
-  return <section aria-label="Experience highlights" className="mx-auto grid max-w-6xl gap-4 px-5 py-8 lg:grid-cols-3">
+  return <section id="experience" aria-label="Experience highlights" className="scroll-mt-44 md:scroll-mt-24 mx-auto grid max-w-6xl gap-4 px-5 py-8 lg:grid-cols-3">
     {experienceHighlights.map(highlight => <article key={highlight.title} className="flex flex-col rounded-2xl border border-border-subtle bg-surface-card p-6">
       <h2 className="text-2xl font-bold leading-tight text-brand-primary">{highlight.title}</h2>
       <p className="mt-4 leading-7 text-text-secondary">{highlight.description}</p>
