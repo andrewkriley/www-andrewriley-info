@@ -2,13 +2,19 @@
 
 Reviewed on 5 November 2026 against the 184 journal entries and Andrew's signed-in LinkedIn profile, including its complete Experience view. The profile is the source for role descriptions and dates: https://www.linkedin.com/in/andrewriley/. Public journal links retain the original LinkedIn citations.
 
-## Stronger headline options
+## Current headline blocks
+
+The homepage uses three broader statements: **Lead at scale**, **Connect strategy to systems**, and **Build to understand**. Leadership includes ANZ and APAC scope; this combines verified ANZ people leadership with APJC/India architecture experience and APAC partner engagement, without claiming direct management of an APAC-wide team. The journal examples distinguish hosting the ANZ Architect Exchange from sharing Google Cloud/Console Connect learning across APAC. Each block links to two journal examples, including practical healthcare architecture, digital assurance, AI agent observability and the Home Assistant integration.
+
+The earlier numeric headline candidates below remain background research, not the current homepage presentation.
+
+## Earlier headline research
 
 | Figure | Supported context | Editorial decision |
 | --- | --- | --- |
-| 75 | The 2019 Partner Architect Exchange announcement says Andrew was looking forward to hosting 75 partner architects across ANZ. The subsequent post says the exchange is underway. | Selected as a **planned cohort**, not a verified attendance count. Journal: `/p/linkedin-6587221303189733377`. |
-| 3,000 | UXC National Solutions Consultant, January–December 2009: lead architect for large enterprise and government infrastructure projects (3,000 users). | Selected with role/date context; not a cumulative user total or current platform usage claim. |
-| 16 | Servcorp Senior IP Engineer, April 2001–April 2005: defined and implemented strategies for successful deployment of 16 global corporate communication platforms, covering implementation, operation and support. | Selected; connects architecture, hands-on delivery and operations. |
+| 75 | The 2019 Partner Architect Exchange announcement says Andrew was looking forward to hosting 75 partner architects across ANZ. The subsequent post says the exchange is underway. | Previously trialled as a **planned cohort**, not a verified attendance count. Journal: `/p/linkedin-6587221303189733377`. |
+| 3,000 | UXC National Solutions Consultant, January–December 2009: lead architect for large enterprise and government infrastructure projects (3,000 users). | Previously trialled with role/date context; not a cumulative user total or current platform usage claim. |
+| 16 | Servcorp Senior IP Engineer, April 2001–April 2005: defined and implemented strategies for successful deployment of 16 global corporate communication platforms, covering implementation, operation and support. | Previously trialled; connects architecture, hands-on delivery and operations. |
 | 2,000+ | Getronics Technical Consultant, September 2006–January 2009: implementation engineer for large multi-site enterprise and government voice, contact centre and collaboration projects of 2,000+ seats. | Strong alternative for a delivery-focused version; overlaps with the 3,000-user architecture figure. Do not add the two figures together. |
 | 10 | Servcorp: technical team lead for global engineering (10 staff). | Verified leadership scope, but the cross-functional platform and partner examples tell a broader story. This is not evidence for the previous homepage's separate Cisco team count. |
 | 25+ years | Engineering and operational roles span 2001–2026; earlier customer care role starts in 2000. | Supported tenure, but less illustrative than scope of work. |

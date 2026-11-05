@@ -77,9 +77,30 @@ export const workingPillars = [
 ];
 
 export const experienceHighlights = [
-  { value: "75", label: "Partner architects in the planned ANZ exchange cohort", context: "Cisco Partner Architect Exchange · 2019", href: "/p/linkedin-6587221303189733377", linkLabel: "Read the event post" },
-  { value: "3,000", label: "Users in enterprise and government architecture projects", context: "Lead architect · UXC · 2009", href: "/about#journey", linkLabel: "Explore the career context" },
-  { value: "16", label: "Global communications platforms deployed", context: "Strategy and implementation · Servcorp · 2001–2005", href: "/about#journey", linkLabel: "Explore the engineering background" },
+  {
+    title: "Lead at scale",
+    description: "Develop people, build architecture capability and connect customers, partners and teams across ANZ and APAC.",
+    examples: [
+      { href: "/p/linkedin-6587221303189733377", label: "Build an architecture community across ANZ", context: "Cisco Partner Architect Exchange" },
+      { href: "/p/linkedin-6673312159277162496", label: "Connect partner expertise across APAC", context: "Sharing Google Cloud and Console Connect learning" },
+    ],
+  },
+  {
+    title: "Connect strategy to systems",
+    description: "Turn business ambition into practical architecture across cloud, healthcare, networking and security.",
+    examples: [
+      { href: "/p/linkedin-6927772651352469505", label: "Start with the care experience people need", context: "Virtual care architecture and platform choices" },
+      { href: "/p/linkedin-6912272550991462400", label: "Connect service visibility with trust", context: "Digital assurance in healthcare" },
+    ],
+  },
+  {
+    title: "Build to understand",
+    description: "Bring engineering and operational experience to hands-on experiments in AI, automation and observability.",
+    examples: [
+      { href: "/p/linkedin-7507060153016324096", label: "Inspect how an AI agent actually works", context: "Personal lab · Agent observability" },
+      { href: "/p/ha-ryde-waste-collection", label: "Turn a daily need into a working integration", context: "Personal project · Home Assistant automation" },
+    ],
+  },
 ];
 
 export const careerRoles = [
