@@ -2,6 +2,10 @@
 
 Reviewed on 5 November 2026 against the 184 journal entries and Andrew's signed-in LinkedIn profile, including its complete Experience view. The profile is the source for role descriptions and dates: https://www.linkedin.com/in/andrewriley/. Public journal links retain the original LinkedIn citations.
 
+## Homepage editorial structure
+
+The homepage introduces Andrew, presents the three scope headlines with journal evidence, shows the five-step working method through examples, adds a personal perspective, then offers technical journal walkthroughs and a contact invitation. Detailed persona narratives and selected project cards live on `/work`; repeating those grids on the homepage retold the same leader/architect/builder story. The working-method cards retain their concrete examples and omit the additional generic principle sentence.
+
 ## Current headline blocks
 
 The homepage uses three broader statements: **Lead at scale**, **Connect strategy to systems**, and **Build to understand**. Leadership includes ANZ and APAC scope; this combines verified ANZ people leadership with APJC/India architecture experience and APAC partner engagement, without claiming direct management of an APAC-wide team. The journal examples distinguish hosting the ANZ Architect Exchange from sharing Google Cloud/Console Connect learning across APAC. Each block links to two journal examples, including practical healthcare architecture, digital assurance, AI agent observability and the Home Assistant integration.

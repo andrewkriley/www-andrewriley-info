@@ -14,5 +14,6 @@ export function ProofStrip() {
         </li>)}</ul>
       </div>
     </article>)}
+    <p className="pt-2 lg:col-span-3"><Link href="/work#experience" className="text-sm font-semibold text-brand-primary hover:underline">Explore my experience and projects →</Link></p>
   </section>;
 }
