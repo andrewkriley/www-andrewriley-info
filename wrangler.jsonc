@@ -45,16 +45,17 @@
     }
   ],
   "env": {
-    // Isolated preview Worker: workers.dev only — no production hostnames.
+    // Shared development Worker: dev.andrewriley.info only, no production hostnames.
     // Deploy this branch with: npm run deploy:dev
     // Workers Builds preview command: npx opennextjs-cloudflare deploy --env=dev
     "dev": {
       "name": "www-andrewriley-info-dev",
       "workers_dev": true,
       "preview_urls": true,
-      // Required: otherwise Wrangler inherits production custom domains
-      // and would steal andrewriley.info / www / 2026 on deploy.
-      "routes": [],
+      // Override the production domains with the dedicated development hostname.
+      "routes": [
+        { "pattern": "dev.andrewriley.info", "custom_domain": true }
+      ],
       "vars": {
         "ENVIRONMENT": "preview",
         "DESIGN_SYSTEM_REF": "andrewkriley/design-system@v0.1.0#therileys-team"

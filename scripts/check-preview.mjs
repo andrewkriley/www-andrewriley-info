@@ -4,7 +4,7 @@ import matter from "gray-matter";
 const origin = process.argv[2];
 if (!origin) throw new Error("Pass the local or deployed dev preview URL.");
 const base = new URL(origin);
-if (base.hostname !== "127.0.0.1" && base.hostname !== "localhost" && base.hostname !== "www-andrewriley-info-dev.andrew-23e.workers.dev") throw new Error("Preview checks are restricted to local and dev URLs.");
+if (!["127.0.0.1", "localhost", "dev.andrewriley.info"].includes(base.hostname)) throw new Error("Preview checks are restricted to local and canonical dev URLs.");
 const imported = JSON.parse(fs.readFileSync("src/content/linkedin-posts.json", "utf8"));
 const mdx = fs.readdirSync("src/content/posts").filter(name => name.endsWith(".mdx")).map(name => {
   const { data } = matter(fs.readFileSync(`src/content/posts/${name}`, "utf8"));
