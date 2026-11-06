@@ -4,6 +4,11 @@ export const site = {
   url: "https://www.andrewriley.info",
   description:
     "Andrew Riley — technology leader, architect and builder connecting complex technology with meaningful outcomes.",
+  cv: {
+    href: "https://canva.link/7yfr2mov4mzc1rh",
+    label: "My CV",
+    note: "View on Canva",
+  },
   nav: [
     { href: "/work", label: "Work" },
     { href: "/about", label: "About" },

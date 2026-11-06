@@ -1,3 +1,4 @@
+import { site } from "@/data/site";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { EditorialHero } from "@/components/editorial-hero";
@@ -9,7 +10,7 @@ export const metadata: Metadata = { title: "Work", description: "Enterprise arch
 
 export default function WorkPage() {
   return <>
-    <EditorialHero eyebrow="Selected work" title="Work that connects people, technology and outcomes." description="I&apos;ve spent my career working across the boundaries between business ambition, technical architecture and the people responsible for making change happen." image="/images/hero/riles_presenting3.jpg" imageAlt="Andrew Riley presenting to an audience" primary={{href:"#selected",label:"Explore the work"}} secondary={{href:"/about",label:"My story"}} />
+    <EditorialHero cv={site.cv} eyebrow="Selected work" title="Work that connects people, technology and outcomes." description="I&apos;ve spent my career working across the boundaries between business ambition, technical architecture and the people responsible for making change happen." image="/images/hero/riles_presenting3.jpg" imageAlt="Andrew Riley presenting to an audience" primary={{href:"#selected",label:"Explore the work"}} secondary={{href:"/about",label:"My story"}} />
     <section id="selected" className="mx-auto max-w-6xl px-5 py-14">
       <h2 className="text-3xl font-bold text-text-primary">Selected evidence</h2>
       <p className="mt-3 max-w-3xl leading-7 text-text-secondary">Professional outcomes and personal experiments are clearly distinguished. Each is an opportunity to show the problem, approach, decisions and learning.</p>
