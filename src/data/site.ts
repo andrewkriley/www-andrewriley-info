@@ -8,6 +8,12 @@ export const site = {
     href: "https://canva.link/7yfr2mov4mzc1rh",
     label: "My CV",
     note: "View on Canva",
+    preview: {
+      src: "/images/cv/andrew-riley-professional-story.png",
+      alt: "First page of Andrew Riley's CV: a visual timeline of his professional story, learning, industries and organisations.",
+      width: 532,
+      height: 376,
+    },
   },
   nav: [
     { href: "/work", label: "Work" },
