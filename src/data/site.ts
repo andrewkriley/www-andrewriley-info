@@ -4,6 +4,17 @@ export const site = {
   url: "https://www.andrewriley.info",
   description:
     "Andrew Riley — technology leader, architect and builder connecting complex technology with meaningful outcomes.",
+  cv: {
+    href: "https://canva.link/7yfr2mov4mzc1rh",
+    label: "My CV",
+    note: "View on Canva",
+    preview: {
+      src: "/images/cv/andrew-riley-professional-story-full.png",
+      alt: "First page of Andrew Riley's CV: a visual timeline of his professional story, learning, industries and organisations.",
+      width: 2000,
+      height: 1414,
+    },
+  },
   nav: [
     { href: "/work", label: "Work" },
     { href: "/about", label: "About" },
