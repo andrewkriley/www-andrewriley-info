@@ -9,10 +9,10 @@ export const site = {
     label: "My CV",
     note: "View on Canva",
     preview: {
-      src: "/images/cv/andrew-riley-professional-story.png",
+      src: "/images/cv/andrew-riley-professional-story-full.png",
       alt: "First page of Andrew Riley's CV: a visual timeline of his professional story, learning, industries and organisations.",
-      width: 532,
-      height: 376,
+      width: 2000,
+      height: 1414,
     },
   },
   nav: [
