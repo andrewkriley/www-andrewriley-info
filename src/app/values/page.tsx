@@ -15,8 +15,7 @@ const values = [
   {
     id: "family",
     title: "Family",
-    statement: "Everything we achieve takes a village. Help me look after mine so I can play my part in looking after yours.",
-    reflection: "Safety, security and trust are the foundation.",
+    statement: "Everything we achieve takes a village. Help me look after mine so I can play my part in looking after yours. Safety, security and trust are the foundation.",
   },
   {
     id: "creativity-curiosity",
@@ -43,7 +42,6 @@ export default function ValuesPage() {
           <article id={value.id} key={value.id} className="scroll-mt-32 rounded-2xl border border-border-subtle bg-surface-card p-7 sm:p-9">
             <h2 className="text-2xl font-bold text-brand-primary">{value.title}</h2>
             <p className="mt-5 text-lg leading-8 text-text-primary">{value.statement}</p>
-            {value.reflection && <p className="mt-4 leading-7 text-text-secondary">{value.reflection}</p>}
           </article>
         ))}
       </section>
