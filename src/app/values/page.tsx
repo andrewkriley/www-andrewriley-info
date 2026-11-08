@@ -26,7 +26,7 @@ const values = [
   {
     id: "accountability",
     title: "Accountability",
-    statement: "Everyone plays their part in the team. When I get something wrong, I own it: here’s why it happened, what I learned and what I’ll do next.",
+    statement: "Everyone plays their part in the team. I take ownership of my actions and outcomes. When I get something wrong, I acknowledge it, share what I learned and explain what I’ll do differently. I encourage and empower others to do the same.",
   },
 ];
 
