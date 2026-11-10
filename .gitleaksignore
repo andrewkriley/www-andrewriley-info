@@ -1,3 +1,7 @@
 # Public Cloudflare account-token ID from its dashboard URL, not the credential.
 # Only this exact historical finding is excluded; all other findings remain active.
 edfefe4f15848e65e3483509fea25ff329936d83:scripts/verify-cloudflare-account-token.mjs:generic-api-key:6
+
+# Figma document ID from its design URL, not an API credential. The scheduled
+# full-history scan also includes this historical branch's design-token metadata.
+90a16eae40e0271747c2128092fc634b3e827dd0:upstream/design-system/tokens/therileys-team.json:generic-api-key:4
