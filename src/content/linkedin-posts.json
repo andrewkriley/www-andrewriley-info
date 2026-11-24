@@ -1,5 +1,137 @@
 [
   {
+    "slug": "linkedin-7528413112895705089",
+    "title": "I’ve been playing around with vLLM Semantic Router on an RTX 4070 Ti, routing requests to existing models…",
+    "description": "I’ve been playing around with vLLM Semantic Router on an RTX 4070 Ti, routing requests to existing models through LiteLLM. The first version was a bit too keen to use the larger mo",
+    "date": "2026-11-17T11:05:57.266Z",
+    "dateSource": "LinkedIn publication ID timestamp",
+    "sourceUrn": "urn:li:activity:7528413112895705089",
+    "sourceUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7528413112895705089/",
+    "authorUrl": "https://www.linkedin.com/in/andrewriley/",
+    "importedAt": "2026-11-24T22:08:28.993249+00:00",
+    "text": "I’ve been playing around with vLLM Semantic Router on an RTX 4070 Ti, routing requests to existing models through LiteLLM.\n\nThe first version was a bit too keen to use the larger model—even simple JSON tasks got sent its way. So I tightened the rules: keep easy requests on the smaller model, and step up for coding or explicit reasoning.\n\nAfter 160 scored requests, the updated router delivered:\n• 40/40 correct answers, matching the original\n• 44% fewer calls to the larger model\n• 19% faster responses on average\n\nIt’s a small test with warm caches, so there’s more to prove. \n\nA useful reminder: just because a prompt looks complex doesn’t mean it needs the bigger model.\n\n#SelfHostedAI #SemanticRouting #vLLM #LiteLLM\n\nIn the screen shot below, \nRTX 4070 Ti (12Gb) running vllm-sr/vela3-fast as the semantic routing model\nRTX 4080 Super (16Gb) running IBM's Granite 4.2 8b\nAMD Strix Halo 395+ (128Gb) running OpenAI GPT OSS 120B",
+    "images": [
+      {
+        "src": "/images/writing/linkedin-7528413112895705089/1.webp",
+        "alt": "Semantic routing experiment running on Andrew Riley’s local AI hardware.",
+        "width": 1600,
+        "height": 735
+      }
+    ],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
+  },
+  {
+    "slug": "linkedin-7527850040984481792",
+    "title": "100K tokens every 30mins adds up  ~25 million tokens.",
+    "description": "100K tokens every 30mins adds up ~25 million tokens. Between Nov 9th and 16th 2026, I ran a routine patrol checking network connectivity every 30min. You could call that an 'agent'",
+    "date": "2026-11-15T21:48:30.461Z",
+    "dateSource": "LinkedIn publication ID timestamp",
+    "sourceUrn": "urn:li:activity:7527850040984481792",
+    "sourceUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7527850040984481792/",
+    "authorUrl": "https://www.linkedin.com/in/andrewriley/",
+    "importedAt": "2026-11-24T22:08:28.993249+00:00",
+    "text": "100K tokens every 30mins adds up  ~25 million tokens. \n\nBetween Nov 9th and 16th 2026, I ran a routine patrol checking network connectivity every 30min. You could call that an 'agent'.... \n\nWhat's worth considering for these routine tasks is where and how these run. Should they they use an LLM, be a static script, use an existing cloud service or a combination.\n\nConsider your #reasoningarchitecture and what makes sense for the job to be done.\n\nIn the example below these 25m tokens came from my local GPU. It wasn't a complex reasoning so a local agent makes sense.\n\n#splunk #litellm #tokenomics",
+    "images": [
+      {
+        "src": "/images/writing/linkedin-7527850040984481792/1.webp",
+        "alt": "Token usage for Andrew Riley’s local network patrol experiment.",
+        "width": 1600,
+        "height": 374
+      }
+    ],
+    "topics": [
+      "ai",
+      "observability"
+    ]
+  },
+  {
+    "slug": "linkedin-7527278885919633408",
+    "title": "BCP for AI ?",
+    "description": "BCP for AI ? I spent twelve weeks building a personal agent stack across four harnesses. About 1,300 commits and ~600 signed GitLab releases. It started in Claude. Then Cursor beca",
+    "date": "2026-11-14T07:58:56.482Z",
+    "dateSource": "LinkedIn publication ID timestamp",
+    "sourceUrn": "urn:li:activity:7527278885919633408",
+    "sourceUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7527278885919633408/",
+    "authorUrl": "https://www.linkedin.com/in/andrewriley/",
+    "importedAt": "2026-11-24T22:08:28.993249+00:00",
+    "text": "BCP for AI ? \n\nI spent twelve weeks building a personal agent stack across four harnesses. About 1,300 commits and ~600 signed GitLab releases.\n\nIt started in Claude. Then Cursor became the daily builder:  opening merge requests. deploying code and application infrastructure (docker, k3s, cloudflare, AWS). Codex joined later as a ChatGPT-paired CLI on its own worker.  All using a local worker , not in the cloud so it had direct access to my platforms. \n\nThis week OpenCode came back as the house harness - no cloud use cases, soverign AI :) \n\nWhat stayed in the middle of all of that was the same guidance layer. AGENTS.md is the instruction file Cursor, Codex, and OpenCode all load. Secrets stay in one store (Infisical). Model calls go through one front door (OpenWork), tools through one gateway (LiteLLM), and GitLab remains the system of record.\n\nClaude, Cursor, Codex, OpenCode. The harness changes. The system of record and the outcomes did not. \n\nHow do you do BCP for AI?",
+    "images": [],
+    "topics": [
+      "ai",
+      "software-development"
+    ]
+  },
+  {
+    "slug": "linkedin-7526438556895080448",
+    "title": "Teamwork makes the dream work - and we had a dream.",
+    "description": "Teamwork makes the dream work - and we had a dream. \"Bring AI augmented creativity to enterprise governance, make it real.\" Cisco Live APJC's first Enterprise AI Builders program w",
+    "date": "2026-11-12T00:19:46.430Z",
+    "dateSource": "LinkedIn publication ID timestamp",
+    "sourceUrn": "urn:li:activity:7526438556895080448",
+    "sourceUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7526438556895080448/",
+    "authorUrl": "https://www.linkedin.com/in/andrewriley/",
+    "importedAt": "2026-11-24T22:08:28.993249+00:00",
+    "text": "Teamwork makes the dream work - and we had a dream. \n\n\"Bring AI augmented creativity to enterprise governance, make it real.\" \n\nCisco Live APJC's first Enterprise AI Builders program was brought to you by this amazing team. Collaborative, supportive and inspiring stories made this real. \n\nThank you to this amazing group of humans. I appreciate the commiment you all made - I know our ask was bold but we did it!\n\nHeath Russell Robert Barton Balaji Venkatraman Sujith Joseph Dave Zacks Ryan Pascoe Liam Panizzon Jonno Lynn Linda Wang Jeff Wang Simer Singh (SJ) Jason Churchill Mohamed A.R. Christina Tin Sathian Daniel Peluso Cameron Esdaile Mike Hicks Dean Luxton Lauren Lee @paulyn lim Angelo Del Castillo Corey Thomson Lisa Deaves Laura Simmons Shireen Kamra Kemal Sanjta Angela Campbell Nesrene O'Connell Claire Thomas an all the event team and AV heros.(apologies if I missed anyone)\n\nFor customers and partners, connect with your favourite Cisco friend and ask them how to build with Cisco! \n\nLet's build!",
+    "images": [
+      {
+        "src": "/images/writing/linkedin-7526438556895080448/1.webp",
+        "alt": "Enterprise AI Builders speakers standing together on stage at Cisco Live APJC.",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/writing/linkedin-7526438556895080448/2.webp",
+        "alt": "Audience members watching the Enterprise AI Builders program at Cisco Live APJC.",
+        "width": 1152,
+        "height": 1536
+      },
+      {
+        "src": "/images/writing/linkedin-7526438556895080448/3.webp",
+        "alt": "The Enterprise AI Builders event team standing together at Cisco Live APJC.",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "src": "/images/writing/linkedin-7526438556895080448/4.webp",
+        "alt": "A panel discussion being filmed on the Cisco Live stage.",
+        "width": 1600,
+        "height": 1200
+      }
+    ],
+    "topics": [
+      "leadership-strategy",
+      "ai"
+    ]
+  },
+  {
+    "slug": "linkedin-7526430068152250368",
+    "title": "Optimising your coding agents starts with #splunk #observability",
+    "description": "Optimising your coding agents starts with #splunk #observability Daniel Peluso helping our #ciscoliveapjc Enterprise AI Builders track their tokens and build without blindfolds. Jo",
+    "date": "2026-11-11T23:46:02.556Z",
+    "dateSource": "LinkedIn publication ID timestamp",
+    "sourceUrn": "urn:li:activity:7526430068152250368",
+    "sourceUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7526430068152250368/",
+    "authorUrl": "https://www.linkedin.com/in/andrewriley/",
+    "importedAt": "2026-11-24T22:08:28.993249+00:00",
+    "text": "Optimising your coding agents starts with #splunk #observability\n\nDaniel Peluso helping our #ciscoliveapjc Enterprise AI Builders track their tokens and build without blindfolds.\n\nJoin the agent observability movement here https://lnkd.in/gWsRhGEf",
+    "images": [
+      {
+        "src": "/images/writing/linkedin-7526430068152250368/1.webp",
+        "alt": "Daniel Peluso presenting agent observability at Cisco Live APJC.",
+        "width": 1600,
+        "height": 878
+      }
+    ],
+    "topics": [
+      "observability",
+      "ai",
+      "software-development"
+    ]
+  },
+  {
     "slug": "linkedin-7526083881847042048",
     "title": "While the buzz at #ciscoliveapjc and our Enterprise AI Builders stream was in full swing this morning, my…",
     "description": "While the buzz at #ciscoliveapjc and our Enterprise AI Builders stream was in full swing this morning, my good friend Ryan Pascoe opened with a simple statement. \"It is our differe",
